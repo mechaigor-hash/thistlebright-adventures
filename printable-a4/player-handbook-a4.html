@@ -8,7 +8,7 @@
 }
 html { background:#d8c59a; }
 body { margin:0 auto; max-width:210mm; color:var(--ink); font-family:"DejaVu Serif", Georgia, "Times New Roman", serif; font-size:10.2pt; line-height:1.28; background:var(--paper2); }
-main.book { min-height:100vh; padding:6mm 8mm 8mm; background:var(--paper2); }
+main.book { min-height:100vh; padding:6mm 8mm 0; background:var(--paper2); }
 p, li { orphans:3; widows:3; } p { margin:0 0 2.6mm; } ul, ol { margin-top:1.2mm; margin-bottom:3mm; padding-left:5.2mm; break-inside:avoid-page; page-break-inside:avoid; } li { margin:.45mm 0; break-inside:avoid; } .keep-block { break-inside:avoid-page; page-break-inside:avoid; margin:0 0 3mm; } .keep-block > :last-child { margin-bottom:0; }
 strong { color:#251b13; } h1, h2, h3, h4 { text-wrap:balance; break-after:avoid; }
 h1 { page-break-before:always; min-height:68mm; margin:0 -2mm 7mm; padding:15mm 14mm 9mm; color:#fff8e8; font-size:24pt; letter-spacing:.02em; line-height:1.04; background:linear-gradient(90deg, rgba(23,35,26,.82), rgba(46,35,65,.62)), url("../art/generated/22-book-title-spread.png") center/cover no-repeat; border-bottom:2.2mm solid #6f4b1f; box-shadow: inset 0 -18mm 26mm rgba(0,0,0,.27); text-shadow:0 2px 4px rgba(0,0,0,.45); }
@@ -43,16 +43,20 @@ figure.art-plate.tall, figure.art-plate.tall img { min-height:148mm; height:148m
 .scene-plate figure.art-plate { position:relative; inset:auto; width:100%; min-height:190mm; height:190mm; margin:0; padding:0; border:0; border-radius:0; box-shadow:none; background:transparent; page-break-before:auto; page-break-after:auto; }
 .scene-plate figure.art-plate::before { display:none; }
 .scene-plate figure.art-plate img { width:100%; height:190mm; max-height:none; object-fit:cover; object-position:center; border-radius:0; opacity:.99; background:#2e2418; }
-.scene-plate.scene-full { min-height:270mm; }
-.scene-plate.scene-full figure.art-plate { min-height:270mm; height:270mm; }
-.scene-plate.scene-full figure.art-plate img { height:270mm; }
+.scene-plate.scene-full { min-height:297mm; margin:-6mm -8mm 0; page-break-before:auto; page-break-after:auto; }
+.scene-plate.scene-full figure.art-plate { min-height:297mm; height:297mm; }
+.scene-plate.scene-full figure.art-plate img { height:297mm; object-fit:cover; object-position:center; transform:scale(1.055); transform-origin:center; }
+.scene-plate.step-overlay { margin-top:0; }
+.scene-plate.step-overlay .scene-copy { bottom:7mm; }
+.scene-plate.step-overlay .scene-copy h3 { clear:none; margin:0 0 1.4mm; padding:0 0 1mm; color:#76342c; font-size:16pt; line-height:1.05; font-variant:small-caps; letter-spacing:.02em; border:0; border-bottom:1px solid rgba(116,52,45,.35); background:none; }
 .scene-plate::after, .profile-card::after, .class-card::after, .creature-card::after { display:none; }
 .scene-copy { position:absolute; z-index:3; left:50%; transform:translateX(-50%); bottom:5mm; width:148mm; max-height:none; overflow:visible; padding:3mm 4mm; background:linear-gradient(180deg, rgba(255,250,238,.96), rgba(250,235,199,.88)); border:1px solid rgba(91,57,22,.58); border-left:2.4mm solid rgba(139,53,45,.75); border-radius:1.5mm 3mm 3mm 1.5mm; box-shadow:0 1.2mm 6mm rgba(0,0,0,.25); font-size:9.7pt; line-height:1.23; }
 .scene-copy p:last-child, .scene-copy ul:last-child, .scene-copy ol:last-child { margin-bottom:0; }
 
 /* Full-page feature plates with ONE overlay group. Shorter than A4 after padding. */
-.profile-card, .class-card, .creature-card { position:relative; clear:both; width:calc(100% + 16mm); min-height:282mm; margin:0 -8mm 0; padding:0; border:0; border-radius:0; overflow:hidden; box-shadow:none; break-inside:avoid; page-break-inside:avoid; page-break-before:auto; page-break-after:auto; background:#2e2418; }
-.profile-card > img, .class-card > img { position:relative; display:block; z-index:0; width:100%; height:282mm; max-width:none; max-height:none; margin:0; padding:0; border:0; border-radius:0; object-fit:cover; object-position:center; opacity:.99; background:#2e2418; }
+.profile-card, .class-card { position:relative; clear:both; width:calc(100% + 16mm); min-height:297mm; margin:-6mm -8mm 0; padding:0; border:0; border-radius:0; overflow:hidden; box-shadow:none; break-inside:avoid; page-break-inside:avoid; page-break-before:auto; page-break-after:auto; background:#2e2418; }
+.creature-card { position:relative; clear:both; width:calc(100% + 16mm); min-height:282mm; margin:0 -8mm 0; padding:0; border:0; border-radius:0; overflow:hidden; box-shadow:none; break-inside:avoid; page-break-inside:avoid; page-break-before:auto; page-break-after:auto; background:#2e2418; }
+.profile-card > img, .class-card > img { position:relative; display:block; z-index:0; width:100%; height:311mm; max-width:none; max-height:none; margin:-7mm 0; padding:0; border:0; border-radius:0; object-fit:cover; object-position:center; opacity:.99; background:#2e2418; transform:scale(1.025); transform-origin:center; }
 .creature-card figure.art-plate { position:relative; width:100%; min-height:282mm; height:282mm; margin:0; padding:0; border:0; border-radius:0; box-shadow:none; page-break-before:auto; page-break-after:auto; background:transparent; }
 .creature-card figure.art-plate img { width:100%; height:282mm; max-height:none; object-fit:cover; object-position:center; padding:0; opacity:.99; background:#2e2418; }
 .profile-card::before, .class-card::before, .creature-card::before { content:""; position:absolute; inset:0; z-index:1; background:linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 38%, rgba(255,248,226,.22) 62%, rgba(42,29,16,.20) 100%); pointer-events:none; }
@@ -70,7 +74,7 @@ figure.art-plate.tall, figure.art-plate.tall img { min-height:148mm; height:148m
 .spell-block ul { margin:0; padding-left:4mm; font-size:8.6pt; line-height:1.12; }
 .pagebreak { clear:both; page-break-after:always; }
 @media screen { body { box-shadow:0 0 16mm rgba(58,38,12,.22); } }
-@media print { html, body { background:var(--paper2); } main.book { padding:6mm 8mm 8mm; } a { color:inherit; text-decoration:none; } figure.art-plate, .scene-plate, .profile-card, .class-card, .creature-card, blockquote, table { break-inside:avoid-page; page-break-inside:avoid; } }
+@media print { html, body { background:var(--paper2); } main.book { padding:6mm 8mm 0; } a { color:inherit; text-decoration:none; } figure.art-plate, .scene-plate, .profile-card, .class-card, .creature-card, blockquote, table { break-inside:avoid-page; page-break-inside:avoid; } }
 
 </style></head><body><main class="book"><h1>Thistlebright Adventures — Player Handbook</h1>
 
@@ -135,11 +139,9 @@ figure.art-plate.tall, figure.art-plate.tall img { min-height:148mm; height:148m
 <li>Your <strong>class</strong> says what you like doing on adventures.</li>
 </ul>
 <p>For ages 5–7, keep it simple: <strong>pick one race, pick one class, then choose your numbers.</strong></p>
-<hr>
-<h3>Step 1: Pick your race — your fairy-tale people</h3>
-<section class="scene-plate scene-full">
+<section class="scene-plate scene-full step-overlay">
 <figure class="art-plate"><img src="../art/generated/23-player-races-kindreds.png" alt="Player races / kindreds"></figure>
-<div class="scene-copy"><p>These are also called <strong>kindreds</strong> in the glen. Pick the one that sounds fun. Races do <strong>not</strong> make anyone better or worse. They give a tiny story gift and a way to imagine your hero.</p>
+<div class="scene-copy"><h3>Step 1: Pick your race — your fairy-tale people</h3><p>These are also called <strong>kindreds</strong> in the glen. Pick the one that sounds fun. Races do <strong>not</strong> make anyone better or worse. They give a tiny story gift and a way to imagine your hero.</p>
 </div>
 </section>
 <section class="profile-card race-card copy-left">
@@ -215,11 +217,9 @@ figure.art-plate.tall, figure.art-plate.tall img { min-height:148mm; height:148m
 </div>
 </section>
 <blockquote><strong>Your turn:</strong> Point to one race. Say, “I am a ______.”</blockquote>
-<hr>
-<h3>Step 2: Pick your class — your adventure job</h3>
-<section class="scene-plate scene-full">
+<section class="scene-plate scene-full step-overlay">
 <figure class="art-plate"><img src="../art/generated/24-player-classes-paths.png" alt="Player classes / adventure paths"></figure>
-<div class="scene-copy"><p>Your class is what you do when adventure starts. It gives you one bigger <strong>class gift</strong>.</p>
+<div class="scene-copy"><h3>Step 2: Pick your class — your adventure job</h3><p>Your class is what you do when adventure starts. It gives you one bigger <strong>class gift</strong>.</p>
 </div>
 </section>
 <section class="class-card copy-left">
