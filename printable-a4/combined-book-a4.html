@@ -1,26 +1,256 @@
 <!doctype html><html><head><meta charset="utf-8"><title>Combined Book Draft</title><style>
-@page { size: A4 portrait; margin: 14mm; }
+
+@page { size: A4 portrait; margin: 12mm 11mm 14mm; }
 * { box-sizing: border-box; }
-body { font-family: "DejaVu Serif", Georgia, serif; color:#2a2118; background:#fffdf7; line-height:1.35; font-size:11pt; }
-h1 { font-size:24pt; color:#4b2e67; border-bottom:3px solid #8b6bb1; padding-bottom:6px; page-break-before: always; }
-h1:first-child { page-break-before: avoid; }
-h2 { font-size:18pt; color:#315c3a; margin-top:16pt; break-after: avoid; }
-h3 { font-size:14pt; color:#6b3b2a; break-after: avoid; }
-h4 { font-size:12pt; color:#4b2e67; margin-bottom:4pt; break-after: avoid; }
-img { max-width:100%; max-height:115mm; display:block; margin:5mm auto; border-radius:4mm; }
-p, li { orphans:2; widows:2; }
-table { width:100%; border-collapse:collapse; margin:4mm 0; font-size:10pt; }
-th,td { border:1px solid #c7b99b; padding:4px; vertical-align:top; }
-th { background:#efe6cc; }
-blockquote { border-left:5px solid #8b6bb1; background:#f4eefb; padding:6px 10px; margin:6mm 0; }
-hr { border:0; border-top:2px dashed #c7b99b; margin:8mm 0; }
-.pagebreak { page-break-after: always; }
-</style></head><body><h1>Thistlebright Adventures — Combined Image-Heavy Book Draft</h1>
-<img src="../art/generated/22-book-title-spread.png" alt="Book title spread">
+:root {
+  --ink:#2a2118;
+  --muted:#5d5144;
+  --green:#285e3d;
+  --purple:#4b2e67;
+  --red:#8b352d;
+  --gold:#b88a2d;
+  --line:#c8ae78;
+  --paper:#fbf2dc;
+  --paper2:#fffaf0;
+  --wash:rgba(255,244,217,.84);
+}
+html { background:#d8c59a; }
+body {
+  margin:0 auto;
+  max-width: 210mm;
+  color:var(--ink);
+  font-family: "DejaVu Serif", Georgia, "Times New Roman", serif;
+  font-size:10.6pt;
+  line-height:1.34;
+  background:
+    radial-gradient(circle at 8% 2%, rgba(135,83,48,.11), transparent 34mm),
+    radial-gradient(circle at 94% 16%, rgba(40,94,61,.09), transparent 42mm),
+    linear-gradient(90deg, rgba(122,84,34,.06), transparent 12mm, transparent calc(100% - 12mm), rgba(122,84,34,.06)),
+    var(--paper2);
+  padding:0;
+}
+main.book {
+  min-height:100vh;
+  padding:0 3mm 6mm;
+}
+p, li { orphans:3; widows:3; }
+p { margin:0 0 3.2mm; }
+ul, ol { margin-top:1.5mm; margin-bottom:3.8mm; padding-left:6mm; }
+li { margin:.7mm 0; }
+strong { color:#251b13; }
+h1, h2, h3, h4 { text-wrap:balance; break-after:avoid; }
+h1 {
+  page-break-before:always;
+  min-height:74mm;
+  margin:0 -3mm 8mm;
+  padding:17mm 16mm 10mm;
+  color:#fff8e8;
+  font-size:25pt;
+  letter-spacing:.02em;
+  line-height:1.06;
+  background:
+    linear-gradient(90deg, rgba(23,35,26,.82), rgba(46,35,65,.62)),
+    url("../art/generated/22-book-title-spread.png") center/cover no-repeat;
+  border-bottom:2.2mm solid #6f4b1f;
+  box-shadow: inset 0 -18mm 26mm rgba(0,0,0,.27);
+  text-shadow:0 2px 4px rgba(0,0,0,.45);
+}
+h1:first-child { page-break-before:auto; }
+h2 {
+  clear:both;
+  margin:8mm 0 4.5mm;
+  color:var(--green);
+  font-size:18pt;
+  border-top:1.4pt dashed rgba(184,138,45,.72);
+  padding-top:5mm;
+}
+h2::first-letter { font-size:1.28em; color:var(--red); }
+h3 {
+  clear:both;
+  margin:6mm 0 2.4mm;
+  color:var(--red);
+  font-size:14pt;
+  border-bottom:1px solid rgba(184,138,45,.6);
+}
+h4 {
+  margin:0 0 1.6mm;
+  color:var(--purple);
+  font-size:12.8pt;
+  letter-spacing:.015em;
+}
+hr {
+  clear:both;
+  border:0;
+  height:4mm;
+  margin:7mm 0;
+  background:
+    radial-gradient(circle, rgba(139,53,45,.95) 1.1mm, transparent 1.2mm) center/7mm 4mm repeat-x;
+  opacity:.6;
+}
+blockquote {
+  clear:both;
+  break-inside:avoid;
+  margin:5mm 0;
+  padding:4mm 5mm 4mm 7mm;
+  border:1px solid rgba(139,53,45,.38);
+  border-left:4mm solid rgba(139,53,45,.72);
+  background:
+    linear-gradient(90deg, rgba(255,244,217,.96), rgba(250,236,199,.72)),
+    radial-gradient(circle at 100% 0, rgba(184,138,45,.18), transparent 28mm);
+  border-radius:1.5mm 5mm 5mm 1.5mm;
+  box-shadow:0 1mm 3mm rgba(79,50,18,.12);
+}
+table {
+  width:100%;
+  border-collapse:collapse;
+  margin:4mm 0 5mm;
+  font-size:9.4pt;
+  break-inside:avoid;
+  box-shadow:0 .8mm 2.6mm rgba(75,45,17,.12);
+}
+th,td { border:1px solid #c9b88b; padding:3px 5px; vertical-align:top; }
+th { background:#d9e6c0; color:#243e28; }
+tr:nth-child(even) td { background:rgba(224,235,202,.62); }
+img { max-width:100%; height:auto; }
+/* Any art not claimed by a profile/class block becomes a manuscript plate. */
+figure.art-plate {
+  clear:both;
+  position:relative;
+  margin:5mm 0 6mm;
+  padding:1.8mm;
+  break-inside:avoid;
+  page-break-inside:avoid;
+  border:1.2mm solid #322615;
+  border-radius:4.5mm;
+  background:#2e2418;
+  box-shadow:0 2mm 6mm rgba(68,38,15,.22);
+  overflow:hidden;
+}
+figure.art-plate::before {
+  content:"";
+  position:absolute;
+  inset:2.3mm;
+  border:1px solid rgba(255,238,177,.7);
+  border-radius:3mm;
+  pointer-events:none;
+  z-index:2;
+}
+figure.art-plate img {
+  display:block;
+  width:100%;
+  max-height:88mm;
+  object-fit:cover;
+  object-position:center;
+  border-radius:2.7mm;
+  break-inside:avoid;
+  page-break-inside:avoid;
+}
+figure.art-plate.title-art img { max-height:70mm; }
+figure.art-plate.tall img { max-height:112mm; object-fit:contain; background:#f7ecd2; }
+.profile-card, .class-card, .creature-card {
+  position:relative;
+  clear:both;
+  min-height:62mm;
+  margin:5.5mm 0;
+  padding:5mm 5mm 4mm 55mm;
+  border:1px solid rgba(105,75,32,.45);
+  border-radius:5mm 2mm 5mm 2mm;
+  background:
+    linear-gradient(90deg, rgba(255,250,237,.95), rgba(250,238,210,.86)),
+    radial-gradient(circle at 92% 8%, rgba(184,138,45,.16), transparent 36mm);
+  box-shadow:0 1.3mm 5mm rgba(84,55,24,.15);
+  overflow:hidden;
+  break-inside:avoid;
+  page-break-inside:avoid;
+}
+.profile-card:nth-of-type(even), .class-card:nth-of-type(even), .creature-card:nth-of-type(even) {
+  padding-left:5mm;
+  padding-right:55mm;
+}
+.profile-card::after, .class-card::after, .creature-card::after {
+  content:"";
+  position:absolute;
+  inset:2.2mm;
+  border:1px solid rgba(184,138,45,.38);
+  border-radius:3.8mm 1.4mm 3.8mm 1.4mm;
+  pointer-events:none;
+}
+.profile-card h4, .class-card h4, .creature-card h2 {
+  font-variant:small-caps;
+  color:#76342c;
+  border:0;
+  border-bottom:1px solid rgba(184,138,45,.6);
+  padding:0 0 1mm;
+  margin:0 0 1.6mm;
+}
+.creature-card h2 { clear:none; font-size:15.5pt; }
+.creature-card h2::first-letter { font-size:1em; color:#76342c; }
+.creature-card h3 { clear:none; margin:3mm 0 1mm; font-size:11.2pt; color:#4b2e67; }
+.profile-card img, .class-card img, .creature-card figure.art-plate {
+  position:absolute;
+  left:0;
+  top:0;
+  width:50mm;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  margin:0;
+  border-radius:4.6mm 22mm 22mm 4.6mm;
+  border-right:1.2mm solid rgba(184,138,45,.72);
+  box-shadow: inset -10mm 0 14mm rgba(255,250,237,.65);
+}
+.creature-card figure.art-plate { padding:0; border:0; box-shadow:none; background:transparent; }
+.creature-card figure.art-plate::before { display:none; }
+.creature-card figure.art-plate img { width:100%; height:100%; max-height:none; object-fit:cover; border-radius:4.6mm 22mm 22mm 4.6mm; }
+.profile-card:nth-of-type(even) img, .class-card:nth-of-type(even) img, .creature-card:nth-of-type(even) figure.art-plate {
+  left:auto;
+  right:0;
+  border-right:0;
+  border-left:1.2mm solid rgba(184,138,45,.72);
+  border-radius:22mm 4.6mm 4.6mm 22mm;
+}
+.creature-card:nth-of-type(even) figure.art-plate img { border-radius:22mm 4.6mm 4.6mm 22mm; }
+.profile-card ul, .class-card ul { padding-left:4.8mm; margin-bottom:1mm; }
+.spell-block {
+  margin-top:3mm;
+  padding:3mm 4mm;
+  border:1px solid rgba(75,46,103,.45);
+  border-radius:2.8mm;
+  background:linear-gradient(180deg, rgba(246,238,255,.9), rgba(255,249,232,.86));
+  break-inside:avoid;
+  page-break-inside:avoid;
+}
+.spell-block .spell-title {
+  margin:0 0 1.5mm;
+  color:#4b2e67;
+  font-weight:700;
+  font-variant:small-caps;
+  letter-spacing:.03em;
+}
+.spell-block ul { margin:0; }
+.chapter-opener {
+  break-inside:avoid;
+  page-break-inside:avoid;
+}
+.pagebreak { clear:both; page-break-after:always; }
+@media screen {
+  body { box-shadow:0 0 16mm rgba(58,38,12,.22); }
+  main.book { padding-top:0; }
+}
+@media print {
+  html, body { background:white; }
+  main.book { padding:0; }
+  a { color:inherit; text-decoration:none; }
+  figure.art-plate, .profile-card, .class-card, blockquote, table { break-inside:avoid-page; page-break-inside:avoid; }
+}
+
+</style></head><body><main class="book"><h1>Thistlebright Adventures — Combined Image-Heavy Book Draft</h1>
+<blockquote class="layout-note"><strong>Print note:</strong> This A4 edition uses layered parchment panels. Artwork is anchored to its text block so race/class portraits and scene art should not split across printed pages.</blockquote>
+<figure class="art-plate title-art"><img src="../art/generated/22-book-title-spread.png" alt="Book title spread"></figure>
 <div class="pagebreak"></div>
 <h1>Book Section: Project Overview</h1>
 <h1>Thistlebright Adventures</h1>
-<img src="../art/generated/01-cover-scottish-fairy.png" alt="Cover">
+<figure class="art-plate title-art"><img src="../art/generated/01-cover-scottish-fairy.png" alt="Cover"></figure>
 <p>A DND-inspired, high-fantasy tabletop RPG for <strong>ages 5–7</strong> with a cozy Scottish fairy mythological theme.</p>
 <h2>Image-heavy draft</h2>
 <p>This repo is intentionally art-forward:</p>
@@ -43,51 +273,51 @@ hr { border:0; border-top:2px dashed #c7b99b; margin:8mm 0; }
 <li>[Combined Draft](Thistlebright-Adventures-combined.md)</li>
 </ul>
 <h2>Art gallery</h2>
-<img src="../art/generated/04-character-sheet-heroes.png" alt="Hero lineup">
-<img src="../art/generated/03-map-fairy-glen.png" alt="Map">
-<img src="../art/generated/02-bestiary-friendly-creatures.png" alt="Bestiary group">
-<img src="../art/generated/05-fairy-ceilidh-reward-scene.png" alt="Fairy ceilidh">
-<img src="../art/generated/06-dm-guide-token-cards.png" alt="DM tokens">
+<figure class="art-plate tall"><img src="../art/generated/04-character-sheet-heroes.png" alt="Hero lineup"></figure>
+<figure class="art-plate tall"><img src="../art/generated/03-map-fairy-glen.png" alt="Map"></figure>
+<figure class="art-plate"><img src="../art/generated/02-bestiary-friendly-creatures.png" alt="Bestiary group"></figure>
+<figure class="art-plate"><img src="../art/generated/05-fairy-ceilidh-reward-scene.png" alt="Fairy ceilidh"></figure>
+<figure class="art-plate"><img src="../art/generated/06-dm-guide-token-cards.png" alt="DM tokens"></figure>
 <h2>Creature gallery</h2>
 <h3>Scottish Fairy Guide — Ailsa Thistledown</h3>
-<img src="../art/generated/07-creature-ailsa-thistledown.png" alt="Scottish Fairy Guide — Ailsa Thistledown">
+<figure class="art-plate"><img src="../art/generated/07-creature-ailsa-thistledown.png" alt="Scottish Fairy Guide — Ailsa Thistledown"></figure>
 <h3>Brownie of the Hearth</h3>
-<img src="../art/generated/08-creature-brownie-hearth.png" alt="Brownie of the Hearth">
+<figure class="art-plate"><img src="../art/generated/08-creature-brownie-hearth.png" alt="Brownie of the Hearth"></figure>
 <h3>Kelpies of the Loch</h3>
-<img src="../art/generated/09-creature-kelpie-loch.png" alt="Kelpies of the Loch">
+<figure class="art-plate"><img src="../art/generated/09-creature-kelpie-loch.png" alt="Kelpies of the Loch"></figure>
 <h3>Selkie Storykeeper</h3>
-<img src="../art/generated/10-creature-selkie-storykeeper.png" alt="Selkie Storykeeper">
+<figure class="art-plate"><img src="../art/generated/10-creature-selkie-storykeeper.png" alt="Selkie Storykeeper"></figure>
 <h3>Redcap Sproutling</h3>
-<img src="../art/generated/11-creature-redcap-sproutling.png" alt="Redcap Sproutling">
+<figure class="art-plate"><img src="../art/generated/11-creature-redcap-sproutling.png" alt="Redcap Sproutling"></figure>
 <h3>Heather Dragonling</h3>
-<img src="../art/generated/12-creature-heather-dragonling.png" alt="Heather Dragonling">
+<figure class="art-plate"><img src="../art/generated/12-creature-heather-dragonling.png" alt="Heather Dragonling"></figure>
 <h3>Rowan Tree Guardian</h3>
-<img src="../art/generated/13-creature-rowan-tree-guardian.png" alt="Rowan Tree Guardian">
+<figure class="art-plate"><img src="../art/generated/13-creature-rowan-tree-guardian.png" alt="Rowan Tree Guardian"></figure>
 <h3>Cloud Sheep</h3>
-<img src="../art/generated/14-creature-cloud-sheep.png" alt="Cloud Sheep">
+<figure class="art-plate"><img src="../art/generated/14-creature-cloud-sheep.png" alt="Cloud Sheep"></figure>
 <h3>Castle Gargoyle Calf</h3>
-<img src="../art/generated/15-creature-gargoyle-calf.png" alt="Castle Gargoyle Calf">
+<figure class="art-plate"><img src="../art/generated/15-creature-gargoyle-calf.png" alt="Castle Gargoyle Calf"></figure>
 <h3>Bog Bean-Nighe Bubble</h3>
-<img src="../art/generated/16-creature-bean-nighe-bubble.png" alt="Bog Bean-Nighe Bubble">
+<figure class="art-plate"><img src="../art/generated/16-creature-bean-nighe-bubble.png" alt="Bog Bean-Nighe Bubble"></figure>
 <h2>Core mechanic</h2>
 <p>Roll <strong>1d6 + a simple stat</strong>. A total of <strong>5+ succeeds</strong>. On 3–4, success with a silly twist. On 1–2, try a new plan or get help from a friend.</p>
 <h2>Safety / age design</h2>
 <p>No gore, no horror, no permanent death, simple choices, cooperative problem solving, reading-light mechanics, 20–40 minute sessions.</p>
 <h2>More book-like page art</h2>
-<img src="../art/generated/22-book-title-spread.png" alt="Book title spread">
-<img src="../art/generated/17-character-creation-step-by-step.png" alt="Character creation step by step">
-<img src="../art/generated/18-example-hero-mairi.png" alt="Example hero Mairi">
-<img src="../art/generated/19-dice-roll-table-scene.png" alt="Dice roll instructional scene">
-<img src="../art/generated/20-tiny-spells-sparkle-page.png" alt="Tiny spells page">
-<img src="../art/generated/21-first-adventure-bridge.png" alt="First adventure bridge">
+<figure class="art-plate title-art"><img src="../art/generated/22-book-title-spread.png" alt="Book title spread"></figure>
+<figure class="art-plate"><img src="../art/generated/17-character-creation-step-by-step.png" alt="Character creation step by step"></figure>
+<figure class="art-plate"><img src="../art/generated/18-example-hero-mairi.png" alt="Example hero Mairi"></figure>
+<figure class="art-plate"><img src="../art/generated/19-dice-roll-table-scene.png" alt="Dice roll instructional scene"></figure>
+<figure class="art-plate"><img src="../art/generated/20-tiny-spells-sparkle-page.png" alt="Tiny spells page"></figure>
+<figure class="art-plate"><img src="../art/generated/21-first-adventure-bridge.png" alt="First adventure bridge"></figure>
 <h2>Race and class art</h2>
-<img src="../art/generated/23-player-races-kindreds.png" alt="Player races">
-<img src="../art/generated/24-player-classes-paths.png" alt="Player classes">
-<img src="../art/generated/25-race-class-combo-example.png" alt="Race class example">
+<figure class="art-plate"><img src="../art/generated/23-player-races-kindreds.png" alt="Player races"></figure>
+<figure class="art-plate"><img src="../art/generated/24-player-classes-paths.png" alt="Player classes"></figure>
+<figure class="art-plate"><img src="../art/generated/25-race-class-combo-example.png" alt="Race class example"></figure>
 <div class="pagebreak"></div>
 <h1>Book Section: Player Handbook</h1>
 <h1>Thistlebright Adventures — Player Handbook</h1>
-<img src="../art/generated/22-book-title-spread.png" alt="Book title spread">
+<figure class="art-plate title-art"><img src="../art/generated/22-book-title-spread.png" alt="Book title spread"></figure>
 <blockquote><strong>For grown-up helpers:</strong> This chapter is written to be read aloud. Pause at each “Your turn” box and let the child choose, point, draw, or answer with one word. A complete first character should take <strong>5–10 minutes</strong>.</blockquote>
 <h2>Welcome, wee hero</h2>
 <p>You are about to make a brave, clever, kind, quick hero for a fairy-tale adventure. Your hero does not need to be perfect. Your hero only needs three things:</p>
@@ -96,7 +326,7 @@ hr { border:0; border-top:2px dashed #c7b99b; margin:8mm 0; }
 <li>A <strong>way to help</strong>.</li>
 <li>A <strong>little bit of magic or courage</strong>.</li>
 </ol>
-<img src="../art/generated/04-character-sheet-heroes.png" alt="Hero lineup">
+<figure class="art-plate tall"><img src="../art/generated/04-character-sheet-heroes.png" alt="Hero lineup"></figure>
 <hr>
 <h2>Chapter 1 — How the game feels</h2>
 <p>This is a talking, drawing, dice-rolling game. The Guide describes a magical place. You say what your hero tries. Then everyone helps tell what happens next.</p>
@@ -117,7 +347,7 @@ hr { border:0; border-top:2px dashed #c7b99b; margin:8mm 0; }
 </ol>
 <hr>
 <h2>Chapter 2 — The dice rule</h2>
-<img src="../art/generated/19-dice-roll-table-scene.png" alt="Dice rolling scene">
+<figure class="art-plate"><img src="../art/generated/19-dice-roll-table-scene.png" alt="Dice rolling scene"></figure>
 <p>When the Guide says, “That is tricky,” roll one six-sided die.</p>
 <p><strong>Roll 1d6 + one stat.</strong></p>
 <table><thead><tr><th>Total</th><th>What happens</th><th>Say it like this</th></tr></thead><tbody>
@@ -135,7 +365,7 @@ hr { border:0; border-top:2px dashed #c7b99b; margin:8mm 0; }
 </ul>
 <hr>
 <h2>Chapter 3 — Make a hero, step by step</h2>
-<img src="../art/generated/17-character-creation-step-by-step.png" alt="Character creation at the table">
+<figure class="art-plate"><img src="../art/generated/17-character-creation-step-by-step.png" alt="Character creation at the table"></figure>
 <p>In Thistlebright, a character has both a <strong>race</strong> and a <strong>class</strong>.</p>
 <ul>
 <li>Your <strong>race</strong> says what kind of fairy-tale person you are.</li>
@@ -144,8 +374,10 @@ hr { border:0; border-top:2px dashed #c7b99b; margin:8mm 0; }
 <p>For ages 5–7, keep it simple: <strong>pick one race, pick one class, then choose your numbers.</strong></p>
 <hr>
 <h3>Step 1: Pick your race — your fairy-tale people</h3>
-<img src="../art/generated/23-player-races-kindreds.png" alt="Player races / kindreds">
+<figure class="art-plate"><img src="../art/generated/23-player-races-kindreds.png" alt="Player races / kindreds"></figure>
 <p>These are also called <strong>kindreds</strong> in the glen. Pick the one that sounds fun. Races do <strong>not</strong> make anyone better or worse. They give a tiny story gift and a way to imagine your hero.</p>
+<section class="profile-card race-card">
+<img src="../art/generated/26-race-human-glenfolk.png" alt="Human Glenfolk">
 <h4>Human Glenfolk</h4>
 <p>Curious children from villages, farms, islands, castles, and cozy cottages near the fairy roads.</p>
 <ul>
@@ -153,6 +385,9 @@ hr { border:0; border-top:2px dashed #c7b99b; margin:8mm 0; }
 <li><strong>Tiny gift:</strong> Once per adventure, ask a grown-up, old sign, or village memory for a clue.</li>
 <li><strong>Good for players who want:</strong> a familiar hero stepping into magic.</li>
 </ul>
+</section>
+<section class="profile-card race-card">
+<img src="../art/generated/27-race-fairy-touched.png" alt="Fairy-Touched">
 <h4>Fairy-Touched</h4>
 <p>Children with a little fairy sparkle: bright eyes, tiny wing-glimmers, or hair that floats when music plays.</p>
 <ul>
@@ -160,6 +395,9 @@ hr { border:0; border-top:2px dashed #c7b99b; margin:8mm 0; }
 <li><strong>Tiny gift:</strong> Once per scene, notice nearby fairy magic.</li>
 <li><strong>Good for players who want:</strong> sparkles, secrets, and fairy manners.</li>
 </ul>
+</section>
+<section class="profile-card race-card">
+<img src="../art/generated/28-race-brownie-kin.png" alt="Brownie-Kin">
 <h4>Brownie-Kin</h4>
 <p>Helpful wee folk who love fixing, tidying, baking, building, and making useful things.</p>
 <ul>
@@ -167,6 +405,9 @@ hr { border:0; border-top:2px dashed #c7b99b; margin:8mm 0; }
 <li><strong>Tiny gift:</strong> Once per scene, repair, tidy, or improve one small thing.</li>
 <li><strong>Good for players who want:</strong> practical problem-solving.</li>
 </ul>
+</section>
+<section class="profile-card race-card">
+<img src="../art/generated/29-race-selkie-born.png" alt="Selkie-Born">
 <h4>Selkie-Born</h4>
 <p>Gentle sea-hearted heroes with a soft seal-cloak, shell songs, or dreams of moonlit waves.</p>
 <ul>
@@ -174,6 +415,9 @@ hr { border:0; border-top:2px dashed #c7b99b; margin:8mm 0; }
 <li><strong>Tiny gift:</strong> Once per scene, understand water, weather, or a sad feeling.</li>
 <li><strong>Good for players who want:</strong> calm, kindness, and loch magic.</li>
 </ul>
+</section>
+<section class="profile-card race-card">
+<img src="../art/generated/30-race-rowan-kin.png" alt="Rowan-Kin">
 <h4>Rowan-Kin</h4>
 <p>Forest friends watched over by rowan trees, moss, birds, and old promises.</p>
 <ul>
@@ -181,6 +425,9 @@ hr { border:0; border-top:2px dashed #c7b99b; margin:8mm 0; }
 <li><strong>Tiny gift:</strong> Once per scene, ask a plant, tree, or bird for a small hint.</li>
 <li><strong>Good for players who want:</strong> nature, guardianship, and gentle wisdom.</li>
 </ul>
+</section>
+<section class="profile-card race-card">
+<img src="../art/generated/31-race-dragon-friend.png" alt="Dragon-Friend">
 <h4>Dragon-Friend</h4>
 <p>A child blessed by a tiny friendly dragon: warm hands, smoke-ring giggles, or shiny scale freckles.</p>
 <ul>
@@ -188,11 +435,14 @@ hr { border:0; border-top:2px dashed #c7b99b; margin:8mm 0; }
 <li><strong>Tiny gift:</strong> Once per adventure, make a little warm puff that dries, warms, or lights something safely.</li>
 <li><strong>Good for players who want:</strong> brave wonder without scary fire.</li>
 </ul>
+</section>
 <blockquote><strong>Your turn:</strong> Point to one race. Say, “I am a ______.”</blockquote>
 <hr>
 <h3>Step 2: Pick your class — your adventure job</h3>
-<img src="../art/generated/24-player-classes-paths.png" alt="Player classes / adventure paths">
+<figure class="art-plate"><img src="../art/generated/24-player-classes-paths.png" alt="Player classes / adventure paths"></figure>
 <p>Your class is what you do when adventure starts. It gives you one bigger <strong>class gift</strong>.</p>
+<section class="class-card">
+<img src="../art/generated/32-class-thistle-knight.png" alt="Thistle Knight">
 <h4>Thistle Knight</h4>
 <p>A tiny knight with a big heart.</p>
 <ul>
@@ -201,6 +451,10 @@ hr { border:0; border-top:2px dashed #c7b99b; margin:8mm 0; }
 <li><strong>Starting item:</strong> soft wooden shield.</li>
 <li><strong>Good name ideas:</strong> Rowan, Tam, Isla Shieldbutton.</li>
 </ul>
+<div class="spell-block"><p class="spell-title">Abilities / spells</p><ul><li><strong>Shield of Thistles:</strong> Give a friend +1 when you protect them.</li><li><strong>Brave Step:</strong> Cross one scary-but-safe obstacle first so friends feel better.</li><li><strong>Kind Challenge:</strong> Ask a grumpy creature for a fair contest instead of a fight.</li><li><strong>Lantern Guard:</strong> Spend a charm to make a scene gentler for everyone.</li></ul></div>
+</section>
+<section class="class-card">
+<img src="../art/generated/33-class-glen-wizard.png" alt="Glen Wizard">
 <h4>Glen Wizard</h4>
 <p>A young spell-speaker who knows rhyme-magic.</p>
 <ul>
@@ -209,6 +463,10 @@ hr { border:0; border-top:2px dashed #c7b99b; margin:8mm 0; }
 <li><strong>Starting item:</strong> pebble wand.</li>
 <li><strong>Good name ideas:</strong> Skye, Eilidh, Pip Pebblewand.</li>
 </ul>
+<div class="spell-block"><p class="spell-title">Abilities / spells</p><ul><li><strong>Glowbug Light:</strong> Make a soft light that shows clues.</li><li><strong>Pebble Ping:</strong> Your wand gently points toward nearby magic.</li><li><strong>Rhyme Reminder:</strong> Say a silly rhyme to remember an old fairy rule.</li><li><strong>Sparkle Signal:</strong> Spend a charm to send a safe sparkle message to a friend.</li></ul></div>
+</section>
+<section class="class-card">
+<img src="../art/generated/34-class-loch-scout.png" alt="Loch Scout">
 <h4>Loch Scout</h4>
 <p>A fast explorer who knows paths and animal tracks.</p>
 <ul>
@@ -217,6 +475,10 @@ hr { border:0; border-top:2px dashed #c7b99b; margin:8mm 0; }
 <li><strong>Starting item:</strong> ribbon map.</li>
 <li><strong>Good name ideas:</strong> Mairi, Finlay, Nessa Map-Button.</li>
 </ul>
+<div class="spell-block"><p class="spell-title">Abilities / spells</p><ul><li><strong>Ribbon Map:</strong> Ask one question about where a path goes.</li><li><strong>Quiet Boots:</strong> Move gently without startling a creature.</li><li><strong>Stepping-Stone Hop:</strong> Give yourself +1 when balancing, climbing, or crossing.</li><li><strong>Trail Friend:</strong> Spend a charm to help the whole group follow you safely.</li></ul></div>
+</section>
+<section class="class-card">
+<img src="../art/generated/35-class-hearth-bard.png" alt="Hearth Bard">
 <h4>Hearth Bard</h4>
 <p>A singer, dancer, joker, and friend-maker.</p>
 <ul>
@@ -225,6 +487,10 @@ hr { border:0; border-top:2px dashed #c7b99b; margin:8mm 0; }
 <li><strong>Starting item:</strong> tiny bell or whistle.</li>
 <li><strong>Good name ideas:</strong> Brodie, Callum, Heather Bell.</li>
 </ul>
+<div class="spell-block"><p class="spell-title">Abilities / spells</p><ul><li><strong>Ceilidh Beat:</strong> Start a rhythm that helps everyone move together.</li><li><strong>Giggle Verse:</strong> Turn one grumpy sentence into a silly one.</li><li><strong>Warm Welcome:</strong> Give a shy NPC a reason to talk.</li><li><strong>Encore Help:</strong> Spend a charm to let a friend reroll after you cheer them on.</li></ul></div>
+</section>
+<section class="class-card">
+<img src="../art/generated/36-class-fairy-friend.png" alt="Fairy Friend">
 <h4>Fairy Friend</h4>
 <p>A child-sized friend of the fairy courts.</p>
 <ul>
@@ -233,6 +499,8 @@ hr { border:0; border-top:2px dashed #c7b99b; margin:8mm 0; }
 <li><strong>Starting item:</strong> acorn cup.</li>
 <li><strong>Good name ideas:</strong> Ailsa, Lorna, Thistle Pip.</li>
 </ul>
+<div class="spell-block"><p class="spell-title">Abilities / spells</p><ul><li><strong>Acorn Cup:</strong> Offer a tiny gift and ask for fairy hospitality.</li><li><strong>Heather Hello:</strong> Flowers wave toward a friendly creature.</li><li><strong>Polite Promise:</strong> Make a simple promise that opens a fairy door or path.</li><li><strong>Mushroom Messenger:</strong> Spend a charm to ask a mushroom, beetle, or breeze for help.</li></ul></div>
+</section>
 <blockquote><strong>Your turn:</strong> Point to one class. Say, “My job is ______.”</blockquote>
 <hr>
 <h3>Step 3: Put race + class together</h3>
@@ -247,7 +515,7 @@ hr { border:0; border-top:2px dashed #c7b99b; margin:8mm 0; }
 <li>Rowan-Kin Fairy Friend</li>
 <li>Dragon-Friend Thistle Knight</li>
 </ul>
-<img src="../art/generated/25-race-class-combo-example.png" alt="Race and class example hero">
+<figure class="art-plate"><img src="../art/generated/25-race-class-combo-example.png" alt="Race and class example hero"></figure>
 <h3>Step 4: Pick your numbers</h3>
 <p>Write these numbers next to your stats:</p>
 <p><strong>+2, +1, +1, +0</strong></p>
@@ -287,7 +555,7 @@ hr { border:0; border-top:2px dashed #c7b99b; margin:8mm 0; }
 </ul>
 <hr>
 <h2>Chapter 4 — Full example character creation</h2>
-<img src="../art/generated/18-example-hero-mairi.png" alt="Example hero Mairi Map-Button">
+<figure class="art-plate"><img src="../art/generated/18-example-hero-mairi.png" alt="Example hero Mairi Map-Button"></figure>
 <p>Here is a complete example you can copy before making your own.</p>
 <h3>Meet Mairi Map-Button</h3>
 <p><strong>Grown-up:</strong> “What kind of hero sounds fun?”</p>
@@ -349,7 +617,7 @@ hr { border:0; border-top:2px dashed #c7b99b; margin:8mm 0; }
 <p>Then spend 1 charm to give your friend <strong>+1</strong>. If the roll still does not work, everyone learns something useful and tries a new idea.</p>
 <hr>
 <h2>Chapter 6 — Tiny spells</h2>
-<img src="../art/generated/20-tiny-spells-sparkle-page.png" alt="Tiny spell page">
+<figure class="art-plate"><img src="../art/generated/20-tiny-spells-sparkle-page.png" alt="Tiny spell page"></figure>
 <p>Tiny spells never hurt anyone and never solve a whole adventure by themselves. They are best for making clues easier to see, cheering someone up, decorating a scene, or doing one small impossible thing.</p>
 <table><thead><tr><th>Spell</th><th>What it does</th></tr></thead><tbody>
 <tr><td><strong>Glowbug Light</strong></td><td>A soft glow floats near your hand.</td></tr>
@@ -365,7 +633,7 @@ hr { border:0; border-top:2px dashed #c7b99b; margin:8mm 0; }
 </tbody></table>
 <hr>
 <h2>Chapter 7 — Example play scene</h2>
-<img src="../art/generated/21-first-adventure-bridge.png" alt="First adventure bridge scene">
+<figure class="art-plate"><img src="../art/generated/21-first-adventure-bridge.png" alt="First adventure bridge scene"></figure>
 <p><strong>Guide:</strong> “The bridge is guarded by a sleepy troll who lost his lullaby.”</p>
 <p><strong>Player:</strong> “I sing him a soft song.”</p>
 <p><strong>Guide:</strong> “That sounds Kind. Roll one die and add Kind.”</p>
@@ -391,7 +659,7 @@ hr { border:0; border-top:2px dashed #c7b99b; margin:8mm 0; }
 <div class="pagebreak"></div>
 <h1>Book Section: Player Races and Classes</h1>
 <h1>Player Races and Classes Quick Reference</h1>
-<img src="../art/generated/23-player-races-kindreds.png" alt="Player races">
+<figure class="art-plate"><img src="../art/generated/23-player-races-kindreds.png" alt="Player races"></figure>
 <h2>Races / Kindreds</h2>
 <table><thead><tr><th>Race</th><th>Tiny story gift</th><th>Visual idea</th></tr></thead><tbody>
 <tr><td>Human Glenfolk</td><td>Once per adventure, ask a grown-up, old sign, or village memory for a clue.</td><td>tartan scarf, muddy boots, pockets full of treasures</td></tr>
@@ -401,7 +669,7 @@ hr { border:0; border-top:2px dashed #c7b99b; margin:8mm 0; }
 <tr><td>Rowan-Kin</td><td>Once per scene, ask a plant, tree, or bird for a small hint.</td><td>leaf crown, berry beads, mossy boots</td></tr>
 <tr><td>Dragon-Friend</td><td>Once per adventure, make a little warm puff that dries, warms, or lights something safely.</td><td>scale freckles, warm scarf, smoky sparkles</td></tr>
 </tbody></table>
-<img src="../art/generated/24-player-classes-paths.png" alt="Player classes">
+<figure class="art-plate"><img src="../art/generated/24-player-classes-paths.png" alt="Player classes"></figure>
 <h2>Classes / Paths</h2>
 <table><thead><tr><th>Class</th><th>Best stat</th><th>Class gift</th><th>Starting item</th></tr></thead><tbody>
 <tr><td>Thistle Knight</td><td>Brave</td><td>Once per adventure, stand in front of danger and make it safe.</td><td>soft wooden shield</td></tr>
@@ -421,7 +689,7 @@ hr { border:0; border-top:2px dashed #c7b99b; margin:8mm 0; }
 <div class="pagebreak"></div>
 <h1>Book Section: Blank Character Sheet</h1>
 <h1>Thistlebright Adventures — Character Sheet</h1>
-<img src="../art/generated/04-character-sheet-heroes.png" alt="Hero inspiration">
+<figure class="art-plate tall"><img src="../art/generated/04-character-sheet-heroes.png" alt="Hero inspiration"></figure>
 <p><strong>Hero Name:</strong> ___________________________</p>
 <p><strong>Player:</strong> ______________________________</p>
 <p><strong>Race / Kindred:</strong> ☐ Human Glenfolk ☐ Fairy-Touched ☐ Brownie-Kin ☐ Selkie-Born ☐ Rowan-Kin ☐ Dragon-Friend</p>
@@ -453,7 +721,7 @@ hr { border:0; border-top:2px dashed #c7b99b; margin:8mm 0; }
 <div class="pagebreak"></div>
 <h1>Book Section: Example Character</h1>
 <h1>Example Character Sheet — Mairi Map-Button</h1>
-<img src="../art/generated/25-race-class-combo-example.png" alt="Mairi Map-Button">
+<figure class="art-plate"><img src="../art/generated/25-race-class-combo-example.png" alt="Mairi Map-Button"></figure>
 <p><strong>Hero Name:</strong> Mairi Map-Button</p>
 <p><strong>Player:</strong> Example Player</p>
 <p><strong>Race / Kindred:</strong> Selkie-Born</p>
@@ -535,7 +803,7 @@ hr { border:0; border-top:2px dashed #c7b99b; margin:8mm 0; }
 <hr>
 <h2>Print-and-play Guide cards</h2>
 <p>Use these as quick table reminders. Cut them into cards or copy them onto index cards.</p>
-<img src="../art/generated/06-dm-guide-token-cards.png" alt="Guide token cards and cozy table scene">
+<figure class="art-plate"><img src="../art/generated/06-dm-guide-token-cards.png" alt="Guide token cards and cozy table scene"></figure>
 <h3>Stat reminder cards</h3>
 <table><thead><tr><th>Card</th><th>Say to the child</th><th>Good for</th></tr></thead><tbody>
 <tr><td><strong>Brave</strong></td><td>“You try something hard or stand up for a friend.”</td><td>climbing, protecting, facing a noisy-but-safe surprise</td></tr>
@@ -581,11 +849,12 @@ hr { border:0; border-top:2px dashed #c7b99b; margin:8mm 0; }
 <div class="pagebreak"></div>
 <h1>Book Section: Image-Heavy Bestiary</h1>
 <h1>Thistlebright Adventures — Image-Heavy Bestiary</h1>
-<img src="../art/generated/02-bestiary-friendly-creatures.png" alt="Friendly bestiary group">
+<figure class="art-plate"><img src="../art/generated/02-bestiary-friendly-creatures.png" alt="Friendly bestiary group"></figure>
 <p>Every creature has a dedicated picture, a kid-safe role, and at least three non-combat ways to interact.</p>
 <hr>
+<section class="creature-card">
 <h2>Scottish Fairy Guide — Ailsa Thistledown</h2>
-<img src="../art/generated/07-creature-ailsa-thistledown.png" alt="Scottish Fairy Guide — Ailsa Thistledown">
+<figure class="art-plate"><img src="../art/generated/07-creature-ailsa-thistledown.png" alt="Scottish Fairy Guide — Ailsa Thistledown"></figure>
 <ul>
 <li><strong>Mood:</strong> Sparkly, bossy in a friendly way.</li>
 <li><strong>Wants:</strong> Brave children to help fix fairy mishaps.</li>
@@ -599,9 +868,11 @@ hr { border:0; border-top:2px dashed #c7b99b; margin:8mm 0; }
 <li><strong>Clever:</strong> Notice a clue, solve a pattern, or remember a fairy tale.</li>
 <li><strong>Brave/Quick:</strong> Protect a friend, climb carefully, race, or distract with silliness.</li>
 </ul>
+</section>
 <hr>
+<section class="creature-card">
 <h2>Brownie of the Hearth</h2>
-<img src="../art/generated/08-creature-brownie-hearth.png" alt="Brownie of the Hearth">
+<figure class="art-plate"><img src="../art/generated/08-creature-brownie-hearth.png" alt="Brownie of the Hearth"></figure>
 <ul>
 <li><strong>Mood:</strong> Hardworking, proud, flour on nose.</li>
 <li><strong>Wants:</strong> A tidy home and a thank-you.</li>
@@ -615,9 +886,11 @@ hr { border:0; border-top:2px dashed #c7b99b; margin:8mm 0; }
 <li><strong>Clever:</strong> Notice a clue, solve a pattern, or remember a fairy tale.</li>
 <li><strong>Brave/Quick:</strong> Protect a friend, climb carefully, race, or distract with silliness.</li>
 </ul>
+</section>
 <hr>
+<section class="creature-card">
 <h2>Kelpies of the Loch</h2>
-<img src="../art/generated/09-creature-kelpie-loch.png" alt="Kelpies of the Loch">
+<figure class="art-plate"><img src="../art/generated/09-creature-kelpie-loch.png" alt="Kelpies of the Loch"></figure>
 <ul>
 <li><strong>Mood:</strong> Splashy, musical, mischievous.</li>
 <li><strong>Wants:</strong> Someone to solve their water-riddle.</li>
@@ -631,9 +904,11 @@ hr { border:0; border-top:2px dashed #c7b99b; margin:8mm 0; }
 <li><strong>Clever:</strong> Notice a clue, solve a pattern, or remember a fairy tale.</li>
 <li><strong>Brave/Quick:</strong> Protect a friend, climb carefully, race, or distract with silliness.</li>
 </ul>
+</section>
 <hr>
+<section class="creature-card">
 <h2>Selkie Storykeeper</h2>
-<img src="../art/generated/10-creature-selkie-storykeeper.png" alt="Selkie Storykeeper">
+<figure class="art-plate"><img src="../art/generated/10-creature-selkie-storykeeper.png" alt="Selkie Storykeeper"></figure>
 <ul>
 <li><strong>Mood:</strong> Gentle, wise, dreamy.</li>
 <li><strong>Wants:</strong> Lost stories returned to the sea library.</li>
@@ -647,9 +922,11 @@ hr { border:0; border-top:2px dashed #c7b99b; margin:8mm 0; }
 <li><strong>Clever:</strong> Notice a clue, solve a pattern, or remember a fairy tale.</li>
 <li><strong>Brave/Quick:</strong> Protect a friend, climb carefully, race, or distract with silliness.</li>
 </ul>
+</section>
 <hr>
+<section class="creature-card">
 <h2>Redcap Sproutling</h2>
-<img src="../art/generated/11-creature-redcap-sproutling.png" alt="Redcap Sproutling">
+<figure class="art-plate"><img src="../art/generated/11-creature-redcap-sproutling.png" alt="Redcap Sproutling"></figure>
 <ul>
 <li><strong>Mood:</strong> Grumpy but tiny.</li>
 <li><strong>Wants:</strong> To look frightening, but mostly wants lunch.</li>
@@ -663,9 +940,11 @@ hr { border:0; border-top:2px dashed #c7b99b; margin:8mm 0; }
 <li><strong>Clever:</strong> Notice a clue, solve a pattern, or remember a fairy tale.</li>
 <li><strong>Brave/Quick:</strong> Protect a friend, climb carefully, race, or distract with silliness.</li>
 </ul>
+</section>
 <hr>
+<section class="creature-card">
 <h2>Heather Dragonling</h2>
-<img src="../art/generated/12-creature-heather-dragonling.png" alt="Heather Dragonling">
+<figure class="art-plate"><img src="../art/generated/12-creature-heather-dragonling.png" alt="Heather Dragonling"></figure>
 <ul>
 <li><strong>Mood:</strong> Proud, sneezy, lonely.</li>
 <li><strong>Wants:</strong> A warm cave and friends who are not scared.</li>
@@ -679,9 +958,11 @@ hr { border:0; border-top:2px dashed #c7b99b; margin:8mm 0; }
 <li><strong>Clever:</strong> Notice a clue, solve a pattern, or remember a fairy tale.</li>
 <li><strong>Brave/Quick:</strong> Protect a friend, climb carefully, race, or distract with silliness.</li>
 </ul>
+</section>
 <hr>
+<section class="creature-card">
 <h2>Rowan Tree Guardian</h2>
-<img src="../art/generated/13-creature-rowan-tree-guardian.png" alt="Rowan Tree Guardian">
+<figure class="art-plate"><img src="../art/generated/13-creature-rowan-tree-guardian.png" alt="Rowan Tree Guardian"></figure>
 <ul>
 <li><strong>Mood:</strong> Slow, ancient, protective.</li>
 <li><strong>Wants:</strong> Children to respect the forest.</li>
@@ -695,9 +976,11 @@ hr { border:0; border-top:2px dashed #c7b99b; margin:8mm 0; }
 <li><strong>Clever:</strong> Notice a clue, solve a pattern, or remember a fairy tale.</li>
 <li><strong>Brave/Quick:</strong> Protect a friend, climb carefully, race, or distract with silliness.</li>
 </ul>
+</section>
 <hr>
+<section class="creature-card">
 <h2>Cloud Sheep</h2>
-<img src="../art/generated/14-creature-cloud-sheep.png" alt="Cloud Sheep">
+<figure class="art-plate"><img src="../art/generated/14-creature-cloud-sheep.png" alt="Cloud Sheep"></figure>
 <ul>
 <li><strong>Mood:</strong> Fluffy, forgetful, floaty.</li>
 <li><strong>Wants:</strong> To find the sky pasture.</li>
@@ -711,9 +994,11 @@ hr { border:0; border-top:2px dashed #c7b99b; margin:8mm 0; }
 <li><strong>Clever:</strong> Notice a clue, solve a pattern, or remember a fairy tale.</li>
 <li><strong>Brave/Quick:</strong> Protect a friend, climb carefully, race, or distract with silliness.</li>
 </ul>
+</section>
 <hr>
+<section class="creature-card">
 <h2>Castle Gargoyle Calf</h2>
-<img src="../art/generated/15-creature-gargoyle-calf.png" alt="Castle Gargoyle Calf">
+<figure class="art-plate"><img src="../art/generated/15-creature-gargoyle-calf.png" alt="Castle Gargoyle Calf"></figure>
 <ul>
 <li><strong>Mood:</strong> Shy stone puppy energy.</li>
 <li><strong>Wants:</strong> To learn how to be a proper gargoyle.</li>
@@ -727,9 +1012,11 @@ hr { border:0; border-top:2px dashed #c7b99b; margin:8mm 0; }
 <li><strong>Clever:</strong> Notice a clue, solve a pattern, or remember a fairy tale.</li>
 <li><strong>Brave/Quick:</strong> Protect a friend, climb carefully, race, or distract with silliness.</li>
 </ul>
+</section>
 <hr>
+<section class="creature-card">
 <h2>Bog Bean-Nighe Bubble</h2>
-<img src="../art/generated/16-creature-bean-nighe-bubble.png" alt="Bog Bean-Nighe Bubble">
+<figure class="art-plate"><img src="../art/generated/16-creature-bean-nighe-bubble.png" alt="Bog Bean-Nighe Bubble"></figure>
 <ul>
 <li><strong>Mood:</strong> Very dramatic washer spirit, but child-safe.</li>
 <li><strong>Wants:</strong> Clean socks for the fairy ball.</li>
@@ -743,10 +1030,11 @@ hr { border:0; border-top:2px dashed #c7b99b; margin:8mm 0; }
 <li><strong>Clever:</strong> Notice a clue, solve a pattern, or remember a fairy tale.</li>
 <li><strong>Brave/Quick:</strong> Protect a friend, climb carefully, race, or distract with silliness.</li>
 </ul>
+</section>
 <div class="pagebreak"></div>
 <h1>Book Section: Example Campaigns</h1>
 <h1>Thistlebright Adventures — Example Campaigns</h1>
-<img src="../art/generated/03-map-fairy-glen.png" alt="Map of Thistlebright Glen">
+<figure class="art-plate tall"><img src="../art/generated/03-map-fairy-glen.png" alt="Map of Thistlebright Glen"></figure>
 <h2>Campaign 1: The Missing Moon-Muffins</h2>
 <p><strong>Length:</strong> 3 short sessions.</p>
 <p><strong>Premise:</strong> Ailsa Thistledown baked moon-muffins for the fairy ceilidh, but they floated away.</p>
@@ -952,7 +1240,7 @@ hr { border:0; border-top:2px dashed #c7b99b; margin:8mm 0; }
 </tbody></table>
 <hr>
 <h2>Celebration Art</h2>
-<img src="../art/generated/05-fairy-ceilidh-reward-scene.png" alt="Fairy ceilidh reward scene">
+<figure class="art-plate"><img src="../art/generated/05-fairy-ceilidh-reward-scene.png" alt="Fairy ceilidh reward scene"></figure>
 <div class="pagebreak"></div>
 <h1>Book Section: Quick Reference Cards</h1>
 <h1>Thistlebright Adventures — Quick Reference Cards</h1>
@@ -1101,7 +1389,7 @@ hr { border:0; border-top:2px dashed #c7b99b; margin:8mm 0; }
 <div class="pagebreak"></div>
 <h1>Book Section: Guide Session Sheet</h1>
 <h1>Thistlebright Adventures — Guide Session Sheet</h1>
-<img src="../art/generated/06-dm-guide-token-cards.png" alt="Guide token inspiration">
+<figure class="art-plate"><img src="../art/generated/06-dm-guide-token-cards.png" alt="Guide token inspiration"></figure>
 <p><strong>Adventure:</strong> ___________________________</p>
 <p><strong>Date:</strong> ________________________________</p>
 <h2>Heroes</h2>
@@ -1131,4 +1419,4 @@ hr { border:0; border-top:2px dashed #c7b99b; margin:8mm 0; }
 </ul>
 <h2>Rewards</h2>
 <p>____________________________________________________</p>
-<div class="pagebreak"></div></body></html>
+<div class="pagebreak"></div></main></body></html>

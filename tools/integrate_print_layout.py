@@ -1,5 +1,20 @@
-<!doctype html><html><head><meta charset="utf-8"><title>Dungeon Master Guide</title><style>
+#!/usr/bin/env python3
+"""Rebuild printable A4 HTML with integrated, layered artwork.
 
+The earlier printables treated images as standalone blocks, which made them split
+across page boundaries in browser print previews. This post-processes the HTML
+into more D&D-style parchment pages: framed art panels, text-wrapped profile
+cards, class ability boxes, and explicit print break rules.
+"""
+from __future__ import annotations
+
+from pathlib import Path
+import re
+
+ROOT = Path(__file__).resolve().parents[1]
+PRINT_DIR = ROOT / "printable-a4"
+
+CSS = r'''
 @page { size: A4 portrait; margin: 12mm 11mm 14mm; }
 * { box-sizing: border-box; }
 :root {
@@ -243,100 +258,101 @@ figure.art-plate.tall img { max-height:112mm; object-fit:contain; background:#f7
   a { color:inherit; text-decoration:none; }
   figure.art-plate, .profile-card, .class-card, blockquote, table { break-inside:avoid-page; page-break-inside:avoid; }
 }
+'''
 
-</style></head><body><main class="book"><h1>Thistlebright Adventures — Dungeon Master Guide</h1>
-<blockquote class="layout-note"><strong>Print note:</strong> This A4 edition uses layered parchment panels. Artwork is anchored to its text block so race/class portraits and scene art should not split across printed pages.</blockquote>
-<h2>Your job as Guide</h2>
-<p>You are not trying to beat the children. You are helping them feel brave, clever, and kind. Keep the pace quick, the choices clear, and the tone magical.</p>
-<h2>Session length</h2>
-<p>For ages 5–7, aim for <strong>20–40 minutes</strong>.</p>
-<p>Use this structure:</p>
-<ol>
-<li><strong>Wonder:</strong> show a magical place.</li>
-<li><strong>Problem:</strong> someone needs help.</li>
-<li><strong>Three scenes:</strong> clue, obstacle, choice.</li>
-<li><strong>Happy ending:</strong> celebrate and give a sticker/title/treasure.</li>
-</ol>
-<h2>Kid-safe stakes</h2>
-<p>Use lost things, mixed-up magic, grumpy creatures, riddles, weather trouble, broken bridges, and missing songs.</p>
-<p>Avoid graphic injury, hopelessness, betrayal by trusted adults, punishing curiosity, and long tactical combat.</p>
-<h2>The “Lantern” safety word</h2>
-<p>If a child says <strong>Lantern</strong>, immediately soften the scene. Example: “The dragon is not angry; it has hiccups and needs help.”</p>
-<h2>Building encounters</h2>
-<p>Every encounter should have at least three solutions:</p>
-<ul>
-<li><strong>Kind:</strong> comfort, negotiate, share.</li>
-<li><strong>Clever:</strong> solve a riddle, spot a clue.</li>
-<li><strong>Brave/Quick:</strong> climb, run, distract, protect.</li>
-</ul>
-<h2>Gentle conflict goals</h2>
-<p>Calm it, help it, outwit it, return what was lost, or make a fair trade.</p>
-<h2>Rewards</h2>
-<p>Use story rewards, not power creep: title, tiny treasure, helper, or a new place opens on the map.</p>
-<h2>Running high fantasy for small children</h2>
-<ul>
-<li>One big image per scene.</li>
-<li>One problem at a time.</li>
-<li>Repeat important clues three times.</li>
-<li>Let kids invent solutions. Say “yes, and” often.</li>
-</ul>
-<h2>Quick NPC voices</h2>
-<ul>
-<li>Scottish fairy: bright, playful, “Och, wee hero!”</li>
-<li>Brownie: busy, practical, loves tidy kitchens.</li>
-<li>Kelpies: musical, splashy, likes riddles.</li>
-<li>Dragon: booming but polite, sneezes smoke-rings.</li>
-</ul>
-<h2>Example scene template</h2>
-<p><strong>Place:</strong> Misty stepping stones over a silver burn.</p>
-<p><strong>Need:</strong> A fairy courier dropped moon-mail.</p>
-<p><strong>Obstacle:</strong> Stones move when nobody says please.</p>
-<p><strong>Clues:</strong> Wet envelopes, giggling reeds, hoofprints.</p>
-<p><strong>Solutions:</strong> Ask reeds kindly, leap quickly, sing to stones.</p>
-<p><strong>Reward:</strong> A moon-stamp that glows near secrets.</p>
-<hr>
-<h2>Print-and-play Guide cards</h2>
-<p>Use these as quick table reminders. Cut them into cards or copy them onto index cards.</p>
-<figure class="art-plate"><img src="../art/generated/06-dm-guide-token-cards.png" alt="Guide token cards and cozy table scene"></figure>
-<h3>Stat reminder cards</h3>
-<table><thead><tr><th>Card</th><th>Say to the child</th><th>Good for</th></tr></thead><tbody>
-<tr><td><strong>Brave</strong></td><td>“You try something hard or stand up for a friend.”</td><td>climbing, protecting, facing a noisy-but-safe surprise</td></tr>
-<tr><td><strong>Clever</strong></td><td>“You notice clues or make a plan.”</td><td>riddles, maps, remembering fairy stories</td></tr>
-<tr><td><strong>Kind</strong></td><td>“You help someone feel better.”</td><td>calming, sharing, apologising, inviting</td></tr>
-<tr><td><strong>Quick</strong></td><td>“You move fast or carefully.”</td><td>catching, sneaking, balancing, racing</td></tr>
-</tbody></table>
-<h3>Charm tokens</h3>
-<p>Give each hero 3 small tokens (buttons, shells, beads, or paper thistles). A hero may spend one to:</p>
-<ul>
-<li>reroll a die;</li>
-<li>add <strong>+1</strong> to a friend’s roll after saying how they help;</li>
-<li>ask for one gentle clue;</li>
-<li>make a scene softer by holding up the <strong>Lantern</strong> card.</li>
-</ul>
-<h3>Twist cards for 3–4 results</h3>
-<p>When a roll is almost there, let the player pick or roll 1d6:</p>
-<ol>
-<li>Your socks squeak loudly.</li>
-<li>A tiny fairy starts narrating everything you do.</li>
-<li>A tartan ribbon ties itself into a bow on your hat.</li>
-<li>You succeed, but the clue is covered in biscuit crumbs.</li>
-<li>A cloud sheep follows you for the rest of the scene.</li>
-<li>Everyone must do one silly dance step before moving on.</li>
-</ol>
-<h3>“Not yet” cards for 1–2 results</h3>
-<p>Avoid saying “you fail.” Try one of these:</p>
-<ul>
-<li>“Not yet — who can help you?”</li>
-<li>“That way is wobbly. What is a kinder or cleverer way?”</li>
-<li>“You learn one useful thing, but need a new plan.”</li>
-<li>“A funny complication appears; it is safe, just inconvenient.”</li>
-</ul>
-<h3>Table comfort checklist</h3>
-<p>Before play, prepare:</p>
-<ul>
-<li>dice that are easy to see;</li>
-<li>pencils and blank spaces for drawing;</li>
-<li>one visible <strong>Lantern</strong> card;</li>
-<li>a 5-minute wiggle break option;</li>
-<li>a promise that every ending is safe, warm, and celebratory.</li>
-</ul></main></body></html>
+RACE_NAMES = [
+    "Human Glenfolk", "Fairy-Touched", "Brownie-Kin", "Selkie-Born", "Rowan-Kin", "Dragon-Friend"
+]
+CLASS_NAMES = ["Thistle Knight", "Glen Wizard", "Loch Scout", "Hearth Bard", "Fairy Friend"]
+
+STYLE_RE = re.compile(r"<style>.*?</style>", re.S)
+IMG_RE = re.compile(r'<img src="([^"]+)" alt="([^"]*)">')
+
+
+def replace_css(text: str) -> str:
+    text = STYLE_RE.sub('<style>\n' + CSS + '\n</style>', text, count=1)
+    text = text.replace('<body>', '<body><main class="book">')
+    text = text.replace('</body>', '</main></body>')
+    return text
+
+
+def wrap_standalone_images(text: str) -> str:
+    # Wrap every remaining plain image. Profile transforms run first; after wrapping,
+    # we immediately unwrap any portrait that is the first child of a profile/class
+    # section so CSS can layer it as a side plate rather than a separate figure.
+    def repl(m):
+        src, alt = m.group(1), m.group(2)
+        cls = 'art-plate title-art' if 'title' in src or 'cover' in src or 'book-title' in src else 'art-plate'
+        if 'sheet' in src or 'map' in src:
+            cls += ' tall'
+        return f'<figure class="{cls}"><img src="{src}" alt="{alt}"></figure>'
+    text = IMG_RE.sub(repl, text)
+    text = re.sub(r'(<section class="(?:profile-card race-card|class-card)">\s*)<figure class="art-plate(?: [^"]*)?"><img ([^>]+)></figure>', r'\1<img \2>', text)
+    return text
+
+
+def profile_pattern(name: str) -> re.Pattern:
+    # Capture h4, image, paragraph, then one ul; non-greedy and stops before next heading/blockquote/hr.
+    return re.compile(
+        rf'(<h4>{re.escape(name)}</h4>\s*)'
+        rf'(<img src="([^"]+)" alt="([^"]*)">\s*)'
+        rf'(.*?)'
+        rf'(<ul>.*?</ul>)',
+        re.S,
+    )
+
+
+def class_pattern(name: str) -> re.Pattern:
+    return re.compile(
+        rf'(<h4>{re.escape(name)}</h4>\s*)'
+        rf'(<img src="([^"]+)" alt="([^"]*)">\s*)'
+        rf'(.*?)'
+        rf'(<ul>.*?</ul>)\s*'
+        rf'<p><strong>Abilities / spells block:</strong></p>\s*'
+        rf'(<ul>.*?</ul>)',
+        re.S,
+    )
+
+
+def transform_profiles(text: str) -> str:
+    for name in RACE_NAMES:
+        pat = profile_pattern(name)
+        def repl(m):
+            h4, _imgtag, src, alt, between, ul = m.groups()
+            return f'<section class="profile-card race-card">\n<img src="{src}" alt="{alt}">\n{h4}{between}{ul}\n</section>'
+        text = pat.sub(repl, text)
+    for name in CLASS_NAMES:
+        pat = class_pattern(name)
+        def repl(m):
+            h4, _imgtag, src, alt, between, details_ul, spells_ul = m.groups()
+            return (f'<section class="class-card">\n<img src="{src}" alt="{alt}">\n{h4}{between}{details_ul}\n'
+                    f'<div class="spell-block"><p class="spell-title">Abilities / spells</p>{spells_ul}</div>\n</section>')
+        text = pat.sub(repl, text)
+    return text
+
+
+def add_intro_note(text: str) -> str:
+    if 'layout-note' in text:
+        return text
+    note = ('<blockquote class="layout-note"><strong>Print note:</strong> This A4 edition uses layered parchment panels. '
+            'Artwork is anchored to its text block so race/class portraits and scene art should not split across printed pages.</blockquote>')
+    return text.replace('</h1>', '</h1>\n' + note, 1)
+
+
+def process(path: Path) -> tuple[int,int,int]:
+    original = path.read_text(encoding='utf-8')
+    text = replace_css(original)
+    text = transform_profiles(text)
+    text = wrap_standalone_images(text)
+    text = add_intro_note(text)
+    path.write_text(text, encoding='utf-8')
+    return text.count('class="profile-card'), text.count('class="class-card'), text.count('<figure class="art-plate')
+
+
+def main():
+    for path in sorted(PRINT_DIR.glob('*-a4.html')):
+        p, c, f = process(path)
+        print(f'{path.name}: profile_cards={p} class_cards={c} art_plates={f}')
+
+if __name__ == '__main__':
+    main()

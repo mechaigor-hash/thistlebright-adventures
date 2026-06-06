@@ -1,26 +1,257 @@
 <!doctype html><html><head><meta charset="utf-8"><title>Bestiary</title><style>
-@page { size: A4 portrait; margin: 14mm; }
+
+@page { size: A4 portrait; margin: 12mm 11mm 14mm; }
 * { box-sizing: border-box; }
-body { font-family: "DejaVu Serif", Georgia, serif; color:#2a2118; background:#fffdf7; line-height:1.35; font-size:11pt; }
-h1 { font-size:24pt; color:#4b2e67; border-bottom:3px solid #8b6bb1; padding-bottom:6px; page-break-before: always; }
-h1:first-child { page-break-before: avoid; }
-h2 { font-size:18pt; color:#315c3a; margin-top:16pt; break-after: avoid; }
-h3 { font-size:14pt; color:#6b3b2a; break-after: avoid; }
-h4 { font-size:12pt; color:#4b2e67; margin-bottom:4pt; break-after: avoid; }
-img { max-width:100%; max-height:115mm; display:block; margin:5mm auto; border-radius:4mm; }
-p, li { orphans:2; widows:2; }
-table { width:100%; border-collapse:collapse; margin:4mm 0; font-size:10pt; }
-th,td { border:1px solid #c7b99b; padding:4px; vertical-align:top; }
-th { background:#efe6cc; }
-blockquote { border-left:5px solid #8b6bb1; background:#f4eefb; padding:6px 10px; margin:6mm 0; }
-hr { border:0; border-top:2px dashed #c7b99b; margin:8mm 0; }
-.pagebreak { page-break-after: always; }
-</style></head><body><h1>Thistlebright Adventures — Image-Heavy Bestiary</h1>
-<img src="../art/generated/02-bestiary-friendly-creatures.png" alt="Friendly bestiary group">
+:root {
+  --ink:#2a2118;
+  --muted:#5d5144;
+  --green:#285e3d;
+  --purple:#4b2e67;
+  --red:#8b352d;
+  --gold:#b88a2d;
+  --line:#c8ae78;
+  --paper:#fbf2dc;
+  --paper2:#fffaf0;
+  --wash:rgba(255,244,217,.84);
+}
+html { background:#d8c59a; }
+body {
+  margin:0 auto;
+  max-width: 210mm;
+  color:var(--ink);
+  font-family: "DejaVu Serif", Georgia, "Times New Roman", serif;
+  font-size:10.6pt;
+  line-height:1.34;
+  background:
+    radial-gradient(circle at 8% 2%, rgba(135,83,48,.11), transparent 34mm),
+    radial-gradient(circle at 94% 16%, rgba(40,94,61,.09), transparent 42mm),
+    linear-gradient(90deg, rgba(122,84,34,.06), transparent 12mm, transparent calc(100% - 12mm), rgba(122,84,34,.06)),
+    var(--paper2);
+  padding:0;
+}
+main.book {
+  min-height:100vh;
+  padding:0 3mm 6mm;
+}
+p, li { orphans:3; widows:3; }
+p { margin:0 0 3.2mm; }
+ul, ol { margin-top:1.5mm; margin-bottom:3.8mm; padding-left:6mm; }
+li { margin:.7mm 0; }
+strong { color:#251b13; }
+h1, h2, h3, h4 { text-wrap:balance; break-after:avoid; }
+h1 {
+  page-break-before:always;
+  min-height:74mm;
+  margin:0 -3mm 8mm;
+  padding:17mm 16mm 10mm;
+  color:#fff8e8;
+  font-size:25pt;
+  letter-spacing:.02em;
+  line-height:1.06;
+  background:
+    linear-gradient(90deg, rgba(23,35,26,.82), rgba(46,35,65,.62)),
+    url("../art/generated/22-book-title-spread.png") center/cover no-repeat;
+  border-bottom:2.2mm solid #6f4b1f;
+  box-shadow: inset 0 -18mm 26mm rgba(0,0,0,.27);
+  text-shadow:0 2px 4px rgba(0,0,0,.45);
+}
+h1:first-child { page-break-before:auto; }
+h2 {
+  clear:both;
+  margin:8mm 0 4.5mm;
+  color:var(--green);
+  font-size:18pt;
+  border-top:1.4pt dashed rgba(184,138,45,.72);
+  padding-top:5mm;
+}
+h2::first-letter { font-size:1.28em; color:var(--red); }
+h3 {
+  clear:both;
+  margin:6mm 0 2.4mm;
+  color:var(--red);
+  font-size:14pt;
+  border-bottom:1px solid rgba(184,138,45,.6);
+}
+h4 {
+  margin:0 0 1.6mm;
+  color:var(--purple);
+  font-size:12.8pt;
+  letter-spacing:.015em;
+}
+hr {
+  clear:both;
+  border:0;
+  height:4mm;
+  margin:7mm 0;
+  background:
+    radial-gradient(circle, rgba(139,53,45,.95) 1.1mm, transparent 1.2mm) center/7mm 4mm repeat-x;
+  opacity:.6;
+}
+blockquote {
+  clear:both;
+  break-inside:avoid;
+  margin:5mm 0;
+  padding:4mm 5mm 4mm 7mm;
+  border:1px solid rgba(139,53,45,.38);
+  border-left:4mm solid rgba(139,53,45,.72);
+  background:
+    linear-gradient(90deg, rgba(255,244,217,.96), rgba(250,236,199,.72)),
+    radial-gradient(circle at 100% 0, rgba(184,138,45,.18), transparent 28mm);
+  border-radius:1.5mm 5mm 5mm 1.5mm;
+  box-shadow:0 1mm 3mm rgba(79,50,18,.12);
+}
+table {
+  width:100%;
+  border-collapse:collapse;
+  margin:4mm 0 5mm;
+  font-size:9.4pt;
+  break-inside:avoid;
+  box-shadow:0 .8mm 2.6mm rgba(75,45,17,.12);
+}
+th,td { border:1px solid #c9b88b; padding:3px 5px; vertical-align:top; }
+th { background:#d9e6c0; color:#243e28; }
+tr:nth-child(even) td { background:rgba(224,235,202,.62); }
+img { max-width:100%; height:auto; }
+/* Any art not claimed by a profile/class block becomes a manuscript plate. */
+figure.art-plate {
+  clear:both;
+  position:relative;
+  margin:5mm 0 6mm;
+  padding:1.8mm;
+  break-inside:avoid;
+  page-break-inside:avoid;
+  border:1.2mm solid #322615;
+  border-radius:4.5mm;
+  background:#2e2418;
+  box-shadow:0 2mm 6mm rgba(68,38,15,.22);
+  overflow:hidden;
+}
+figure.art-plate::before {
+  content:"";
+  position:absolute;
+  inset:2.3mm;
+  border:1px solid rgba(255,238,177,.7);
+  border-radius:3mm;
+  pointer-events:none;
+  z-index:2;
+}
+figure.art-plate img {
+  display:block;
+  width:100%;
+  max-height:88mm;
+  object-fit:cover;
+  object-position:center;
+  border-radius:2.7mm;
+  break-inside:avoid;
+  page-break-inside:avoid;
+}
+figure.art-plate.title-art img { max-height:70mm; }
+figure.art-plate.tall img { max-height:112mm; object-fit:contain; background:#f7ecd2; }
+.profile-card, .class-card, .creature-card {
+  position:relative;
+  clear:both;
+  min-height:62mm;
+  margin:5.5mm 0;
+  padding:5mm 5mm 4mm 55mm;
+  border:1px solid rgba(105,75,32,.45);
+  border-radius:5mm 2mm 5mm 2mm;
+  background:
+    linear-gradient(90deg, rgba(255,250,237,.95), rgba(250,238,210,.86)),
+    radial-gradient(circle at 92% 8%, rgba(184,138,45,.16), transparent 36mm);
+  box-shadow:0 1.3mm 5mm rgba(84,55,24,.15);
+  overflow:hidden;
+  break-inside:avoid;
+  page-break-inside:avoid;
+}
+.profile-card:nth-of-type(even), .class-card:nth-of-type(even), .creature-card:nth-of-type(even) {
+  padding-left:5mm;
+  padding-right:55mm;
+}
+.profile-card::after, .class-card::after, .creature-card::after {
+  content:"";
+  position:absolute;
+  inset:2.2mm;
+  border:1px solid rgba(184,138,45,.38);
+  border-radius:3.8mm 1.4mm 3.8mm 1.4mm;
+  pointer-events:none;
+}
+.profile-card h4, .class-card h4, .creature-card h2 {
+  font-variant:small-caps;
+  color:#76342c;
+  border:0;
+  border-bottom:1px solid rgba(184,138,45,.6);
+  padding:0 0 1mm;
+  margin:0 0 1.6mm;
+}
+.creature-card h2 { clear:none; font-size:15.5pt; }
+.creature-card h2::first-letter { font-size:1em; color:#76342c; }
+.creature-card h3 { clear:none; margin:3mm 0 1mm; font-size:11.2pt; color:#4b2e67; }
+.profile-card img, .class-card img, .creature-card figure.art-plate {
+  position:absolute;
+  left:0;
+  top:0;
+  width:50mm;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  margin:0;
+  border-radius:4.6mm 22mm 22mm 4.6mm;
+  border-right:1.2mm solid rgba(184,138,45,.72);
+  box-shadow: inset -10mm 0 14mm rgba(255,250,237,.65);
+}
+.creature-card figure.art-plate { padding:0; border:0; box-shadow:none; background:transparent; }
+.creature-card figure.art-plate::before { display:none; }
+.creature-card figure.art-plate img { width:100%; height:100%; max-height:none; object-fit:cover; border-radius:4.6mm 22mm 22mm 4.6mm; }
+.profile-card:nth-of-type(even) img, .class-card:nth-of-type(even) img, .creature-card:nth-of-type(even) figure.art-plate {
+  left:auto;
+  right:0;
+  border-right:0;
+  border-left:1.2mm solid rgba(184,138,45,.72);
+  border-radius:22mm 4.6mm 4.6mm 22mm;
+}
+.creature-card:nth-of-type(even) figure.art-plate img { border-radius:22mm 4.6mm 4.6mm 22mm; }
+.profile-card ul, .class-card ul { padding-left:4.8mm; margin-bottom:1mm; }
+.spell-block {
+  margin-top:3mm;
+  padding:3mm 4mm;
+  border:1px solid rgba(75,46,103,.45);
+  border-radius:2.8mm;
+  background:linear-gradient(180deg, rgba(246,238,255,.9), rgba(255,249,232,.86));
+  break-inside:avoid;
+  page-break-inside:avoid;
+}
+.spell-block .spell-title {
+  margin:0 0 1.5mm;
+  color:#4b2e67;
+  font-weight:700;
+  font-variant:small-caps;
+  letter-spacing:.03em;
+}
+.spell-block ul { margin:0; }
+.chapter-opener {
+  break-inside:avoid;
+  page-break-inside:avoid;
+}
+.pagebreak { clear:both; page-break-after:always; }
+@media screen {
+  body { box-shadow:0 0 16mm rgba(58,38,12,.22); }
+  main.book { padding-top:0; }
+}
+@media print {
+  html, body { background:white; }
+  main.book { padding:0; }
+  a { color:inherit; text-decoration:none; }
+  figure.art-plate, .profile-card, .class-card, blockquote, table { break-inside:avoid-page; page-break-inside:avoid; }
+}
+
+</style></head><body><main class="book"><h1>Thistlebright Adventures — Image-Heavy Bestiary</h1>
+<blockquote class="layout-note"><strong>Print note:</strong> This A4 edition uses layered parchment panels. Artwork is anchored to its text block so race/class portraits and scene art should not split across printed pages.</blockquote>
+<figure class="art-plate"><img src="../art/generated/02-bestiary-friendly-creatures.png" alt="Friendly bestiary group"></figure>
 <p>Every creature has a dedicated picture, a kid-safe role, and at least three non-combat ways to interact.</p>
 <hr>
+<section class="creature-card">
 <h2>Scottish Fairy Guide — Ailsa Thistledown</h2>
-<img src="../art/generated/07-creature-ailsa-thistledown.png" alt="Scottish Fairy Guide — Ailsa Thistledown">
+<figure class="art-plate"><img src="../art/generated/07-creature-ailsa-thistledown.png" alt="Scottish Fairy Guide — Ailsa Thistledown"></figure>
 <ul>
 <li><strong>Mood:</strong> Sparkly, bossy in a friendly way.</li>
 <li><strong>Wants:</strong> Brave children to help fix fairy mishaps.</li>
@@ -34,9 +265,11 @@ hr { border:0; border-top:2px dashed #c7b99b; margin:8mm 0; }
 <li><strong>Clever:</strong> Notice a clue, solve a pattern, or remember a fairy tale.</li>
 <li><strong>Brave/Quick:</strong> Protect a friend, climb carefully, race, or distract with silliness.</li>
 </ul>
+</section>
 <hr>
+<section class="creature-card">
 <h2>Brownie of the Hearth</h2>
-<img src="../art/generated/08-creature-brownie-hearth.png" alt="Brownie of the Hearth">
+<figure class="art-plate"><img src="../art/generated/08-creature-brownie-hearth.png" alt="Brownie of the Hearth"></figure>
 <ul>
 <li><strong>Mood:</strong> Hardworking, proud, flour on nose.</li>
 <li><strong>Wants:</strong> A tidy home and a thank-you.</li>
@@ -50,9 +283,11 @@ hr { border:0; border-top:2px dashed #c7b99b; margin:8mm 0; }
 <li><strong>Clever:</strong> Notice a clue, solve a pattern, or remember a fairy tale.</li>
 <li><strong>Brave/Quick:</strong> Protect a friend, climb carefully, race, or distract with silliness.</li>
 </ul>
+</section>
 <hr>
+<section class="creature-card">
 <h2>Kelpies of the Loch</h2>
-<img src="../art/generated/09-creature-kelpie-loch.png" alt="Kelpies of the Loch">
+<figure class="art-plate"><img src="../art/generated/09-creature-kelpie-loch.png" alt="Kelpies of the Loch"></figure>
 <ul>
 <li><strong>Mood:</strong> Splashy, musical, mischievous.</li>
 <li><strong>Wants:</strong> Someone to solve their water-riddle.</li>
@@ -66,9 +301,11 @@ hr { border:0; border-top:2px dashed #c7b99b; margin:8mm 0; }
 <li><strong>Clever:</strong> Notice a clue, solve a pattern, or remember a fairy tale.</li>
 <li><strong>Brave/Quick:</strong> Protect a friend, climb carefully, race, or distract with silliness.</li>
 </ul>
+</section>
 <hr>
+<section class="creature-card">
 <h2>Selkie Storykeeper</h2>
-<img src="../art/generated/10-creature-selkie-storykeeper.png" alt="Selkie Storykeeper">
+<figure class="art-plate"><img src="../art/generated/10-creature-selkie-storykeeper.png" alt="Selkie Storykeeper"></figure>
 <ul>
 <li><strong>Mood:</strong> Gentle, wise, dreamy.</li>
 <li><strong>Wants:</strong> Lost stories returned to the sea library.</li>
@@ -82,9 +319,11 @@ hr { border:0; border-top:2px dashed #c7b99b; margin:8mm 0; }
 <li><strong>Clever:</strong> Notice a clue, solve a pattern, or remember a fairy tale.</li>
 <li><strong>Brave/Quick:</strong> Protect a friend, climb carefully, race, or distract with silliness.</li>
 </ul>
+</section>
 <hr>
+<section class="creature-card">
 <h2>Redcap Sproutling</h2>
-<img src="../art/generated/11-creature-redcap-sproutling.png" alt="Redcap Sproutling">
+<figure class="art-plate"><img src="../art/generated/11-creature-redcap-sproutling.png" alt="Redcap Sproutling"></figure>
 <ul>
 <li><strong>Mood:</strong> Grumpy but tiny.</li>
 <li><strong>Wants:</strong> To look frightening, but mostly wants lunch.</li>
@@ -98,9 +337,11 @@ hr { border:0; border-top:2px dashed #c7b99b; margin:8mm 0; }
 <li><strong>Clever:</strong> Notice a clue, solve a pattern, or remember a fairy tale.</li>
 <li><strong>Brave/Quick:</strong> Protect a friend, climb carefully, race, or distract with silliness.</li>
 </ul>
+</section>
 <hr>
+<section class="creature-card">
 <h2>Heather Dragonling</h2>
-<img src="../art/generated/12-creature-heather-dragonling.png" alt="Heather Dragonling">
+<figure class="art-plate"><img src="../art/generated/12-creature-heather-dragonling.png" alt="Heather Dragonling"></figure>
 <ul>
 <li><strong>Mood:</strong> Proud, sneezy, lonely.</li>
 <li><strong>Wants:</strong> A warm cave and friends who are not scared.</li>
@@ -114,9 +355,11 @@ hr { border:0; border-top:2px dashed #c7b99b; margin:8mm 0; }
 <li><strong>Clever:</strong> Notice a clue, solve a pattern, or remember a fairy tale.</li>
 <li><strong>Brave/Quick:</strong> Protect a friend, climb carefully, race, or distract with silliness.</li>
 </ul>
+</section>
 <hr>
+<section class="creature-card">
 <h2>Rowan Tree Guardian</h2>
-<img src="../art/generated/13-creature-rowan-tree-guardian.png" alt="Rowan Tree Guardian">
+<figure class="art-plate"><img src="../art/generated/13-creature-rowan-tree-guardian.png" alt="Rowan Tree Guardian"></figure>
 <ul>
 <li><strong>Mood:</strong> Slow, ancient, protective.</li>
 <li><strong>Wants:</strong> Children to respect the forest.</li>
@@ -130,9 +373,11 @@ hr { border:0; border-top:2px dashed #c7b99b; margin:8mm 0; }
 <li><strong>Clever:</strong> Notice a clue, solve a pattern, or remember a fairy tale.</li>
 <li><strong>Brave/Quick:</strong> Protect a friend, climb carefully, race, or distract with silliness.</li>
 </ul>
+</section>
 <hr>
+<section class="creature-card">
 <h2>Cloud Sheep</h2>
-<img src="../art/generated/14-creature-cloud-sheep.png" alt="Cloud Sheep">
+<figure class="art-plate"><img src="../art/generated/14-creature-cloud-sheep.png" alt="Cloud Sheep"></figure>
 <ul>
 <li><strong>Mood:</strong> Fluffy, forgetful, floaty.</li>
 <li><strong>Wants:</strong> To find the sky pasture.</li>
@@ -146,9 +391,11 @@ hr { border:0; border-top:2px dashed #c7b99b; margin:8mm 0; }
 <li><strong>Clever:</strong> Notice a clue, solve a pattern, or remember a fairy tale.</li>
 <li><strong>Brave/Quick:</strong> Protect a friend, climb carefully, race, or distract with silliness.</li>
 </ul>
+</section>
 <hr>
+<section class="creature-card">
 <h2>Castle Gargoyle Calf</h2>
-<img src="../art/generated/15-creature-gargoyle-calf.png" alt="Castle Gargoyle Calf">
+<figure class="art-plate"><img src="../art/generated/15-creature-gargoyle-calf.png" alt="Castle Gargoyle Calf"></figure>
 <ul>
 <li><strong>Mood:</strong> Shy stone puppy energy.</li>
 <li><strong>Wants:</strong> To learn how to be a proper gargoyle.</li>
@@ -162,9 +409,11 @@ hr { border:0; border-top:2px dashed #c7b99b; margin:8mm 0; }
 <li><strong>Clever:</strong> Notice a clue, solve a pattern, or remember a fairy tale.</li>
 <li><strong>Brave/Quick:</strong> Protect a friend, climb carefully, race, or distract with silliness.</li>
 </ul>
+</section>
 <hr>
+<section class="creature-card">
 <h2>Bog Bean-Nighe Bubble</h2>
-<img src="../art/generated/16-creature-bean-nighe-bubble.png" alt="Bog Bean-Nighe Bubble">
+<figure class="art-plate"><img src="../art/generated/16-creature-bean-nighe-bubble.png" alt="Bog Bean-Nighe Bubble"></figure>
 <ul>
 <li><strong>Mood:</strong> Very dramatic washer spirit, but child-safe.</li>
 <li><strong>Wants:</strong> Clean socks for the fairy ball.</li>
@@ -177,4 +426,5 @@ hr { border:0; border-top:2px dashed #c7b99b; margin:8mm 0; }
 <li><strong>Kind:</strong> Offer comfort, share something, or ask what it needs.</li>
 <li><strong>Clever:</strong> Notice a clue, solve a pattern, or remember a fairy tale.</li>
 <li><strong>Brave/Quick:</strong> Protect a friend, climb carefully, race, or distract with silliness.</li>
-</ul></body></html>
+</ul>
+</section></main></body></html>
