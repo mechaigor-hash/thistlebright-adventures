@@ -17,6 +17,7 @@ This repo is intentionally art-forward:
 - [Image-Heavy Bestiary](books/bestiary.md)
 - [Example Campaigns](books/example-campaigns.md)
 - [Character Sheet](sheets/character-sheet.md)
+- [Example Character — Mairi Map-Button](sheets/example-character-mairi-map-button.md)
 - [Guide Session Sheet](sheets/dm-session-sheet.md)
 - [Combined Draft](Thistlebright-Adventures-combined.md)
 
@@ -63,3 +64,11 @@ Roll **1d6 + a simple stat**. A total of **5+ succeeds**. On 3–4, success with
 
 ## Safety / age design
 No gore, no horror, no permanent death, simple choices, cooperative problem solving, reading-light mechanics, 20–40 minute sessions.
+
+## More book-like page art
+![Book title spread](art/generated/22-book-title-spread.png)
+![Character creation step by step](art/generated/17-character-creation-step-by-step.png)
+![Example hero Mairi](art/generated/18-example-hero-mairi.png)
+![Dice roll instructional scene](art/generated/19-dice-roll-table-scene.png)
+![Tiny spells page](art/generated/20-tiny-spells-sparkle-page.png)
+![First adventure bridge](art/generated/21-first-adventure-bridge.png)

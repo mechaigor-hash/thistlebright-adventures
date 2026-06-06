@@ -1,7 +1,12 @@
-# Thistlebright Adventures — Combined Image-Heavy Draft
+# Thistlebright Adventures — Combined Image-Heavy Book Draft
+
+![Book title spread](art/generated/22-book-title-spread.png)
 
 
 <div style="page-break-after: always;"></div>
+
+
+# Book Section: Project Overview
 
 # Thistlebright Adventures
 
@@ -22,6 +27,7 @@ This repo is intentionally art-forward:
 - [Image-Heavy Bestiary](books/bestiary.md)
 - [Example Campaigns](books/example-campaigns.md)
 - [Character Sheet](sheets/character-sheet.md)
+- [Example Character — Mairi Map-Button](sheets/example-character-mairi-map-button.md)
 - [Guide Session Sheet](sheets/dm-session-sheet.md)
 - [Combined Draft](Thistlebright-Adventures-combined.md)
 
@@ -69,64 +75,243 @@ Roll **1d6 + a simple stat**. A total of **5+ succeeds**. On 3–4, success with
 ## Safety / age design
 No gore, no horror, no permanent death, simple choices, cooperative problem solving, reading-light mechanics, 20–40 minute sessions.
 
+## More book-like page art
+![Book title spread](art/generated/22-book-title-spread.png)
+![Character creation step by step](art/generated/17-character-creation-step-by-step.png)
+![Example hero Mairi](art/generated/18-example-hero-mairi.png)
+![Dice roll instructional scene](art/generated/19-dice-roll-table-scene.png)
+![Tiny spells page](art/generated/20-tiny-spells-sparkle-page.png)
+![First adventure bridge](art/generated/21-first-adventure-bridge.png)
+
 
 <div style="page-break-after: always;"></div>
 
+
+# Book Section: Player Handbook
+
 # Thistlebright Adventures — Player Handbook
+
+![Book title spread](art/generated/22-book-title-spread.png)
+
+> **For grown-up helpers:** This chapter is written to be read aloud. Pause at each “Your turn” box and let the child choose, point, draw, or answer with one word. A complete first character should take **5–10 minutes**.
+
+## Welcome, wee hero
+
+You are about to make a brave, clever, kind, quick hero for a fairy-tale adventure. Your hero does not need to be perfect. Your hero only needs three things:
+
+1. A **name**.
+2. A **way to help**.
+3. A **little bit of magic or courage**.
 
 ![Hero lineup](art/generated/04-character-sheet-heroes.png)
 
+---
 
-## What is this game?
-You and your friends tell a magical story together. One person is the **Guide**. Everyone else plays a brave hero. You explore fairy glens, old castles, misty lochs, and moonlit forests. You help creatures, solve puzzles, and make kind choices.
+## Chapter 1 — How the game feels
 
-## The Golden Rules
-1. **Heroes help.** We solve problems with kindness first.
-2. **Everyone gets a turn.** If someone is quiet, invite them in.
-3. **No scary forever.** If something is too spooky, say “Lantern!” and the Guide makes it gentler.
-4. **Failing means a new idea.** It never means you are bad.
+This is a talking, drawing, dice-rolling game. The Guide describes a magical place. You say what your hero tries. Then everyone helps tell what happens next.
 
-## Dice Rule
-Roll **1d6 + one stat**.
-- **5 or more:** You do it!
-- **3–4:** You do it, but something funny or tricky happens.
-- **1–2:** Not yet. Pick a new plan, ask a friend, or use a charm.
+The story is about:
+- Finding lost things.
+- Helping mixed-up creatures.
+- Solving gentle puzzles.
+- Being brave without being mean.
+- Making the glen safer and happier.
 
-## Stats
-Pick numbers: **+2, +1, +1, +0**.
-- **Brave** — climbing, protecting, trying something hard.
-- **Clever** — puzzles, clues, plans, remembering stories.
-- **Kind** — calming creatures, helping friends, making peace.
-- **Quick** — sneaking, dodging, racing, catching.
+### The Golden Rules
+1. **Heroes help.** Kindness comes first.
+2. **Everyone gets a turn.** Invite quiet friends in.
+3. **Lantern makes it gentler.** If anything feels too spooky, say “Lantern!”
+4. **A low roll means a new idea.** It never means you are bad at the game.
 
-## Hero Kinds
-### Thistle Knight
+---
+
+## Chapter 2 — The dice rule
+
+![Dice rolling scene](art/generated/19-dice-roll-table-scene.png)
+
+When the Guide says, “That is tricky,” roll one six-sided die.
+
+**Roll 1d6 + one stat.**
+
+| Total | What happens | Say it like this |
+|---:|---|---|
+| **5 or more** | You do it! | “Yes! Tell us what it looks like.” |
+| **3–4** | You do it, with a silly twist. | “Yes, but something funny happens.” |
+| **1–2** | Not yet. Try a new plan or ask for help. | “Not yet. What else could we try?” |
+
+### Your four stats
+Use these when your hero does something tricky:
+
+- **Brave** — climbing, protecting, trying a hard thing.
+- **Clever** — puzzles, clues, remembering tales, making plans.
+- **Kind** — calming creatures, sharing, apologizing, making peace.
+- **Quick** — racing, catching, dodging, sneaking, balancing.
+
+---
+
+## Chapter 3 — Make a hero, step by step
+
+![Character creation at the table](art/generated/17-character-creation-step-by-step.png)
+
+### Step 1: Pick your hero kind
+Point to the one that sounds fun.
+
+#### Thistle Knight
 A tiny knight with a big heart.
-- Gift: Once per adventure, stand in front of danger and make it safe.
-- Starting item: Soft wooden shield.
+- **Best at:** protecting friends and trying brave things.
+- **Gift:** Once per adventure, stand in front of danger and make it safe.
+- **Starting item:** soft wooden shield.
+- **Good name ideas:** Rowan, Tam, Isla Shieldbutton.
 
-### Glen Wizard
+#### Glen Wizard
 A young spell-speaker who knows rhyme-magic.
-- Gift: Once per scene, make a small magical light, sound, or sparkle.
-- Starting item: Pebble wand.
+- **Best at:** small helpful magic and fairy clues.
+- **Gift:** Once per scene, make a small magical light, sound, or sparkle.
+- **Starting item:** pebble wand.
+- **Good name ideas:** Skye, Eilidh, Pip Pebblewand.
 
-### Loch Scout
+#### Loch Scout
 A fast explorer who knows paths and animal tracks.
-- Gift: Once per scene, find a hidden path or clue.
-- Starting item: Map ribbon.
+- **Best at:** maps, hidden paths, and quick movement.
+- **Gift:** Once per scene, find a hidden path or clue.
+- **Starting item:** ribbon map.
+- **Good name ideas:** Mairi, Finlay, Nessa Map-Button.
 
-### Hearth Bard
+#### Hearth Bard
 A singer, dancer, joker, and friend-maker.
-- Gift: Once per adventure, turn grumpiness into giggles.
-- Starting item: Tiny bell or whistle.
+- **Best at:** cheering people up and making grumpy creatures laugh.
+- **Gift:** Once per adventure, turn grumpiness into giggles.
+- **Starting item:** tiny bell or whistle.
+- **Good name ideas:** Brodie, Callum, Heather Bell.
 
-### Fairy Friend
+#### Fairy Friend
 A child-sized friend of the fairy courts.
-- Gift: Once per scene, ask a small nature spirit for a hint.
-- Starting item: Acorn cup.
+- **Best at:** nature hints and fairy manners.
+- **Gift:** Once per scene, ask a small nature spirit for a hint.
+- **Starting item:** acorn cup.
+- **Good name ideas:** Ailsa, Lorna, Thistle Pip.
 
-## Charms
-Each hero starts with **3 charms**. Spend one to reroll, help a friend add +1, make a scene less scary, or remember a helpful tale.
+> **Your turn:** Circle one hero kind. If choosing is hard, ask: “Do you want to be brave, magical, speedy, musical, or fairy-wise?”
+
+### Step 2: Pick your numbers
+Write these numbers next to your stats:
+
+**+2, +1, +1, +0**
+
+Put **+2** next to the thing your hero is best at.
+
+| If you picked... | Put +2 in... | Why |
+|---|---|---|
+| Thistle Knight | Brave | You protect and try hard things. |
+| Glen Wizard | Clever | You know rhymes, signs, and tiny spells. |
+| Loch Scout | Quick | You move fast and find paths. |
+| Hearth Bard | Kind | You cheer people up. |
+| Fairy Friend | Kind or Clever | You know fairy manners and nature hints. |
+
+Then put **+1** in two other stats, and **+0** in the last one.
+
+> **Grown-up helper tip:** Do not optimize too much. At this age, the best stat is the one the child is excited to use.
+
+### Step 3: Pick a treasure
+Choose one, roll 1d6, or invent something small:
+
+1. Rowan button that feels warm near kind magic.
+2. Tartan ribbon that points toward music.
+3. Smooth loch pebble that skips once on any puddle.
+4. Thistle badge that glows when someone is brave.
+5. Heather biscuit wrapped in leaf-paper.
+6. Wee wooden dragon that sneezes sparkles.
+
+### Step 4: Answer one helper question
+Finish this sentence:
+
+**“My hero always helps __________________.”**
+
+Ideas: lost animals, shy friends, grumpy creatures, little siblings, travelers, trees, dragons, anyone who is scared.
+
+### Step 5: Draw your hero
+Draw a big shape first. Then add:
+- One tartan thing.
+- One magical thing.
+- One friendly smile.
+- One tiny treasure.
+
+---
+
+## Chapter 4 — Full example character creation
+
+![Example hero Mairi Map-Button](art/generated/18-example-hero-mairi.png)
+
+Here is a complete example you can copy before making your own.
+
+### Meet Mairi Map-Button
+
+**Grown-up:** “What kind of hero sounds fun?”
+
+**Player:** “I want to find secret paths.”
+
+**Grown-up:** “Great. That sounds like a Loch Scout.”
+
+#### 1. Hero kind
+Mairi chooses **Loch Scout**.
+
+#### 2. Stats
+A Loch Scout is best at moving fast and finding paths, so Mairi puts **+2 in Quick**.
+
+Then she chooses:
+- **Brave +1** because she likes crossing stepping stones.
+- **Clever +1** because she likes maps.
+- **Kind +0** because she is still learning how to talk to grumpy creatures.
+
+Mairi’s stats are:
+
+| Stat | Number |
+|---|---:|
+| Brave | +1 |
+| Clever | +1 |
+| Kind | +0 |
+| Quick | +2 |
+
+#### 3. Treasure
+Mairi picks a **rowan button** sewn onto her scarf. It feels warm near kind magic.
+
+#### 4. Helper sentence
+Mairi writes:
+
+**“My hero always helps lost travelers.”**
+
+#### 5. Gift
+Because she is a Loch Scout, once per scene Mairi can find a hidden path or clue.
+
+### Mairi’s first roll
+The Guide says:
+
+> “A sleepy troll has lost his lullaby. The stepping stones wiggle in the moonlight. What do you do?”
+
+Mairi says:
+
+> “I look for tiny wet footprints to see where the lullaby went.”
+
+That is a **Clever** roll. Mairi rolls a **4** and adds **+1 Clever**.
+
+**4 + 1 = 5. Success!**
+
+The Guide says:
+
+> “You find silver footprints leading to a mossy cookie plate. The troll smiles and whispers, ‘Och, I remember the first line now.’”
+
+---
+
+## Chapter 5 — Charms and helping friends
+
+Each hero starts with **3 charms**.
+
+Spend one charm to:
+- Reroll a die.
+- Help a friend add **+1**.
+- Make a scene less scary.
+- Remember a helpful tale.
 
 ### How helping works
 When a friend rolls, you can help by saying one clear action:
@@ -136,67 +321,157 @@ When a friend rolls, you can help by saying one clear action:
 
 Then spend 1 charm to give your friend **+1**. If the roll still does not work, everyone learns something useful and tries a new idea.
 
-## Making a Hero
-1. Pick a hero kind.
-2. Name your hero.
-3. Choose stats: +2, +1, +1, +0.
-4. Pick one treasure: ribbon, shiny button, wooden sword, lucky pebble, warm scarf, storybook.
-5. Draw your hero.
-6. Answer: “Who do you always help?”
+---
 
-### Quick build choices
-If you want to start quickly, choose one of these:
+## Chapter 6 — Tiny spells
 
-| Hero | Brave | Clever | Kind | Quick | Treasure | Helps |
-|---|---:|---:|---:|---:|---|---|
-| Rowan Shield-Keeper | +2 | +1 | +1 | +0 | soft wooden shield | small animals |
-| Loch Map-Maker | +0 | +2 | +1 | +1 | ribbon map | lost travelers |
-| Heather Song-Friend | +1 | +0 | +2 | +1 | tiny bell | grumpy creatures |
-| Tartan Spark Runner | +1 | +1 | +0 | +2 | lucky pebble | friends in a hurry |
+![Tiny spell page](art/generated/20-tiny-spells-sparkle-page.png)
 
-### Names for wee heroes
-Pick or invent: Ailsa, Brodie, Isla, Finlay, Skye, Rowan, Mairi, Tam, Eilidh, Callum, Nessa, Pip.
-
-### Tiny treasures
-Roll 1d6 or pick:
-1. Rowan button that feels warm near kind magic.
-2. Tartan ribbon that points toward music.
-3. Smooth loch pebble that skips once on any puddle.
-4. Thistle badge that glows when someone is brave.
-5. Heather biscuit wrapped in leaf-paper.
-6. Wee wooden dragon that sneezes sparkles.
-
-## Tiny Spells
-Glowbug Light, Tickly Breeze, Door-Knock Whisper, Puddle Mirror, Tartan Sparkle, Feather Fall.
-
-### Tiny spell rules
 Tiny spells never hurt anyone and never solve a whole adventure by themselves. They are best for making clues easier to see, cheering someone up, decorating a scene, or doing one small impossible thing.
 
-More tiny spells:
-- **Mossy Cushion:** soft moss appears where someone might tumble.
-- **Heather Hello:** flowers wave in the direction of a friendly creature.
-- **Rowan Promise:** a leaf glows when someone tells the truth.
-- **Ceilidh Beat:** a tap-tap rhythm helps everyone march together.
-- **Loch Whisper:** water repeats the last kind words spoken nearby.
-- **Button Bright:** a button shines like a candle for one scene.
+| Spell | What it does |
+|---|---|
+| **Glowbug Light** | A soft glow floats near your hand. |
+| **Tickly Breeze** | A gentle wind moves leaves, hair, or dust. |
+| **Door-Knock Whisper** | A door politely tells you if it wants a knock. |
+| **Puddle Mirror** | A puddle shows the last kind thing said nearby. |
+| **Tartan Sparkle** | A ribbon sparkles when fairy magic is close. |
+| **Feather Fall** | Someone lands softly on moss or feathers. |
+| **Mossy Cushion** | Soft moss appears where someone might tumble. |
+| **Heather Hello** | Flowers wave toward a friendly creature. |
+| **Rowan Promise** | A leaf glows when someone tells the truth. |
+| **Ceilidh Beat** | A tap-tap rhythm helps everyone march together. |
 
-## Example Play
-Guide: “The bridge is guarded by a sleepy troll who lost his lullaby.”
-Player: “I sing him a soft song.”
-Guide: “Roll Kind.”
-Player rolls 4 + Kind 1 = 5.
-Guide: “He smiles, yawns, and lets you cross. He gives you a moss cookie for later.”
+---
 
-## A turn in three steps
+## Chapter 7 — Example play scene
+
+![First adventure bridge scene](art/generated/21-first-adventure-bridge.png)
+
+**Guide:** “The bridge is guarded by a sleepy troll who lost his lullaby.”
+
+**Player:** “I sing him a soft song.”
+
+**Guide:** “That sounds Kind. Roll one die and add Kind.”
+
+**Player:** “I rolled a 4. My Kind is +1. That makes 5!”
+
+**Guide:** “You do it! The troll smiles, yawns, and lets you cross. He gives you a moss cookie for later.”
+
+### A turn in three steps
 1. **Say what you try.** “I ask the brownie what is wrong.”
 2. **Choose the best stat.** Kind, Clever, Brave, or Quick.
-3. **Roll and tell the story.** On a twist, make it funny: squeaky boots, floating hair, biscuit crumbs, a frog clapping.
+3. **Roll and tell the story.** On a twist, make it funny: squeaky boots, floating hair, biscuit crumbs, or a frog clapping.
 
-## What heroes do not do
-Thistlebright heroes do not use gore, cruel tricks, or permanent harm. Even “monsters” are usually hungry, lonely, mixed-up, sleepy, cursed by silly magic, or guarding the wrong thing. The best victory is a new friend, a fair trade, or a safe path home.
+---
+
+## Chapter 8 — What heroes do not do
+
+Thistlebright heroes do not use gore, cruel tricks, or permanent harm. Even “monsters” are usually hungry, lonely, mixed-up, sleepy, cursed by silly magic, or guarding the wrong thing.
+
+The best victory is:
+- A new friend.
+- A fair trade.
+- A safe path home.
+- A creature feeling understood.
+- A party under the rowan tree.
 
 
 <div style="page-break-after: always;"></div>
+
+
+# Book Section: Blank Character Sheet
+
+# Thistlebright Adventures — Character Sheet
+
+![Hero inspiration](art/generated/04-character-sheet-heroes.png)
+
+
+**Hero Name:** ___________________________
+
+**Player:** ______________________________
+
+**Hero Kind:** ☐ Thistle Knight ☐ Glen Wizard ☐ Loch Scout ☐ Hearth Bard ☐ Fairy Friend
+
+## Stats
+- Brave: ____
+- Clever: ____
+- Kind: ____
+- Quick: ____
+
+## Charms
+☐ Charm 1  ☐ Charm 2  ☐ Charm 3
+
+## My Gift
+____________________________________________________
+
+## My Treasure
+____________________________________________________
+
+## My Friend / Who I Help
+____________________________________________________
+
+## Draw Your Hero
+
+
+
+
+
+
+## Adventure Notes
+- Today I helped: __________________________________
+- Funny thing that happened: ________________________
+- Treasure/title earned: ____________________________
+
+
+<div style="page-break-after: always;"></div>
+
+
+# Book Section: Example Character
+
+# Example Character Sheet — Mairi Map-Button
+
+![Mairi Map-Button](art/generated/18-example-hero-mairi.png)
+
+**Hero Name:** Mairi Map-Button
+
+**Player:** Example Player
+
+**Hero Kind:** Loch Scout
+
+## Stats
+- Brave: +1
+- Clever: +1
+- Kind: +0
+- Quick: +2
+
+## Charms
+☐ Charm 1  ☐ Charm 2  ☐ Charm 3
+
+## My Gift
+Once per scene, I can find a hidden path or clue.
+
+## My Treasure
+A rowan button sewn onto my scarf. It feels warm near kind magic.
+
+## My Friend / Who I Help
+I always help lost travelers.
+
+## What Mairi looks like
+Mairi wears a warm scarf, carries a ribbon map, and keeps a tiny pencil behind one ear. A small cloud sheep follows her when she remembers to say please.
+
+## Example first roll
+Mairi looks for wet footprints near the polite stepping stones.
+
+She rolls **4** and adds **Clever +1**.
+
+**Total: 5 — success!** She finds silver footprints leading toward the moss cookie plate.
+
+
+<div style="page-break-after: always;"></div>
+
+
+# Book Section: Dungeon Master Guide
 
 # Thistlebright Adventures — Dungeon Master Guide
 
@@ -298,6 +573,9 @@ Before play, prepare:
 
 
 <div style="page-break-after: always;"></div>
+
+
+# Book Section: Image-Heavy Bestiary
 
 # Thistlebright Adventures — Image-Heavy Bestiary
 
@@ -497,6 +775,9 @@ Every creature has a dedicated picture, a kid-safe role, and at least three non-
 
 
 <div style="page-break-after: always;"></div>
+
+
+# Book Section: Example Campaigns
 
 # Thistlebright Adventures — Example Campaigns
 
@@ -733,49 +1014,190 @@ Copy one box after each session so young players remember the story.
 
 <div style="page-break-after: always;"></div>
 
-# Thistlebright Adventures — Character Sheet
 
-![Hero inspiration](art/generated/04-character-sheet-heroes.png)
+# Book Section: Quick Reference Cards
 
+# Thistlebright Adventures — Quick Reference Cards
 
-**Hero Name:** ___________________________
+Print this page, cut on the lines, or copy the cards onto index cards.
 
-**Player:** ______________________________
+---
 
-**Hero Kind:** ☐ Thistle Knight ☐ Glen Wizard ☐ Loch Scout ☐ Hearth Bard ☐ Fairy Friend
+## Core Roll Card
 
-## Stats
-- Brave: ____
-- Clever: ____
-- Kind: ____
-- Quick: ____
+Roll **1d6 + one stat**.
 
-## Charms
-☐ Charm 1  ☐ Charm 2  ☐ Charm 3
+- **5+** — You do it!
+- **3–4** — You do it with a funny twist.
+- **1–2** — Not yet: ask for help, use a charm, or try a new plan.
 
-## My Gift
-____________________________________________________
+No one is out of the story. Every roll moves the adventure forward.
 
-## My Treasure
-____________________________________________________
+---
 
-## My Friend / Who I Help
-____________________________________________________
+## Stats Card
 
-## Draw Your Hero
+- **Brave:** try hard things, protect, climb, face noisy surprises.
+- **Clever:** spot clues, solve riddles, remember tales, make plans.
+- **Kind:** calm, share, apologise, invite, befriend.
+- **Quick:** catch, balance, sneak, race, move carefully.
 
+If two stats fit, let the child choose and explain why.
 
+---
 
+## Charm Card
 
+Each hero starts with **3 charms**.
 
+Spend 1 charm to:
+- reroll your die;
+- give a friend **+1** after describing help;
+- ask the Guide for one gentle clue;
+- soften a scene with the **Lantern** safety word.
 
-## Adventure Notes
-- Today I helped: __________________________________
-- Funny thing that happened: ________________________
-- Treasure/title earned: ____________________________
+Use buttons, beads, shells, or paper thistles as tokens.
+
+---
+
+## Lantern Safety Card
+
+If anyone says **Lantern**, the Guide makes the scene softer right away.
+
+Examples:
+- The dragon is not angry; it has tickly hiccups.
+- The mist is not spooky; it becomes bubble fog.
+- The loud noise is a giant sneezing into a handkerchief.
+- The dark cave has glowworms and a friendly echo.
+
+---
+
+## Funny Twist Card
+
+On a 3–4, the hero succeeds and one silly thing happens:
+
+1. Boots squeak like ducklings.
+2. Hair floats for one minute.
+3. A frog applauds politely.
+4. The clue is sticky with jam.
+5. A tartan ribbon ties itself into a bow.
+6. A cloud sheep follows the hero.
+
+---
+
+## Cozy Ending Card
+
+End each session with:
+
+- a thank-you from someone helped;
+- a title, sticker, charm, or tiny treasure;
+- one chance for each player to say their favorite moment;
+- a safe path home under rowan, thistle, heather, and stars.
 
 
 <div style="page-break-after: always;"></div>
+
+
+# Book Section: Starter Play Kit
+
+# Thistlebright Adventures — Starter Play Kit
+
+Print these pages when you want to begin with almost no preparation. The Guide reads the setup, each child chooses a hero card, and play starts at the first scene.
+
+## 5-Minute Table Setup
+1. Put one die, three charm tokens, and a pencil near each hero.
+2. Place the **Lantern** safety card where everyone can see it.
+3. Pick one adventure from `books/example-campaigns.md`.
+4. Ask every player: “What is one kind thing your hero is good at?”
+5. Begin with a bright image: thistles glowing, heather waving, tartan flags, a silver loch, or fiddles at a fairy ceilidh.
+
+## Guide Promise to Read Aloud
+“Tonight we are making a cozy fairy-tale adventure together. Nothing can remove you from the story forever. If anything feels too much, say **Lantern**, and it becomes softer. Your ideas matter. Kind, clever, brave, and quick choices can all save the day.”
+
+---
+
+## Ready Hero Card: Rowan Shield-Keeper
+**Kind:** Thistle Knight  
+**Look:** A green cloak, a wooden shield painted with a rowan leaf, and boots with thistle buckles.  
+**Stats:** Brave +2, Clever +1, Kind +1, Quick +0  
+**Gift:** Once per adventure, stand in front of danger and make it safe.  
+**Treasure:** Warm rowan button.  
+**Always helps:** Small animals and nervous friends.
+
+### Catchphrase
+“By thistle and shield, we’ll make this safe!”
+
+---
+
+## Ready Hero Card: Loch Map-Maker
+**Kind:** Loch Scout  
+**Look:** Blue tartan scarf, map ribbon, pebble pouch, and a hat with a feather.  
+**Stats:** Brave +0, Clever +2, Kind +1, Quick +1  
+**Gift:** Once per scene, find a hidden path or clue.  
+**Treasure:** Smooth loch pebble.  
+**Always helps:** Lost travelers.
+
+### Catchphrase
+“The loch remembers the way!”
+
+---
+
+## Ready Hero Card: Heather Song-Friend
+**Kind:** Hearth Bard  
+**Look:** Purple heather crown, tiny bell, soft mittens, and a biscuit bag.  
+**Stats:** Brave +1, Clever +0, Kind +2, Quick +1  
+**Gift:** Once per adventure, turn grumpiness into giggles.  
+**Treasure:** Tiny silver bell.  
+**Always helps:** Grumpy creatures.
+
+### Catchphrase
+“A song is a warm blanket for the heart.”
+
+---
+
+## Ready Hero Card: Tartan Spark Runner
+**Kind:** Fairy Friend  
+**Look:** Red tartan sash, acorn cup, sparkle freckles, and speedy shoes.  
+**Stats:** Brave +1, Clever +1, Kind +0, Quick +2  
+**Gift:** Once per scene, ask a small nature spirit for a hint.  
+**Treasure:** Lucky pebble with a star mark.  
+**Always helps:** Friends in a hurry.
+
+### Catchphrase
+“Quick as a fairy fiddle!”
+
+---
+
+## Tiny Table Jobs
+Give each child one optional job between turns:
+- **Map Keeper:** draws the path, loch, rowan tree, or castle door.
+- **Charm Keeper:** reminds friends they can help each other.
+- **Creature Voice:** makes a friendly sound for sheep, frogs, or dragon sneezes.
+- **Ceilidh Leader:** chooses a tiny dance move when the party celebrates.
+
+## If Attention Wobbles
+Use one of these quick resets:
+1. Everyone wiggles fingers like fairy lights for ten seconds.
+2. Ask: “What colour is the magic right now?”
+3. Let a player draw the next clue.
+4. Give a cloud sheep a silly name.
+5. Offer two clear choices: “Do you go to the loch or the rowan tree?”
+
+## End-of-Session Stars
+At the end, each hero receives one star. Pick the star that fits what they did:
+- **Kind Star:** helped someone feel better.
+- **Clever Star:** solved a puzzle or spotted a clue.
+- **Brave Star:** tried something hard.
+- **Quick Star:** acted carefully or speedily.
+- **Ceilidh Star:** made the table laugh or dance.
+
+Stars are story keepsakes, not competition points. Everyone should leave with something to feel proud of.
+
+
+<div style="page-break-after: always;"></div>
+
+
+# Book Section: Guide Session Sheet
 
 # Thistlebright Adventures — Guide Session Sheet
 
@@ -812,3 +1234,6 @@ Tone: cozy / silly / brave / wonder
 
 ## Rewards
 ____________________________________________________
+
+
+<div style="page-break-after: always;"></div>

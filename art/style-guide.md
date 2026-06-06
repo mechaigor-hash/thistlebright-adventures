@@ -7,3 +7,9 @@ Consistent visual direction for all images:
 - Palette: heather purple, moss green, warm gold, misty blue, soft cream.
 - Lighting: magical dawn/dusk glow, firefly sparkles.
 - Text: avoid readable text inside generated art unless specifically requested.
+
+
+## Book layout direction
+- Treat each major rule section like a two-page children's book spread: large friendly art first, then short blocks of readable guidance.
+- Use repeated visual anchors: tartan ribbons for tips, thistles for rules, rowan leaves for safety, acorn lanterns for examples.
+- Keep images frequent enough that a child can point to what is happening even before reading the text.
