@@ -9,13 +9,13 @@
 html { background:#d8c59a; }
 body { margin:0 auto; max-width:210mm; color:var(--ink); font-family:"DejaVu Serif", Georgia, "Times New Roman", serif; font-size:10.2pt; line-height:1.28; background:var(--paper2); }
 main.book { min-height:100vh; padding:6mm 8mm 8mm; background:var(--paper2); }
-p, li { orphans:3; widows:3; } p { margin:0 0 2.6mm; } ul, ol { margin-top:1.2mm; margin-bottom:3mm; padding-left:5.2mm; } li { margin:.45mm 0; }
+p, li { orphans:3; widows:3; } p { margin:0 0 2.6mm; } ul, ol { margin-top:1.2mm; margin-bottom:3mm; padding-left:5.2mm; break-inside:avoid-page; page-break-inside:avoid; } li { margin:.45mm 0; break-inside:avoid; } .keep-block { break-inside:avoid-page; page-break-inside:avoid; margin:0 0 3mm; } .keep-block > :last-child { margin-bottom:0; }
 strong { color:#251b13; } h1, h2, h3, h4 { text-wrap:balance; break-after:avoid; }
 h1 { page-break-before:always; min-height:68mm; margin:0 -2mm 7mm; padding:15mm 14mm 9mm; color:#fff8e8; font-size:24pt; letter-spacing:.02em; line-height:1.04; background:linear-gradient(90deg, rgba(23,35,26,.82), rgba(46,35,65,.62)), url("../art/generated/22-book-title-spread.png") center/cover no-repeat; border-bottom:2.2mm solid #6f4b1f; box-shadow: inset 0 -18mm 26mm rgba(0,0,0,.27); text-shadow:0 2px 4px rgba(0,0,0,.45); }
 h1:first-child { page-break-before:auto; }
-h2 { clear:both; margin:7mm 0 3.6mm; color:var(--green); font-size:17pt; border-top:1.2pt dashed rgba(184,138,45,.72); padding-top:4mm; }
+h2 { clear:both; margin:7mm 0 3.6mm; color:var(--green); font-size:17pt; border-top:1.2pt dashed rgba(184,138,45,.72); padding-top:4mm; break-after:avoid-page; page-break-after:avoid; }
 h2::first-letter { font-size:1.22em; color:var(--red); }
-h3 { clear:both; margin:5mm 0 2mm; color:var(--red); font-size:13pt; border-bottom:1px solid rgba(184,138,45,.6); }
+h3 { clear:both; margin:5mm 0 2mm; color:var(--red); font-size:13pt; border-bottom:1px solid rgba(184,138,45,.6); break-after:avoid-page; page-break-after:avoid; }
 h4 { margin:0 0 1.3mm; color:var(--purple); font-size:12pt; letter-spacing:.015em; }
 hr { clear:both; border:0; height:3.5mm; margin:6mm 0; background:radial-gradient(circle, rgba(139,53,45,.95) 1mm, transparent 1.1mm) center/7mm 3.5mm repeat-x; opacity:.6; }
 blockquote, table { break-inside:avoid; page-break-inside:avoid; }
@@ -29,29 +29,32 @@ img { max-width:100%; height:auto; }
 
 /* Standalone art plates: page-scale but short enough to leave safe A4 room. */
 figure.art-plate {
-  clear:both; position:relative; width:calc(100% + 16mm); min-height:184mm; margin:3mm -8mm 4mm; padding:0;
+  clear:both; position:relative; width:calc(100% + 16mm); min-height:180mm; margin:3mm -8mm 4mm; padding:0;
   break-inside:avoid; page-break-inside:avoid; page-break-before:auto; page-break-after:auto;
   border:0; border-radius:0; background:#2e2418; box-shadow:none; overflow:hidden;
 }
 figure.art-plate::before { display:none; }
-figure.art-plate img { display:block; width:100%; height:184mm; max-height:none; object-fit:cover; object-position:center; border-radius:0; background:#2e2418; }
-figure.art-plate.title-art, figure.art-plate.title-art img { min-height:154mm; height:154mm; }
-figure.art-plate.tall, figure.art-plate.tall img { min-height:190mm; height:190mm; }
+figure.art-plate img { display:block; width:100%; height:180mm; max-height:none; object-fit:cover; object-position:center; border-radius:0; background:#2e2418; }
+figure.art-plate.title-art, figure.art-plate.title-art img { min-height:136mm; height:136mm; }
+figure.art-plate.tall, figure.art-plate.tall img { min-height:148mm; height:148mm; }
 
 /* Scene plates: large image + overlay, but no fixed content clipping. */
-.scene-plate { position:relative; clear:both; width:calc(100% + 16mm); min-height:214mm; margin:3mm -8mm 4mm; padding:0; border:0; border-radius:0; overflow:hidden; box-shadow:none; break-inside:avoid; page-break-inside:avoid; page-break-before:auto; page-break-after:auto; background:#2e2418; }
-.scene-plate figure.art-plate { position:relative; inset:auto; width:100%; min-height:214mm; height:214mm; margin:0; padding:0; border:0; border-radius:0; box-shadow:none; background:transparent; page-break-before:auto; page-break-after:auto; }
+.scene-plate { position:relative; clear:both; width:calc(100% + 16mm); min-height:190mm; margin:3mm -8mm 4mm; padding:0; border:0; border-radius:0; overflow:hidden; box-shadow:none; break-inside:avoid; page-break-inside:avoid; page-break-before:auto; page-break-after:auto; background:#2e2418; }
+.scene-plate figure.art-plate { position:relative; inset:auto; width:100%; min-height:190mm; height:190mm; margin:0; padding:0; border:0; border-radius:0; box-shadow:none; background:transparent; page-break-before:auto; page-break-after:auto; }
 .scene-plate figure.art-plate::before { display:none; }
-.scene-plate figure.art-plate img { width:100%; height:214mm; max-height:none; object-fit:cover; object-position:center; border-radius:0; opacity:.99; background:#2e2418; }
+.scene-plate figure.art-plate img { width:100%; height:190mm; max-height:none; object-fit:cover; object-position:center; border-radius:0; opacity:.99; background:#2e2418; }
+.scene-plate.scene-full { min-height:270mm; }
+.scene-plate.scene-full figure.art-plate { min-height:270mm; height:270mm; }
+.scene-plate.scene-full figure.art-plate img { height:270mm; }
 .scene-plate::after, .profile-card::after, .class-card::after, .creature-card::after { display:none; }
 .scene-copy { position:absolute; z-index:3; left:50%; transform:translateX(-50%); bottom:5mm; width:148mm; max-height:none; overflow:visible; padding:3mm 4mm; background:linear-gradient(180deg, rgba(255,250,238,.96), rgba(250,235,199,.88)); border:1px solid rgba(91,57,22,.58); border-left:2.4mm solid rgba(139,53,45,.75); border-radius:1.5mm 3mm 3mm 1.5mm; box-shadow:0 1.2mm 6mm rgba(0,0,0,.25); font-size:9.7pt; line-height:1.23; }
 .scene-copy p:last-child, .scene-copy ul:last-child, .scene-copy ol:last-child { margin-bottom:0; }
 
 /* Full-page feature plates with ONE overlay group. Shorter than A4 after padding. */
-.profile-card, .class-card, .creature-card { position:relative; clear:both; width:calc(100% + 16mm); min-height:272mm; margin:3mm -8mm 4mm; padding:0; border:0; border-radius:0; overflow:hidden; box-shadow:none; break-inside:avoid; page-break-inside:avoid; page-break-before:auto; page-break-after:auto; background:#2e2418; }
-.profile-card > img, .class-card > img { position:relative; display:block; z-index:0; width:100%; height:272mm; max-width:none; max-height:none; margin:0; padding:0; border:0; border-radius:0; object-fit:cover; object-position:center; opacity:.99; background:#2e2418; }
-.creature-card figure.art-plate { position:relative; width:100%; min-height:272mm; height:272mm; margin:0; padding:0; border:0; border-radius:0; box-shadow:none; page-break-before:auto; page-break-after:auto; background:transparent; }
-.creature-card figure.art-plate img { width:100%; height:272mm; max-height:none; object-fit:cover; object-position:center; padding:0; opacity:.99; background:#2e2418; }
+.profile-card, .class-card, .creature-card { position:relative; clear:both; width:calc(100% + 16mm); min-height:282mm; margin:0 -8mm 0; padding:0; border:0; border-radius:0; overflow:hidden; box-shadow:none; break-inside:avoid; page-break-inside:avoid; page-break-before:auto; page-break-after:auto; background:#2e2418; }
+.profile-card > img, .class-card > img { position:relative; display:block; z-index:0; width:100%; height:282mm; max-width:none; max-height:none; margin:0; padding:0; border:0; border-radius:0; object-fit:cover; object-position:center; opacity:.99; background:#2e2418; }
+.creature-card figure.art-plate { position:relative; width:100%; min-height:282mm; height:282mm; margin:0; padding:0; border:0; border-radius:0; box-shadow:none; page-break-before:auto; page-break-after:auto; background:transparent; }
+.creature-card figure.art-plate img { width:100%; height:282mm; max-height:none; object-fit:cover; object-position:center; padding:0; opacity:.99; background:#2e2418; }
 .profile-card::before, .class-card::before, .creature-card::before { content:""; position:absolute; inset:0; z-index:1; background:linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 38%, rgba(255,248,226,.22) 62%, rgba(42,29,16,.20) 100%); pointer-events:none; }
 .feature-copy { position:absolute; z-index:3; left:50% !important; right:auto !important; top:auto !important; bottom:5mm !important; transform:translateX(-50%); width:158mm; max-height:none; overflow:visible; padding:3mm 4mm; background:linear-gradient(180deg, rgba(255,250,238,.97), rgba(250,235,199,.90)); border:1px solid rgba(91,57,22,.55); border-top:1.8mm solid rgba(139,53,45,.78); border-radius:1.5mm 3.2mm 3.2mm 1.5mm; box-shadow:0 1.5mm 7mm rgba(0,0,0,.24); }
 .copy-left .feature-copy, .copy-right .feature-copy, .copy-bottom .feature-copy { left:50% !important; right:auto !important; top:auto !important; bottom:5mm !important; transform:translateX(-50%); width:158mm; max-height:none; overflow:visible; }
@@ -74,16 +77,16 @@ figure.art-plate.tall, figure.art-plate.tall img { min-height:190mm; height:190m
 <figure class="art-plate title-art"><img src="../art/generated/22-book-title-spread.png" alt="Book title spread"></figure>
 <blockquote><strong>For grown-up helpers:</strong> This chapter is written to be read aloud. Pause at each “Your turn” box and let the child choose, point, draw, or answer with one word. A complete first character should take <strong>5–10 minutes</strong>.</blockquote>
 <h2>Welcome, wee hero</h2>
-<p>You are about to make a brave, clever, kind, quick hero for a fairy-tale adventure. Your hero does not need to be perfect. Your hero only needs three things:</p>
+<div class="keep-block"><p>You are about to make a brave, clever, kind, quick hero for a fairy-tale adventure. Your hero does not need to be perfect. Your hero only needs three things:</p>
 <ol>
 <li>A <strong>name</strong>.</li>
 <li>A <strong>way to help</strong>.</li>
 <li>A <strong>little bit of magic or courage</strong>.</li>
-</ol>
+</ol></div>
 <figure class="art-plate tall"><img src="../art/generated/04-character-sheet-heroes.png" alt="Hero lineup"></figure>
 <hr>
 <h2>Chapter 1 — How the game feels</h2>
-<p>This is a talking, drawing, dice-rolling game. The Guide describes a magical place. You say what your hero tries. Then everyone helps tell what happens next.</p>
+<div class="keep-block"><p>This is a talking, drawing, dice-rolling game. The Guide describes a magical place. You say what your hero tries. Then everyone helps tell what happens next.</p>
 <p>The story is about:</p>
 <ul>
 <li>Finding lost things.</li>
@@ -91,14 +94,14 @@ figure.art-plate.tall, figure.art-plate.tall img { min-height:190mm; height:190m
 <li>Solving gentle puzzles.</li>
 <li>Being brave without being mean.</li>
 <li>Making the glen safer and happier.</li>
-</ul>
-<h3>The Golden Rules</h3>
+</ul></div>
+<div class="keep-block"><h3>The Golden Rules</h3>
 <ol>
 <li><strong>Heroes help.</strong> Kindness comes first.</li>
 <li><strong>Everyone gets a turn.</strong> Invite quiet friends in.</li>
 <li><strong>Lantern makes it gentler.</strong> If anything feels too spooky, say “Lantern!”</li>
 <li><strong>A low roll means a new idea.</strong> It never means you are bad at the game.</li>
-</ol>
+</ol></div>
 <hr>
 <h2>Chapter 2 — The dice rule</h2>
 <section class="scene-plate">
@@ -113,13 +116,13 @@ figure.art-plate.tall, figure.art-plate.tall img { min-height:190mm; height:190m
 <tr><td><strong>1–2</strong></td><td>Not yet. Try a new plan or ask for help.</td><td>“Not yet. What else could we try?”</td></tr>
 </tbody></table>
 <h3>Your four stats</h3>
-<p>Use these when your hero does something tricky:</p>
+<div class="keep-block"><p>Use these when your hero does something tricky:</p>
 <ul>
 <li><strong>Brave</strong> — climbing, protecting, trying a hard thing.</li>
 <li><strong>Clever</strong> — puzzles, clues, remembering tales, making plans.</li>
 <li><strong>Kind</strong> — calming creatures, sharing, apologizing, making peace.</li>
 <li><strong>Quick</strong> — racing, catching, dodging, sneaking, balancing.</li>
-</ul>
+</ul></div>
 <hr>
 <h2>Chapter 3 — Make a hero, step by step</h2>
 <section class="scene-plate">
@@ -134,7 +137,7 @@ figure.art-plate.tall, figure.art-plate.tall img { min-height:190mm; height:190m
 <p>For ages 5–7, keep it simple: <strong>pick one race, pick one class, then choose your numbers.</strong></p>
 <hr>
 <h3>Step 1: Pick your race — your fairy-tale people</h3>
-<section class="scene-plate">
+<section class="scene-plate scene-full">
 <figure class="art-plate"><img src="../art/generated/23-player-races-kindreds.png" alt="Player races / kindreds"></figure>
 <div class="scene-copy"><p>These are also called <strong>kindreds</strong> in the glen. Pick the one that sounds fun. Races do <strong>not</strong> make anyone better or worse. They give a tiny story gift and a way to imagine your hero.</p>
 </div>
@@ -143,78 +146,78 @@ figure.art-plate.tall, figure.art-plate.tall img { min-height:190mm; height:190m
 <img src="../art/generated/26-race-human-glenfolk.png" alt="Human Glenfolk">
 <div class="feature-copy">
 <h4>Human Glenfolk</h4>
-<p>Curious children from villages, farms, islands, castles, and cozy cottages near the fairy roads.</p>
+<div class="keep-block"><p>Curious children from villages, farms, islands, castles, and cozy cottages near the fairy roads.</p>
 <ul>
 <li><strong>Look:</strong> tartan scarf, muddy boots, warm smile, pockets full of treasures.</li>
 <li><strong>Tiny gift:</strong> Once per adventure, ask a grown-up, old sign, or village memory for a clue.</li>
 <li><strong>Good for players who want:</strong> a familiar hero stepping into magic.</li>
-</ul>
+</ul></div>
 </div>
 </section>
 <section class="profile-card race-card copy-right">
 <img src="../art/generated/27-race-fairy-touched.png" alt="Fairy-Touched">
 <div class="feature-copy">
 <h4>Fairy-Touched</h4>
-<p>Children with a little fairy sparkle: bright eyes, tiny wing-glimmers, or hair that floats when music plays.</p>
+<div class="keep-block"><p>Children with a little fairy sparkle: bright eyes, tiny wing-glimmers, or hair that floats when music plays.</p>
 <ul>
 <li><strong>Look:</strong> thistle-petal shimmer, star freckles, ribbon-bright clothes.</li>
 <li><strong>Tiny gift:</strong> Once per scene, notice nearby fairy magic.</li>
 <li><strong>Good for players who want:</strong> sparkles, secrets, and fairy manners.</li>
-</ul>
+</ul></div>
 </div>
 </section>
 <section class="profile-card race-card copy-bottom">
 <img src="../art/generated/28-race-brownie-kin.png" alt="Brownie-Kin">
 <div class="feature-copy">
 <h4>Brownie-Kin</h4>
-<p>Helpful wee folk who love fixing, tidying, baking, building, and making useful things.</p>
+<div class="keep-block"><p>Helpful wee folk who love fixing, tidying, baking, building, and making useful things.</p>
 <ul>
 <li><strong>Look:</strong> flour on nose, tool pouch, apron, cozy cap.</li>
 <li><strong>Tiny gift:</strong> Once per scene, repair, tidy, or improve one small thing.</li>
 <li><strong>Good for players who want:</strong> practical problem-solving.</li>
-</ul>
+</ul></div>
 </div>
 </section>
 <section class="profile-card race-card copy-right">
 <img src="../art/generated/29-race-selkie-born.png" alt="Selkie-Born">
 <div class="feature-copy">
 <h4>Selkie-Born</h4>
-<p>Gentle sea-hearted heroes with a soft seal-cloak, shell songs, or dreams of moonlit waves.</p>
+<div class="keep-block"><p>Gentle sea-hearted heroes with a soft seal-cloak, shell songs, or dreams of moonlit waves.</p>
 <ul>
 <li><strong>Look:</strong> soft cloak, shell button, sea-glass charm, misty blue colors.</li>
 <li><strong>Tiny gift:</strong> Once per scene, understand water, weather, or a sad feeling.</li>
 <li><strong>Good for players who want:</strong> calm, kindness, and loch magic.</li>
-</ul>
+</ul></div>
 </div>
 </section>
 <section class="profile-card race-card copy-left">
 <img src="../art/generated/30-race-rowan-kin.png" alt="Rowan-Kin">
 <div class="feature-copy">
 <h4>Rowan-Kin</h4>
-<p>Forest friends watched over by rowan trees, moss, birds, and old promises.</p>
+<div class="keep-block"><p>Forest friends watched over by rowan trees, moss, birds, and old promises.</p>
 <ul>
 <li><strong>Look:</strong> leaf crown, berry beads, mossy boots, bark-brown cloak.</li>
 <li><strong>Tiny gift:</strong> Once per scene, ask a plant, tree, or bird for a small hint.</li>
 <li><strong>Good for players who want:</strong> nature, guardianship, and gentle wisdom.</li>
-</ul>
+</ul></div>
 </div>
 </section>
 <section class="profile-card race-card copy-bottom">
 <img src="../art/generated/31-race-dragon-friend.png" alt="Dragon-Friend">
 <div class="feature-copy">
 <h4>Dragon-Friend</h4>
-<p>A child blessed by a tiny friendly dragon: warm hands, smoke-ring giggles, or shiny scale freckles.</p>
+<div class="keep-block"><p>A child blessed by a tiny friendly dragon: warm hands, smoke-ring giggles, or shiny scale freckles.</p>
 <ul>
 <li><strong>Look:</strong> dragon-scale button, warm scarf, tiny harmless horn headband, smoky sparkles.</li>
 <li><strong>Tiny gift:</strong> Once per adventure, make a little warm puff that dries, warms, or lights something safely.</li>
 <li><strong>Good for players who want:</strong> brave wonder without scary fire.</li>
-</ul>
+</ul></div>
 </div>
 </section>
 <blockquote><strong>Your turn:</strong> Point to one race. Say, “I am a ______.”</blockquote>
 <hr>
 <h3>Step 2: Pick your class — your adventure job</h3>
-<section class="scene-plate">
+<section class="scene-plate scene-full">
 <figure class="art-plate"><img src="../art/generated/24-player-classes-paths.png" alt="Player classes / adventure paths"></figure>
 <div class="scene-copy"><p>Your class is what you do when adventure starts. It gives you one bigger <strong>class gift</strong>.</p>
 </div>
@@ -223,13 +226,13 @@ figure.art-plate.tall, figure.art-plate.tall img { min-height:190mm; height:190m
 <img src="../art/generated/32-class-thistle-knight.png" alt="Thistle Knight">
 <div class="feature-copy">
 <h4>Thistle Knight</h4>
-<p>A tiny knight with a big heart.</p>
+<div class="keep-block"><p>A tiny knight with a big heart.</p>
 <ul>
 <li><strong>Best at:</strong> protecting friends and trying brave things.</li>
 <li><strong>Class gift:</strong> Once per adventure, stand in front of danger and make it safe.</li>
 <li><strong>Starting item:</strong> soft wooden shield.</li>
 <li><strong>Good name ideas:</strong> Rowan, Tam, Isla Shieldbutton.</li>
-</ul>
+</ul></div>
 <div class="spell-block"><p class="spell-title">Abilities / spells</p><ul>
 <li><strong>Shield of Thistles:</strong> Give a friend +1 when you protect them.</li>
 <li><strong>Brave Step:</strong> Cross one scary-but-safe obstacle first so friends feel better.</li>
@@ -243,13 +246,13 @@ figure.art-plate.tall, figure.art-plate.tall img { min-height:190mm; height:190m
 <img src="../art/generated/33-class-glen-wizard.png" alt="Glen Wizard">
 <div class="feature-copy">
 <h4>Glen Wizard</h4>
-<p>A young spell-speaker who knows rhyme-magic.</p>
+<div class="keep-block"><p>A young spell-speaker who knows rhyme-magic.</p>
 <ul>
 <li><strong>Best at:</strong> small helpful magic and fairy clues.</li>
 <li><strong>Class gift:</strong> Once per scene, make a small magical light, sound, or sparkle.</li>
 <li><strong>Starting item:</strong> pebble wand.</li>
 <li><strong>Good name ideas:</strong> Skye, Eilidh, Pip Pebblewand.</li>
-</ul>
+</ul></div>
 <div class="spell-block"><p class="spell-title">Abilities / spells</p><ul>
 <li><strong>Glowbug Light:</strong> Make a soft light that shows clues.</li>
 <li><strong>Pebble Ping:</strong> Your wand gently points toward nearby magic.</li>
@@ -263,13 +266,13 @@ figure.art-plate.tall, figure.art-plate.tall img { min-height:190mm; height:190m
 <img src="../art/generated/34-class-loch-scout.png" alt="Loch Scout">
 <div class="feature-copy">
 <h4>Loch Scout</h4>
-<p>A fast explorer who knows paths and animal tracks.</p>
+<div class="keep-block"><p>A fast explorer who knows paths and animal tracks.</p>
 <ul>
 <li><strong>Best at:</strong> maps, hidden paths, and quick movement.</li>
 <li><strong>Class gift:</strong> Once per scene, find a hidden path or clue.</li>
 <li><strong>Starting item:</strong> ribbon map.</li>
 <li><strong>Good name ideas:</strong> Mairi, Finlay, Nessa Map-Button.</li>
-</ul>
+</ul></div>
 <div class="spell-block"><p class="spell-title">Abilities / spells</p><ul>
 <li><strong>Ribbon Map:</strong> Ask one question about where a path goes.</li>
 <li><strong>Quiet Boots:</strong> Move gently without startling a creature.</li>
@@ -283,13 +286,13 @@ figure.art-plate.tall, figure.art-plate.tall img { min-height:190mm; height:190m
 <img src="../art/generated/35-class-hearth-bard.png" alt="Hearth Bard">
 <div class="feature-copy">
 <h4>Hearth Bard</h4>
-<p>A singer, dancer, joker, and friend-maker.</p>
+<div class="keep-block"><p>A singer, dancer, joker, and friend-maker.</p>
 <ul>
 <li><strong>Best at:</strong> cheering people up and making grumpy creatures laugh.</li>
 <li><strong>Class gift:</strong> Once per adventure, turn grumpiness into giggles.</li>
 <li><strong>Starting item:</strong> tiny bell or whistle.</li>
 <li><strong>Good name ideas:</strong> Brodie, Callum, Heather Bell.</li>
-</ul>
+</ul></div>
 <div class="spell-block"><p class="spell-title">Abilities / spells</p><ul>
 <li><strong>Ceilidh Beat:</strong> Start a rhythm that helps everyone move together.</li>
 <li><strong>Giggle Verse:</strong> Turn one grumpy sentence into a silly one.</li>
@@ -303,13 +306,13 @@ figure.art-plate.tall, figure.art-plate.tall img { min-height:190mm; height:190m
 <img src="../art/generated/36-class-fairy-friend.png" alt="Fairy Friend">
 <div class="feature-copy">
 <h4>Fairy Friend</h4>
-<p>A child-sized friend of the fairy courts.</p>
+<div class="keep-block"><p>A child-sized friend of the fairy courts.</p>
 <ul>
 <li><strong>Best at:</strong> nature hints and fairy manners.</li>
 <li><strong>Class gift:</strong> Once per scene, ask a small nature spirit for a hint.</li>
 <li><strong>Starting item:</strong> acorn cup.</li>
 <li><strong>Good name ideas:</strong> Ailsa, Lorna, Thistle Pip.</li>
-</ul>
+</ul></div>
 <div class="spell-block"><p class="spell-title">Abilities / spells</p><ul>
 <li><strong>Acorn Cup:</strong> Offer a tiny gift and ask for fairy hospitality.</li>
 <li><strong>Heather Hello:</strong> Flowers wave toward a friendly creature.</li>
@@ -322,7 +325,7 @@ figure.art-plate.tall, figure.art-plate.tall img { min-height:190mm; height:190m
 <blockquote><strong>Your turn:</strong> Point to one class. Say, “My job is ______.”</blockquote>
 <hr>
 <h3>Step 3: Put race + class together</h3>
-<p>Say both pieces together:</p>
+<div class="keep-block"><p>Say both pieces together:</p>
 <blockquote>“I am a <strong>[race] [class]</strong>.”</blockquote>
 <p>Examples:</p>
 <ul>
@@ -332,7 +335,7 @@ figure.art-plate.tall, figure.art-plate.tall img { min-height:190mm; height:190m
 <li>Selkie-Born Loch Scout</li>
 <li>Rowan-Kin Fairy Friend</li>
 <li>Dragon-Friend Thistle Knight</li>
-</ul>
+</ul></div>
 <figure class="art-plate"><img src="../art/generated/25-race-class-combo-example.png" alt="Race and class example hero"></figure>
 <h3>Step 4: Pick your numbers</h3>
 <p>Write these numbers next to your stats:</p>
@@ -348,7 +351,7 @@ figure.art-plate.tall, figure.art-plate.tall img { min-height:190mm; height:190m
 <p>Then put <strong>+1</strong> in two other stats, and <strong>+0</strong> in the last one.</p>
 <blockquote><strong>Grown-up helper tip:</strong> The race gift is for flavor and tiny story help. The class tells the child what they are likely to do most often.</blockquote>
 <h3>Step 5: Pick a treasure</h3>
-<p>Choose one, roll 1d6, or invent something small:</p>
+<div class="keep-block"><p>Choose one, roll 1d6, or invent something small:</p>
 <ol>
 <li>Rowan button that feels warm near kind magic.</li>
 <li>Tartan ribbon that points toward music.</li>
@@ -356,11 +359,11 @@ figure.art-plate.tall, figure.art-plate.tall img { min-height:190mm; height:190m
 <li>Thistle badge that glows when someone is brave.</li>
 <li>Heather biscuit wrapped in leaf-paper.</li>
 <li>Wee wooden dragon that sneezes sparkles.</li>
-</ol>
+</ol></div>
 <h3>Step 6: Answer one helper question</h3>
 <p>Finish this sentence:</p>
 <p><strong>“My hero always helps __________________.”</strong></p>
-<p>Ideas: lost animals, shy friends, grumpy creatures, little siblings, travelers, trees, dragons, anyone who is scared.</p>
+<div class="keep-block"><p>Ideas: lost animals, shy friends, grumpy creatures, little siblings, travelers, trees, dragons, anyone who is scared.</p>
 <h3>Step 7: Draw your hero</h3>
 <p>Draw a big shape first. Then add:</p>
 <ul>
@@ -370,7 +373,7 @@ figure.art-plate.tall, figure.art-plate.tall img { min-height:190mm; height:190m
 <li>One magical thing.</li>
 <li>One friendly smile.</li>
 <li>One tiny treasure.</li>
-</ul>
+</ul></div>
 <hr>
 <h2>Chapter 4 — Full example character creation</h2>
 <section class="scene-plate">
@@ -388,13 +391,13 @@ figure.art-plate.tall, figure.art-plate.tall img { min-height:190mm; height:190m
 <h4>2. Class</h4>
 <p>Mairi chooses <strong>Loch Scout</strong>. Her class gift lets her find a hidden path or clue once per scene.</p>
 <h4>3. Stats</h4>
-<p>A Loch Scout is best at moving fast and finding paths, so Mairi puts <strong>+2 in Quick</strong>.</p>
+<div class="keep-block"><p>A Loch Scout is best at moving fast and finding paths, so Mairi puts <strong>+2 in Quick</strong>.</p>
 <p>Then she chooses:</p>
 <ul>
 <li><strong>Brave +1</strong> because she likes crossing stepping stones.</li>
 <li><strong>Clever +1</strong> because she likes maps.</li>
 <li><strong>Kind +0</strong> because she is still learning how to talk to grumpy creatures.</li>
-</ul>
+</ul></div>
 <p>Mairi’s stats are:</p>
 <table><thead><tr><th>Stat</th><th>Number</th></tr></thead><tbody>
 <tr><td>Brave</td><td>+1</td></tr>
@@ -422,21 +425,21 @@ figure.art-plate.tall, figure.art-plate.tall img { min-height:190mm; height:190m
 </section>
 <hr>
 <h2>Chapter 5 — Charms and helping friends</h2>
-<p>Each hero starts with <strong>3 charms</strong>.</p>
+<div class="keep-block"><p>Each hero starts with <strong>3 charms</strong>.</p>
 <p>Spend one charm to:</p>
 <ul>
 <li>Reroll a die.</li>
 <li>Help a friend add <strong>+1</strong>.</li>
 <li>Make a scene less scary.</li>
 <li>Remember a helpful tale.</li>
-</ul>
+</ul></div>
 <h3>How helping works</h3>
-<p>When a friend rolls, you can help by saying one clear action:</p>
+<div class="keep-block"><p>When a friend rolls, you can help by saying one clear action:</p>
 <ul>
 <li>“I hold the lantern so they can see.”</li>
 <li>“I share my scarf with the chilly kelpie.”</li>
 <li>“I remember the fairy rhyme with them.”</li>
-</ul>
+</ul></div>
 <p>Then spend 1 charm to give your friend <strong>+1</strong>. If the roll still does not work, everyone learns something useful and tries a new idea.</p>
 <hr>
 <h2>Chapter 6 — Tiny spells</h2>
@@ -468,15 +471,15 @@ figure.art-plate.tall, figure.art-plate.tall img { min-height:190mm; height:190m
 <p><strong>Guide:</strong> “That sounds Kind. Roll one die and add Kind.”</p>
 <p><strong>Player:</strong> “I rolled a 4. My Kind is +1. That makes 5!”</p>
 <p><strong>Guide:</strong> “You do it! The troll smiles, yawns, and lets you cross. He gives you a moss cookie for later.”</p>
-<h3>A turn in three steps</h3>
+<div class="keep-block"><h3>A turn in three steps</h3>
 <ol>
 <li><strong>Say what you try.</strong> “I ask the brownie what is wrong.”</li>
 <li><strong>Choose the best stat.</strong> Kind, Clever, Brave, or Quick.</li>
 <li><strong>Roll and tell the story.</strong> On a twist, make it funny: squeaky boots, floating hair, biscuit crumbs, or a frog clapping.</li>
-</ol>
+</ol></div>
 <hr>
 <h2>Chapter 8 — What heroes do not do</h2>
-<p>Thistlebright heroes do not use gore, cruel tricks, or permanent harm. Even “monsters” are usually hungry, lonely, mixed-up, sleepy, cursed by silly magic, or guarding the wrong thing.</p>
+<div class="keep-block"><p>Thistlebright heroes do not use gore, cruel tricks, or permanent harm. Even “monsters” are usually hungry, lonely, mixed-up, sleepy, cursed by silly magic, or guarding the wrong thing.</p>
 <p>The best victory is:</p>
 <ul>
 <li>A new friend.</li>
@@ -484,4 +487,4 @@ figure.art-plate.tall, figure.art-plate.tall img { min-height:190mm; height:190m
 <li>A safe path home.</li>
 <li>A creature feeling understood.</li>
 <li>A party under the rowan tree.</li>
-</ul></main></body></html>
+</ul></div></main></body></html>

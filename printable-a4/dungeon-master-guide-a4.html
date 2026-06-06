@@ -9,13 +9,13 @@
 html { background:#d8c59a; }
 body { margin:0 auto; max-width:210mm; color:var(--ink); font-family:"DejaVu Serif", Georgia, "Times New Roman", serif; font-size:10.2pt; line-height:1.28; background:var(--paper2); }
 main.book { min-height:100vh; padding:6mm 8mm 8mm; background:var(--paper2); }
-p, li { orphans:3; widows:3; } p { margin:0 0 2.6mm; } ul, ol { margin-top:1.2mm; margin-bottom:3mm; padding-left:5.2mm; } li { margin:.45mm 0; }
+p, li { orphans:3; widows:3; } p { margin:0 0 2.6mm; } ul, ol { margin-top:1.2mm; margin-bottom:3mm; padding-left:5.2mm; break-inside:avoid-page; page-break-inside:avoid; } li { margin:.45mm 0; break-inside:avoid; } .keep-block { break-inside:avoid-page; page-break-inside:avoid; margin:0 0 3mm; } .keep-block > :last-child { margin-bottom:0; }
 strong { color:#251b13; } h1, h2, h3, h4 { text-wrap:balance; break-after:avoid; }
 h1 { page-break-before:always; min-height:68mm; margin:0 -2mm 7mm; padding:15mm 14mm 9mm; color:#fff8e8; font-size:24pt; letter-spacing:.02em; line-height:1.04; background:linear-gradient(90deg, rgba(23,35,26,.82), rgba(46,35,65,.62)), url("../art/generated/22-book-title-spread.png") center/cover no-repeat; border-bottom:2.2mm solid #6f4b1f; box-shadow: inset 0 -18mm 26mm rgba(0,0,0,.27); text-shadow:0 2px 4px rgba(0,0,0,.45); }
 h1:first-child { page-break-before:auto; }
-h2 { clear:both; margin:7mm 0 3.6mm; color:var(--green); font-size:17pt; border-top:1.2pt dashed rgba(184,138,45,.72); padding-top:4mm; }
+h2 { clear:both; margin:7mm 0 3.6mm; color:var(--green); font-size:17pt; border-top:1.2pt dashed rgba(184,138,45,.72); padding-top:4mm; break-after:avoid-page; page-break-after:avoid; }
 h2::first-letter { font-size:1.22em; color:var(--red); }
-h3 { clear:both; margin:5mm 0 2mm; color:var(--red); font-size:13pt; border-bottom:1px solid rgba(184,138,45,.6); }
+h3 { clear:both; margin:5mm 0 2mm; color:var(--red); font-size:13pt; border-bottom:1px solid rgba(184,138,45,.6); break-after:avoid-page; page-break-after:avoid; }
 h4 { margin:0 0 1.3mm; color:var(--purple); font-size:12pt; letter-spacing:.015em; }
 hr { clear:both; border:0; height:3.5mm; margin:6mm 0; background:radial-gradient(circle, rgba(139,53,45,.95) 1mm, transparent 1.1mm) center/7mm 3.5mm repeat-x; opacity:.6; }
 blockquote, table { break-inside:avoid; page-break-inside:avoid; }
@@ -29,29 +29,32 @@ img { max-width:100%; height:auto; }
 
 /* Standalone art plates: page-scale but short enough to leave safe A4 room. */
 figure.art-plate {
-  clear:both; position:relative; width:calc(100% + 16mm); min-height:184mm; margin:3mm -8mm 4mm; padding:0;
+  clear:both; position:relative; width:calc(100% + 16mm); min-height:180mm; margin:3mm -8mm 4mm; padding:0;
   break-inside:avoid; page-break-inside:avoid; page-break-before:auto; page-break-after:auto;
   border:0; border-radius:0; background:#2e2418; box-shadow:none; overflow:hidden;
 }
 figure.art-plate::before { display:none; }
-figure.art-plate img { display:block; width:100%; height:184mm; max-height:none; object-fit:cover; object-position:center; border-radius:0; background:#2e2418; }
-figure.art-plate.title-art, figure.art-plate.title-art img { min-height:154mm; height:154mm; }
-figure.art-plate.tall, figure.art-plate.tall img { min-height:190mm; height:190mm; }
+figure.art-plate img { display:block; width:100%; height:180mm; max-height:none; object-fit:cover; object-position:center; border-radius:0; background:#2e2418; }
+figure.art-plate.title-art, figure.art-plate.title-art img { min-height:136mm; height:136mm; }
+figure.art-plate.tall, figure.art-plate.tall img { min-height:148mm; height:148mm; }
 
 /* Scene plates: large image + overlay, but no fixed content clipping. */
-.scene-plate { position:relative; clear:both; width:calc(100% + 16mm); min-height:214mm; margin:3mm -8mm 4mm; padding:0; border:0; border-radius:0; overflow:hidden; box-shadow:none; break-inside:avoid; page-break-inside:avoid; page-break-before:auto; page-break-after:auto; background:#2e2418; }
-.scene-plate figure.art-plate { position:relative; inset:auto; width:100%; min-height:214mm; height:214mm; margin:0; padding:0; border:0; border-radius:0; box-shadow:none; background:transparent; page-break-before:auto; page-break-after:auto; }
+.scene-plate { position:relative; clear:both; width:calc(100% + 16mm); min-height:190mm; margin:3mm -8mm 4mm; padding:0; border:0; border-radius:0; overflow:hidden; box-shadow:none; break-inside:avoid; page-break-inside:avoid; page-break-before:auto; page-break-after:auto; background:#2e2418; }
+.scene-plate figure.art-plate { position:relative; inset:auto; width:100%; min-height:190mm; height:190mm; margin:0; padding:0; border:0; border-radius:0; box-shadow:none; background:transparent; page-break-before:auto; page-break-after:auto; }
 .scene-plate figure.art-plate::before { display:none; }
-.scene-plate figure.art-plate img { width:100%; height:214mm; max-height:none; object-fit:cover; object-position:center; border-radius:0; opacity:.99; background:#2e2418; }
+.scene-plate figure.art-plate img { width:100%; height:190mm; max-height:none; object-fit:cover; object-position:center; border-radius:0; opacity:.99; background:#2e2418; }
+.scene-plate.scene-full { min-height:270mm; }
+.scene-plate.scene-full figure.art-plate { min-height:270mm; height:270mm; }
+.scene-plate.scene-full figure.art-plate img { height:270mm; }
 .scene-plate::after, .profile-card::after, .class-card::after, .creature-card::after { display:none; }
 .scene-copy { position:absolute; z-index:3; left:50%; transform:translateX(-50%); bottom:5mm; width:148mm; max-height:none; overflow:visible; padding:3mm 4mm; background:linear-gradient(180deg, rgba(255,250,238,.96), rgba(250,235,199,.88)); border:1px solid rgba(91,57,22,.58); border-left:2.4mm solid rgba(139,53,45,.75); border-radius:1.5mm 3mm 3mm 1.5mm; box-shadow:0 1.2mm 6mm rgba(0,0,0,.25); font-size:9.7pt; line-height:1.23; }
 .scene-copy p:last-child, .scene-copy ul:last-child, .scene-copy ol:last-child { margin-bottom:0; }
 
 /* Full-page feature plates with ONE overlay group. Shorter than A4 after padding. */
-.profile-card, .class-card, .creature-card { position:relative; clear:both; width:calc(100% + 16mm); min-height:272mm; margin:3mm -8mm 4mm; padding:0; border:0; border-radius:0; overflow:hidden; box-shadow:none; break-inside:avoid; page-break-inside:avoid; page-break-before:auto; page-break-after:auto; background:#2e2418; }
-.profile-card > img, .class-card > img { position:relative; display:block; z-index:0; width:100%; height:272mm; max-width:none; max-height:none; margin:0; padding:0; border:0; border-radius:0; object-fit:cover; object-position:center; opacity:.99; background:#2e2418; }
-.creature-card figure.art-plate { position:relative; width:100%; min-height:272mm; height:272mm; margin:0; padding:0; border:0; border-radius:0; box-shadow:none; page-break-before:auto; page-break-after:auto; background:transparent; }
-.creature-card figure.art-plate img { width:100%; height:272mm; max-height:none; object-fit:cover; object-position:center; padding:0; opacity:.99; background:#2e2418; }
+.profile-card, .class-card, .creature-card { position:relative; clear:both; width:calc(100% + 16mm); min-height:282mm; margin:0 -8mm 0; padding:0; border:0; border-radius:0; overflow:hidden; box-shadow:none; break-inside:avoid; page-break-inside:avoid; page-break-before:auto; page-break-after:auto; background:#2e2418; }
+.profile-card > img, .class-card > img { position:relative; display:block; z-index:0; width:100%; height:282mm; max-width:none; max-height:none; margin:0; padding:0; border:0; border-radius:0; object-fit:cover; object-position:center; opacity:.99; background:#2e2418; }
+.creature-card figure.art-plate { position:relative; width:100%; min-height:282mm; height:282mm; margin:0; padding:0; border:0; border-radius:0; box-shadow:none; page-break-before:auto; page-break-after:auto; background:transparent; }
+.creature-card figure.art-plate img { width:100%; height:282mm; max-height:none; object-fit:cover; object-position:center; padding:0; opacity:.99; background:#2e2418; }
 .profile-card::before, .class-card::before, .creature-card::before { content:""; position:absolute; inset:0; z-index:1; background:linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 38%, rgba(255,248,226,.22) 62%, rgba(42,29,16,.20) 100%); pointer-events:none; }
 .feature-copy { position:absolute; z-index:3; left:50% !important; right:auto !important; top:auto !important; bottom:5mm !important; transform:translateX(-50%); width:158mm; max-height:none; overflow:visible; padding:3mm 4mm; background:linear-gradient(180deg, rgba(255,250,238,.97), rgba(250,235,199,.90)); border:1px solid rgba(91,57,22,.55); border-top:1.8mm solid rgba(139,53,45,.78); border-radius:1.5mm 3.2mm 3.2mm 1.5mm; box-shadow:0 1.5mm 7mm rgba(0,0,0,.24); }
 .copy-left .feature-copy, .copy-right .feature-copy, .copy-bottom .feature-copy { left:50% !important; right:auto !important; top:auto !important; bottom:5mm !important; transform:translateX(-50%); width:158mm; max-height:none; overflow:visible; }
@@ -74,26 +77,26 @@ figure.art-plate.tall, figure.art-plate.tall img { min-height:190mm; height:190m
 <h2>Your job as Guide</h2>
 <p>You are not trying to beat the children. You are helping them feel brave, clever, and kind. Keep the pace quick, the choices clear, and the tone magical.</p>
 <h2>Session length</h2>
-<p>For ages 5–7, aim for <strong>20–40 minutes</strong>.</p>
+<div class="keep-block"><p>For ages 5–7, aim for <strong>20–40 minutes</strong>.</p>
 <p>Use this structure:</p>
 <ol>
 <li><strong>Wonder:</strong> show a magical place.</li>
 <li><strong>Problem:</strong> someone needs help.</li>
 <li><strong>Three scenes:</strong> clue, obstacle, choice.</li>
 <li><strong>Happy ending:</strong> celebrate and give a sticker/title/treasure.</li>
-</ol>
+</ol></div>
 <h2>Kid-safe stakes</h2>
 <p>Use lost things, mixed-up magic, grumpy creatures, riddles, weather trouble, broken bridges, and missing songs.</p>
 <p>Avoid graphic injury, hopelessness, betrayal by trusted adults, punishing curiosity, and long tactical combat.</p>
 <h2>The “Lantern” safety word</h2>
 <p>If a child says <strong>Lantern</strong>, immediately soften the scene. Example: “The dragon is not angry; it has hiccups and needs help.”</p>
 <h2>Building encounters</h2>
-<p>Every encounter should have at least three solutions:</p>
+<div class="keep-block"><p>Every encounter should have at least three solutions:</p>
 <ul>
 <li><strong>Kind:</strong> comfort, negotiate, share.</li>
 <li><strong>Clever:</strong> solve a riddle, spot a clue.</li>
 <li><strong>Brave/Quick:</strong> climb, run, distract, protect.</li>
-</ul>
+</ul></div>
 <h2>Gentle conflict goals</h2>
 <p>Calm it, help it, outwit it, return what was lost, or make a fair trade.</p>
 <h2>Rewards</h2>
@@ -131,15 +134,15 @@ figure.art-plate.tall, figure.art-plate.tall img { min-height:190mm; height:190m
 <tr><td><strong>Quick</strong></td><td>“You move fast or carefully.”</td><td>catching, sneaking, balancing, racing</td></tr>
 </tbody></table>
 <h3>Charm tokens</h3>
-<p>Give each hero 3 small tokens (buttons, shells, beads, or paper thistles). A hero may spend one to:</p>
+<div class="keep-block"><p>Give each hero 3 small tokens (buttons, shells, beads, or paper thistles). A hero may spend one to:</p>
 <ul>
 <li>reroll a die;</li>
 <li>add <strong>+1</strong> to a friend’s roll after saying how they help;</li>
 <li>ask for one gentle clue;</li>
 <li>make a scene softer by holding up the <strong>Lantern</strong> card.</li>
-</ul>
+</ul></div>
 <h3>Twist cards for 3–4 results</h3>
-<p>When a roll is almost there, let the player pick or roll 1d6:</p>
+<div class="keep-block"><p>When a roll is almost there, let the player pick or roll 1d6:</p>
 <ol>
 <li>Your socks squeak loudly.</li>
 <li>A tiny fairy starts narrating everything you do.</li>
@@ -147,21 +150,21 @@ figure.art-plate.tall, figure.art-plate.tall img { min-height:190mm; height:190m
 <li>You succeed, but the clue is covered in biscuit crumbs.</li>
 <li>A cloud sheep follows you for the rest of the scene.</li>
 <li>Everyone must do one silly dance step before moving on.</li>
-</ol>
+</ol></div>
 <h3>“Not yet” cards for 1–2 results</h3>
-<p>Avoid saying “you fail.” Try one of these:</p>
+<div class="keep-block"><p>Avoid saying “you fail.” Try one of these:</p>
 <ul>
 <li>“Not yet — who can help you?”</li>
 <li>“That way is wobbly. What is a kinder or cleverer way?”</li>
 <li>“You learn one useful thing, but need a new plan.”</li>
 <li>“A funny complication appears; it is safe, just inconvenient.”</li>
-</ul>
+</ul></div>
 <h3>Table comfort checklist</h3>
-<p>Before play, prepare:</p>
+<div class="keep-block"><p>Before play, prepare:</p>
 <ul>
 <li>dice that are easy to see;</li>
 <li>pencils and blank spaces for drawing;</li>
 <li>one visible <strong>Lantern</strong> card;</li>
 <li>a 5-minute wiggle break option;</li>
 <li>a promise that every ending is safe, warm, and celebratory.</li>
-</ul></main></body></html>
+</ul></div></main></body></html>
