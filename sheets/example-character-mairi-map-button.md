@@ -1,12 +1,14 @@
 # Example Character Sheet — Mairi Map-Button
 
-![Mairi Map-Button](../art/generated/18-example-hero-mairi.png)
+![Mairi Map-Button](../art/generated/25-race-class-combo-example.png)
 
 **Hero Name:** Mairi Map-Button
 
 **Player:** Example Player
 
-**Hero Kind:** Loch Scout
+**Race / Kindred:** Selkie-Born
+
+**Class / Path:** Loch Scout
 
 ## Stats
 - Brave: +1
@@ -17,7 +19,10 @@
 ## Charms
 ☐ Charm 1  ☐ Charm 2  ☐ Charm 3
 
-## My Gift
+## My Race Gift
+Once per scene, I can understand water, weather, or a sad feeling.
+
+## My Class Gift
 Once per scene, I can find a hidden path or clue.
 
 ## My Treasure

@@ -18,6 +18,7 @@ This repo is intentionally art-forward:
 - [Example Campaigns](books/example-campaigns.md)
 - [Character Sheet](sheets/character-sheet.md)
 - [Example Character — Mairi Map-Button](sheets/example-character-mairi-map-button.md)
+- [Player Races and Classes](sheets/player-races-and-classes.md)
 - [Guide Session Sheet](sheets/dm-session-sheet.md)
 - [Combined Draft](Thistlebright-Adventures-combined.md)
 
@@ -72,3 +73,8 @@ No gore, no horror, no permanent death, simple choices, cooperative problem solv
 ![Dice roll instructional scene](art/generated/19-dice-roll-table-scene.png)
 ![Tiny spells page](art/generated/20-tiny-spells-sparkle-page.png)
 ![First adventure bridge](art/generated/21-first-adventure-bridge.png)
+
+## Race and class art
+![Player races](art/generated/23-player-races-kindreds.png)
+![Player classes](art/generated/24-player-classes-paths.png)
+![Race class example](art/generated/25-race-class-combo-example.png)

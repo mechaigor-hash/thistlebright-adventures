@@ -28,6 +28,7 @@ This repo is intentionally art-forward:
 - [Example Campaigns](books/example-campaigns.md)
 - [Character Sheet](sheets/character-sheet.md)
 - [Example Character — Mairi Map-Button](sheets/example-character-mairi-map-button.md)
+- [Player Races and Classes](sheets/player-races-and-classes.md)
 - [Guide Session Sheet](sheets/dm-session-sheet.md)
 - [Combined Draft](Thistlebright-Adventures-combined.md)
 
@@ -82,6 +83,11 @@ No gore, no horror, no permanent death, simple choices, cooperative problem solv
 ![Dice roll instructional scene](art/generated/19-dice-roll-table-scene.png)
 ![Tiny spells page](art/generated/20-tiny-spells-sparkle-page.png)
 ![First adventure bridge](art/generated/21-first-adventure-bridge.png)
+
+## Race and class art
+![Player races](art/generated/23-player-races-kindreds.png)
+![Player classes](art/generated/24-player-classes-paths.png)
+![Race class example](art/generated/25-race-class-combo-example.png)
 
 
 <div style="page-break-after: always;"></div>
@@ -154,54 +160,130 @@ Use these when your hero does something tricky:
 
 ![Character creation at the table](art/generated/17-character-creation-step-by-step.png)
 
-### Step 1: Pick your hero kind
-Point to the one that sounds fun.
+In Thistlebright, a character has both a **race** and a **class**.
+
+- Your **race** says what kind of fairy-tale person you are.
+- Your **class** says what you like doing on adventures.
+
+For ages 5–7, keep it simple: **pick one race, pick one class, then choose your numbers.**
+
+---
+
+### Step 1: Pick your race — your fairy-tale people
+
+![Player races / kindreds](art/generated/23-player-races-kindreds.png)
+
+These are also called **kindreds** in the glen. Pick the one that sounds fun. Races do **not** make anyone better or worse. They give a tiny story gift and a way to imagine your hero.
+
+#### Human Glenfolk
+Curious children from villages, farms, islands, castles, and cozy cottages near the fairy roads.
+- **Look:** tartan scarf, muddy boots, warm smile, pockets full of treasures.
+- **Tiny gift:** Once per adventure, ask a grown-up, old sign, or village memory for a clue.
+- **Good for players who want:** a familiar hero stepping into magic.
+
+#### Fairy-Touched
+Children with a little fairy sparkle: bright eyes, tiny wing-glimmers, or hair that floats when music plays.
+- **Look:** thistle-petal shimmer, star freckles, ribbon-bright clothes.
+- **Tiny gift:** Once per scene, notice nearby fairy magic.
+- **Good for players who want:** sparkles, secrets, and fairy manners.
+
+#### Brownie-Kin
+Helpful wee folk who love fixing, tidying, baking, building, and making useful things.
+- **Look:** flour on nose, tool pouch, apron, cozy cap.
+- **Tiny gift:** Once per scene, repair, tidy, or improve one small thing.
+- **Good for players who want:** practical problem-solving.
+
+#### Selkie-Born
+Gentle sea-hearted heroes with a soft seal-cloak, shell songs, or dreams of moonlit waves.
+- **Look:** soft cloak, shell button, sea-glass charm, misty blue colors.
+- **Tiny gift:** Once per scene, understand water, weather, or a sad feeling.
+- **Good for players who want:** calm, kindness, and loch magic.
+
+#### Rowan-Kin
+Forest friends watched over by rowan trees, moss, birds, and old promises.
+- **Look:** leaf crown, berry beads, mossy boots, bark-brown cloak.
+- **Tiny gift:** Once per scene, ask a plant, tree, or bird for a small hint.
+- **Good for players who want:** nature, guardianship, and gentle wisdom.
+
+#### Dragon-Friend
+A child blessed by a tiny friendly dragon: warm hands, smoke-ring giggles, or shiny scale freckles.
+- **Look:** dragon-scale button, warm scarf, tiny harmless horn headband, smoky sparkles.
+- **Tiny gift:** Once per adventure, make a little warm puff that dries, warms, or lights something safely.
+- **Good for players who want:** brave wonder without scary fire.
+
+> **Your turn:** Point to one race. Say, “I am a ______.”
+
+---
+
+### Step 2: Pick your class — your adventure job
+
+![Player classes / adventure paths](art/generated/24-player-classes-paths.png)
+
+Your class is what you do when adventure starts. It gives you one bigger **class gift**.
 
 #### Thistle Knight
 A tiny knight with a big heart.
 - **Best at:** protecting friends and trying brave things.
-- **Gift:** Once per adventure, stand in front of danger and make it safe.
+- **Class gift:** Once per adventure, stand in front of danger and make it safe.
 - **Starting item:** soft wooden shield.
 - **Good name ideas:** Rowan, Tam, Isla Shieldbutton.
 
 #### Glen Wizard
 A young spell-speaker who knows rhyme-magic.
 - **Best at:** small helpful magic and fairy clues.
-- **Gift:** Once per scene, make a small magical light, sound, or sparkle.
+- **Class gift:** Once per scene, make a small magical light, sound, or sparkle.
 - **Starting item:** pebble wand.
 - **Good name ideas:** Skye, Eilidh, Pip Pebblewand.
 
 #### Loch Scout
 A fast explorer who knows paths and animal tracks.
 - **Best at:** maps, hidden paths, and quick movement.
-- **Gift:** Once per scene, find a hidden path or clue.
+- **Class gift:** Once per scene, find a hidden path or clue.
 - **Starting item:** ribbon map.
 - **Good name ideas:** Mairi, Finlay, Nessa Map-Button.
 
 #### Hearth Bard
 A singer, dancer, joker, and friend-maker.
 - **Best at:** cheering people up and making grumpy creatures laugh.
-- **Gift:** Once per adventure, turn grumpiness into giggles.
+- **Class gift:** Once per adventure, turn grumpiness into giggles.
 - **Starting item:** tiny bell or whistle.
 - **Good name ideas:** Brodie, Callum, Heather Bell.
 
 #### Fairy Friend
 A child-sized friend of the fairy courts.
 - **Best at:** nature hints and fairy manners.
-- **Gift:** Once per scene, ask a small nature spirit for a hint.
+- **Class gift:** Once per scene, ask a small nature spirit for a hint.
 - **Starting item:** acorn cup.
 - **Good name ideas:** Ailsa, Lorna, Thistle Pip.
 
-> **Your turn:** Circle one hero kind. If choosing is hard, ask: “Do you want to be brave, magical, speedy, musical, or fairy-wise?”
+> **Your turn:** Point to one class. Say, “My job is ______.”
 
-### Step 2: Pick your numbers
+---
+
+### Step 3: Put race + class together
+
+Say both pieces together:
+
+> “I am a **[race] [class]**.”
+
+Examples:
+- Human Glenfolk Thistle Knight
+- Fairy-Touched Glen Wizard
+- Brownie-Kin Hearth Bard
+- Selkie-Born Loch Scout
+- Rowan-Kin Fairy Friend
+- Dragon-Friend Thistle Knight
+
+![Race and class example hero](art/generated/25-race-class-combo-example.png)
+
+### Step 4: Pick your numbers
 Write these numbers next to your stats:
 
 **+2, +1, +1, +0**
 
-Put **+2** next to the thing your hero is best at.
+Put **+2** next to the thing your class is best at.
 
-| If you picked... | Put +2 in... | Why |
+| If your class is... | Put +2 in... | Why |
 |---|---|---|
 | Thistle Knight | Brave | You protect and try hard things. |
 | Glen Wizard | Clever | You know rhymes, signs, and tiny spells. |
@@ -211,9 +293,9 @@ Put **+2** next to the thing your hero is best at.
 
 Then put **+1** in two other stats, and **+0** in the last one.
 
-> **Grown-up helper tip:** Do not optimize too much. At this age, the best stat is the one the child is excited to use.
+> **Grown-up helper tip:** The race gift is for flavor and tiny story help. The class tells the child what they are likely to do most often.
 
-### Step 3: Pick a treasure
+### Step 5: Pick a treasure
 Choose one, roll 1d6, or invent something small:
 
 1. Rowan button that feels warm near kind magic.
@@ -223,15 +305,17 @@ Choose one, roll 1d6, or invent something small:
 5. Heather biscuit wrapped in leaf-paper.
 6. Wee wooden dragon that sneezes sparkles.
 
-### Step 4: Answer one helper question
+### Step 6: Answer one helper question
 Finish this sentence:
 
 **“My hero always helps __________________.”**
 
 Ideas: lost animals, shy friends, grumpy creatures, little siblings, travelers, trees, dragons, anyone who is scared.
 
-### Step 5: Draw your hero
+### Step 7: Draw your hero
 Draw a big shape first. Then add:
+- One sign of your **race**.
+- One sign of your **class**.
 - One tartan thing.
 - One magical thing.
 - One friendly smile.
@@ -249,14 +333,17 @@ Here is a complete example you can copy before making your own.
 
 **Grown-up:** “What kind of hero sounds fun?”
 
-**Player:** “I want to find secret paths.”
+**Player:** “I want to find secret paths and be from the loch.”
 
-**Grown-up:** “Great. That sounds like a Loch Scout.”
+**Grown-up:** “Great. For race, Selkie-Born gives you gentle loch magic. For class, Loch Scout helps you find secret paths.”
 
-#### 1. Hero kind
-Mairi chooses **Loch Scout**.
+#### 1. Race
+Mairi chooses **Selkie-Born**. Her tiny race gift lets her understand water, weather, or a sad feeling once per scene.
 
-#### 2. Stats
+#### 2. Class
+Mairi chooses **Loch Scout**. Her class gift lets her find a hidden path or clue once per scene.
+
+#### 3. Stats
 A Loch Scout is best at moving fast and finding paths, so Mairi puts **+2 in Quick**.
 
 Then she chooses:
@@ -273,16 +360,18 @@ Mairi’s stats are:
 | Kind | +0 |
 | Quick | +2 |
 
-#### 3. Treasure
+#### 4. Treasure
 Mairi picks a **rowan button** sewn onto her scarf. It feels warm near kind magic.
 
-#### 4. Helper sentence
+#### 5. Helper sentence
 Mairi writes:
 
 **“My hero always helps lost travelers.”**
 
-#### 5. Gift
-Because she is a Loch Scout, once per scene Mairi can find a hidden path or clue.
+#### 6. Gifts
+Because she is **Selkie-Born**, once per scene Mairi can understand water, weather, or a sad feeling.
+
+Because she is a **Loch Scout**, once per scene Mairi can find a hidden path or clue.
 
 ### Mairi’s first roll
 The Guide says:
@@ -380,6 +469,48 @@ The best victory is:
 <div style="page-break-after: always;"></div>
 
 
+# Book Section: Player Races and Classes
+
+# Player Races and Classes Quick Reference
+
+![Player races](art/generated/23-player-races-kindreds.png)
+
+## Races / Kindreds
+
+| Race | Tiny story gift | Visual idea |
+|---|---|---|
+| Human Glenfolk | Once per adventure, ask a grown-up, old sign, or village memory for a clue. | tartan scarf, muddy boots, pockets full of treasures |
+| Fairy-Touched | Once per scene, notice nearby fairy magic. | star freckles, thistle shimmer, ribbon-bright clothes |
+| Brownie-Kin | Once per scene, repair, tidy, or improve one small thing. | apron, tool pouch, flour on nose |
+| Selkie-Born | Once per scene, understand water, weather, or a sad feeling. | seal-cloak scarf, shell button, sea-glass charm |
+| Rowan-Kin | Once per scene, ask a plant, tree, or bird for a small hint. | leaf crown, berry beads, mossy boots |
+| Dragon-Friend | Once per adventure, make a little warm puff that dries, warms, or lights something safely. | scale freckles, warm scarf, smoky sparkles |
+
+![Player classes](art/generated/24-player-classes-paths.png)
+
+## Classes / Paths
+
+| Class | Best stat | Class gift | Starting item |
+|---|---|---|---|
+| Thistle Knight | Brave | Once per adventure, stand in front of danger and make it safe. | soft wooden shield |
+| Glen Wizard | Clever | Once per scene, make a small magical light, sound, or sparkle. | pebble wand |
+| Loch Scout | Quick | Once per scene, find a hidden path or clue. | ribbon map |
+| Hearth Bard | Kind | Once per adventure, turn grumpiness into giggles. | tiny bell or whistle |
+| Fairy Friend | Kind or Clever | Once per scene, ask a small nature spirit for a hint. | acorn cup |
+
+## Fast formula
+
+**I am a [race] [class] who helps [someone].**
+
+Examples:
+- I am a **Selkie-Born Loch Scout** who helps lost travelers.
+- I am a **Brownie-Kin Hearth Bard** who helps grumpy creatures.
+- I am a **Dragon-Friend Thistle Knight** who helps anyone who feels scared.
+
+
+<div style="page-break-after: always;"></div>
+
+
 # Book Section: Blank Character Sheet
 
 # Thistlebright Adventures — Character Sheet
@@ -391,7 +522,9 @@ The best victory is:
 
 **Player:** ______________________________
 
-**Hero Kind:** ☐ Thistle Knight ☐ Glen Wizard ☐ Loch Scout ☐ Hearth Bard ☐ Fairy Friend
+**Race / Kindred:** ☐ Human Glenfolk ☐ Fairy-Touched ☐ Brownie-Kin ☐ Selkie-Born ☐ Rowan-Kin ☐ Dragon-Friend
+
+**Class / Path:** ☐ Thistle Knight ☐ Glen Wizard ☐ Loch Scout ☐ Hearth Bard ☐ Fairy Friend
 
 ## Stats
 - Brave: ____
@@ -402,7 +535,10 @@ The best victory is:
 ## Charms
 ☐ Charm 1  ☐ Charm 2  ☐ Charm 3
 
-## My Gift
+## My Race Gift
+____________________________________________________
+
+## My Class Gift
 ____________________________________________________
 
 ## My Treasure
@@ -431,13 +567,15 @@ ____________________________________________________
 
 # Example Character Sheet — Mairi Map-Button
 
-![Mairi Map-Button](art/generated/18-example-hero-mairi.png)
+![Mairi Map-Button](art/generated/25-race-class-combo-example.png)
 
 **Hero Name:** Mairi Map-Button
 
 **Player:** Example Player
 
-**Hero Kind:** Loch Scout
+**Race / Kindred:** Selkie-Born
+
+**Class / Path:** Loch Scout
 
 ## Stats
 - Brave: +1
@@ -448,7 +586,10 @@ ____________________________________________________
 ## Charms
 ☐ Charm 1  ☐ Charm 2  ☐ Charm 3
 
-## My Gift
+## My Race Gift
+Once per scene, I can understand water, weather, or a sad feeling.
+
+## My Class Gift
 Once per scene, I can find a hidden path or clue.
 
 ## My Treasure

@@ -7,7 +7,9 @@
 
 **Player:** ______________________________
 
-**Hero Kind:** ☐ Thistle Knight ☐ Glen Wizard ☐ Loch Scout ☐ Hearth Bard ☐ Fairy Friend
+**Race / Kindred:** ☐ Human Glenfolk ☐ Fairy-Touched ☐ Brownie-Kin ☐ Selkie-Born ☐ Rowan-Kin ☐ Dragon-Friend
+
+**Class / Path:** ☐ Thistle Knight ☐ Glen Wizard ☐ Loch Scout ☐ Hearth Bard ☐ Fairy Friend
 
 ## Stats
 - Brave: ____
@@ -18,7 +20,10 @@
 ## Charms
 ☐ Charm 1  ☐ Charm 2  ☐ Charm 3
 
-## My Gift
+## My Race Gift
+____________________________________________________
+
+## My Class Gift
 ____________________________________________________
 
 ## My Treasure
