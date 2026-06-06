@@ -54,6 +54,25 @@ figure.art-plate img { display:block; width:100%; height:248mm; max-height:none;
 .copy-left .feature-copy { left:8mm; }
 .copy-right .feature-copy { right:8mm; }
 .copy-bottom .feature-copy { left:50%; right:auto; top:auto; bottom:9mm; transform:translateX(-50%); width:126mm; max-height:84mm; }
+
+/* Face-safe overlays: keep text on the artwork, but away from character/creature faces. */
+.profile-card .feature-copy, .class-card .feature-copy, .creature-card .feature-copy {
+  left:50% !important; right:auto !important; top:auto !important; bottom:8mm !important;
+  transform:translateX(-50%); width:150mm; max-height:96mm;
+}
+.profile-card::before, .class-card::before, .creature-card::before {
+  background:linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 42%, rgba(255,248,226,.18) 65%, rgba(42,29,16,.18) 100%);
+}
+.example-panel {
+  margin:6mm 0 8mm; padding:5mm 7mm;
+  border:1px solid rgba(139,53,45,.42); border-left:4mm solid rgba(139,53,45,.78);
+  border-radius:2mm 6mm 6mm 2mm;
+  background:linear-gradient(180deg, rgba(255,250,238,.97), rgba(247,231,190,.91));
+  box-shadow:0 1.4mm 5mm rgba(77,45,16,.16), inset 0 0 0 1px rgba(255,255,255,.48);
+  break-inside:avoid; page-break-inside:avoid;
+}
+.example-panel h3:first-child { margin-top:0; }
+.example-panel p:last-child, .example-panel table:last-child, .example-panel blockquote:last-child { margin-bottom:0; }
 .feature-copy h2, .feature-copy h3, .feature-copy h4 { clear:none; margin:0 0 2mm; padding:0 0 1.5mm; color:#76342c; font-size:21pt; line-height:1.04; font-variant:small-caps; letter-spacing:.025em; border:0; border-bottom:1px solid rgba(116,52,45,.40); background:none; }
 .feature-copy p { position:static; width:auto; margin:0 0 3mm; padding:0; font-size:11.5pt; background:none; border:0; box-shadow:none; }
 .feature-copy ul { position:static; width:auto; margin:0 0 3mm; padding-left:5.5mm; font-size:10.8pt; background:none; border:0; box-shadow:none; }
@@ -374,6 +393,7 @@ figure.art-plate img { display:block; width:100%; height:248mm; max-height:none;
 <div class="scene-copy"><p>Here is a complete example you can copy before making your own.</p>
 </div>
 </section>
+<section class="example-panel">
 <h3>Meet Mairi Map-Button</h3>
 <p><strong>Grown-up:</strong> “What kind of hero sounds fun?”</p>
 <p><strong>Player:</strong> “I want to find secret paths and be from the loch.”</p>
@@ -414,6 +434,7 @@ figure.art-plate img { display:block; width:100%; height:248mm; max-height:none;
 <p><strong>4 + 1 = 5. Success!</strong></p>
 <p>The Guide says:</p>
 <blockquote>“You find silver footprints leading to a mossy cookie plate. The troll smiles and whispers, ‘Och, I remember the first line now.’”</blockquote>
+</section>
 <hr>
 <h2>Chapter 5 — Charms and helping friends</h2>
 <p>Each hero starts with <strong>3 charms</strong>.</p>
