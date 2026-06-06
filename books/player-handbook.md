@@ -79,36 +79,48 @@ For ages 5–7, keep it simple: **pick one race, pick one class, then choose you
 These are also called **kindreds** in the glen. Pick the one that sounds fun. Races do **not** make anyone better or worse. They give a tiny story gift and a way to imagine your hero.
 
 #### Human Glenfolk
+![Human Glenfolk](../art/generated/26-race-human-glenfolk.png)
+
 Curious children from villages, farms, islands, castles, and cozy cottages near the fairy roads.
 - **Look:** tartan scarf, muddy boots, warm smile, pockets full of treasures.
 - **Tiny gift:** Once per adventure, ask a grown-up, old sign, or village memory for a clue.
 - **Good for players who want:** a familiar hero stepping into magic.
 
 #### Fairy-Touched
+![Fairy-Touched](../art/generated/27-race-fairy-touched.png)
+
 Children with a little fairy sparkle: bright eyes, tiny wing-glimmers, or hair that floats when music plays.
 - **Look:** thistle-petal shimmer, star freckles, ribbon-bright clothes.
 - **Tiny gift:** Once per scene, notice nearby fairy magic.
 - **Good for players who want:** sparkles, secrets, and fairy manners.
 
 #### Brownie-Kin
+![Brownie-Kin](../art/generated/28-race-brownie-kin.png)
+
 Helpful wee folk who love fixing, tidying, baking, building, and making useful things.
 - **Look:** flour on nose, tool pouch, apron, cozy cap.
 - **Tiny gift:** Once per scene, repair, tidy, or improve one small thing.
 - **Good for players who want:** practical problem-solving.
 
 #### Selkie-Born
+![Selkie-Born](../art/generated/29-race-selkie-born.png)
+
 Gentle sea-hearted heroes with a soft seal-cloak, shell songs, or dreams of moonlit waves.
 - **Look:** soft cloak, shell button, sea-glass charm, misty blue colors.
 - **Tiny gift:** Once per scene, understand water, weather, or a sad feeling.
 - **Good for players who want:** calm, kindness, and loch magic.
 
 #### Rowan-Kin
+![Rowan-Kin](../art/generated/30-race-rowan-kin.png)
+
 Forest friends watched over by rowan trees, moss, birds, and old promises.
 - **Look:** leaf crown, berry beads, mossy boots, bark-brown cloak.
 - **Tiny gift:** Once per scene, ask a plant, tree, or bird for a small hint.
 - **Good for players who want:** nature, guardianship, and gentle wisdom.
 
 #### Dragon-Friend
+![Dragon-Friend](../art/generated/31-race-dragon-friend.png)
+
 A child blessed by a tiny friendly dragon: warm hands, smoke-ring giggles, or shiny scale freckles.
 - **Look:** dragon-scale button, warm scarf, tiny harmless horn headband, smoky sparkles.
 - **Tiny gift:** Once per adventure, make a little warm puff that dries, warms, or lights something safely.
@@ -125,39 +137,79 @@ A child blessed by a tiny friendly dragon: warm hands, smoke-ring giggles, or sh
 Your class is what you do when adventure starts. It gives you one bigger **class gift**.
 
 #### Thistle Knight
+![Thistle Knight](../art/generated/32-class-thistle-knight.png)
+
 A tiny knight with a big heart.
 - **Best at:** protecting friends and trying brave things.
 - **Class gift:** Once per adventure, stand in front of danger and make it safe.
 - **Starting item:** soft wooden shield.
 - **Good name ideas:** Rowan, Tam, Isla Shieldbutton.
 
+**Abilities / spells block:**
+- **Shield of Thistles:** Give a friend +1 when you protect them.
+- **Brave Step:** Cross one scary-but-safe obstacle first so friends feel better.
+- **Kind Challenge:** Ask a grumpy creature for a fair contest instead of a fight.
+- **Lantern Guard:** Spend a charm to make a scene gentler for everyone.
+
 #### Glen Wizard
+![Glen Wizard](../art/generated/33-class-glen-wizard.png)
+
 A young spell-speaker who knows rhyme-magic.
 - **Best at:** small helpful magic and fairy clues.
 - **Class gift:** Once per scene, make a small magical light, sound, or sparkle.
 - **Starting item:** pebble wand.
 - **Good name ideas:** Skye, Eilidh, Pip Pebblewand.
 
+**Abilities / spells block:**
+- **Glowbug Light:** Make a soft light that shows clues.
+- **Pebble Ping:** Your wand gently points toward nearby magic.
+- **Rhyme Reminder:** Say a silly rhyme to remember an old fairy rule.
+- **Sparkle Signal:** Spend a charm to send a safe sparkle message to a friend.
+
 #### Loch Scout
+![Loch Scout](../art/generated/34-class-loch-scout.png)
+
 A fast explorer who knows paths and animal tracks.
 - **Best at:** maps, hidden paths, and quick movement.
 - **Class gift:** Once per scene, find a hidden path or clue.
 - **Starting item:** ribbon map.
 - **Good name ideas:** Mairi, Finlay, Nessa Map-Button.
 
+**Abilities / spells block:**
+- **Ribbon Map:** Ask one question about where a path goes.
+- **Quiet Boots:** Move gently without startling a creature.
+- **Stepping-Stone Hop:** Give yourself +1 when balancing, climbing, or crossing.
+- **Trail Friend:** Spend a charm to help the whole group follow you safely.
+
 #### Hearth Bard
+![Hearth Bard](../art/generated/35-class-hearth-bard.png)
+
 A singer, dancer, joker, and friend-maker.
 - **Best at:** cheering people up and making grumpy creatures laugh.
 - **Class gift:** Once per adventure, turn grumpiness into giggles.
 - **Starting item:** tiny bell or whistle.
 - **Good name ideas:** Brodie, Callum, Heather Bell.
 
+**Abilities / spells block:**
+- **Ceilidh Beat:** Start a rhythm that helps everyone move together.
+- **Giggle Verse:** Turn one grumpy sentence into a silly one.
+- **Warm Welcome:** Give a shy NPC a reason to talk.
+- **Encore Help:** Spend a charm to let a friend reroll after you cheer them on.
+
 #### Fairy Friend
+![Fairy Friend](../art/generated/36-class-fairy-friend.png)
+
 A child-sized friend of the fairy courts.
 - **Best at:** nature hints and fairy manners.
 - **Class gift:** Once per scene, ask a small nature spirit for a hint.
 - **Starting item:** acorn cup.
 - **Good name ideas:** Ailsa, Lorna, Thistle Pip.
+
+**Abilities / spells block:**
+- **Acorn Cup:** Offer a tiny gift and ask for fairy hospitality.
+- **Heather Hello:** Flowers wave toward a friendly creature.
+- **Polite Promise:** Make a simple promise that opens a fairy door or path.
+- **Mushroom Messenger:** Spend a charm to ask a mushroom, beetle, or breeze for help.
 
 > **Your turn:** Point to one class. Say, “My job is ______.”
 

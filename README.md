@@ -12,6 +12,7 @@ This repo is intentionally art-forward:
 - Generated art stored in `art/generated/`.
 
 ## Books
+- [Printable A4 portrait versions](printable-a4/README.md)
 - [Player Handbook](books/player-handbook.md)
 - [Dungeon Master Guide](books/dungeon-master-guide.md)
 - [Image-Heavy Bestiary](books/bestiary.md)
@@ -78,3 +79,16 @@ No gore, no horror, no permanent death, simple choices, cooperative problem solv
 ![Player races](art/generated/23-player-races-kindreds.png)
 ![Player classes](art/generated/24-player-classes-paths.png)
 ![Race class example](art/generated/25-race-class-combo-example.png)
+
+## Individual race and class portraits
+![Human Glenfolk](art/generated/26-race-human-glenfolk.png)
+![Fairy-Touched](art/generated/27-race-fairy-touched.png)
+![Brownie-Kin](art/generated/28-race-brownie-kin.png)
+![Selkie-Born](art/generated/29-race-selkie-born.png)
+![Rowan-Kin](art/generated/30-race-rowan-kin.png)
+![Dragon-Friend](art/generated/31-race-dragon-friend.png)
+![Thistle Knight](art/generated/32-class-thistle-knight.png)
+![Glen Wizard](art/generated/33-class-glen-wizard.png)
+![Loch Scout](art/generated/34-class-loch-scout.png)
+![Hearth Bard](art/generated/35-class-hearth-bard.png)
+![Fairy Friend](art/generated/36-class-fairy-friend.png)
