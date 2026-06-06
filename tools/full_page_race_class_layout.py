@@ -1,5 +1,20 @@
-<!doctype html><html><head><meta charset="utf-8"><title>Dungeon Master Guide</title><style>
+#!/usr/bin/env python3
+"""Make race/class entries full-page A4 feature plates.
 
+The user specifically wants the race and class images to be page-scale layered
+artwork, not cropped into small cards. This script updates the printable CSS so
+.profile-card and .class-card each occupy roughly a full A4 content page, keep the
+entire portrait visible with object-fit: contain, and layer text panels over the
+artwork.
+"""
+from __future__ import annotations
+from pathlib import Path
+import re
+
+PRINT_DIR = Path('/home/mecha-igor/prepped/scottish-fairy-quest/printable-a4')
+STYLE_RE = re.compile(r'<style>.*?</style>', re.S)
+
+CSS = r'''
 @page { size: A4 portrait; margin: 12mm 11mm 14mm; }
 * { box-sizing: border-box; }
 :root {
@@ -156,100 +171,13 @@ figure.art-plate.title-art img { max-height:70mm; } figure.art-plate.tall img { 
   a { color:inherit; text-decoration:none; }
   figure.art-plate, .scene-plate, .profile-card, .class-card, .creature-card, blockquote, table { break-inside:avoid-page; page-break-inside:avoid; }
 }
+'''
 
-</style></head><body><main class="book"><h1>Thistlebright Adventures — Dungeon Master Guide</h1>
-<blockquote class="layout-note"><strong>Print note:</strong> Race and class entries now use full-page feature plates. The entire artwork is preserved with text layered on top, so portraits are not cut off inside small boxes.</blockquote>
-<h2>Your job as Guide</h2>
-<p>You are not trying to beat the children. You are helping them feel brave, clever, and kind. Keep the pace quick, the choices clear, and the tone magical.</p>
-<h2>Session length</h2>
-<p>For ages 5–7, aim for <strong>20–40 minutes</strong>.</p>
-<p>Use this structure:</p>
-<ol>
-<li><strong>Wonder:</strong> show a magical place.</li>
-<li><strong>Problem:</strong> someone needs help.</li>
-<li><strong>Three scenes:</strong> clue, obstacle, choice.</li>
-<li><strong>Happy ending:</strong> celebrate and give a sticker/title/treasure.</li>
-</ol>
-<h2>Kid-safe stakes</h2>
-<p>Use lost things, mixed-up magic, grumpy creatures, riddles, weather trouble, broken bridges, and missing songs.</p>
-<p>Avoid graphic injury, hopelessness, betrayal by trusted adults, punishing curiosity, and long tactical combat.</p>
-<h2>The “Lantern” safety word</h2>
-<p>If a child says <strong>Lantern</strong>, immediately soften the scene. Example: “The dragon is not angry; it has hiccups and needs help.”</p>
-<h2>Building encounters</h2>
-<p>Every encounter should have at least three solutions:</p>
-<ul>
-<li><strong>Kind:</strong> comfort, negotiate, share.</li>
-<li><strong>Clever:</strong> solve a riddle, spot a clue.</li>
-<li><strong>Brave/Quick:</strong> climb, run, distract, protect.</li>
-</ul>
-<h2>Gentle conflict goals</h2>
-<p>Calm it, help it, outwit it, return what was lost, or make a fair trade.</p>
-<h2>Rewards</h2>
-<p>Use story rewards, not power creep: title, tiny treasure, helper, or a new place opens on the map.</p>
-<h2>Running high fantasy for small children</h2>
-<ul>
-<li>One big image per scene.</li>
-<li>One problem at a time.</li>
-<li>Repeat important clues three times.</li>
-<li>Let kids invent solutions. Say “yes, and” often.</li>
-</ul>
-<h2>Quick NPC voices</h2>
-<ul>
-<li>Scottish fairy: bright, playful, “Och, wee hero!”</li>
-<li>Brownie: busy, practical, loves tidy kitchens.</li>
-<li>Kelpies: musical, splashy, likes riddles.</li>
-<li>Dragon: booming but polite, sneezes smoke-rings.</li>
-</ul>
-<h2>Example scene template</h2>
-<p><strong>Place:</strong> Misty stepping stones over a silver burn.</p>
-<p><strong>Need:</strong> A fairy courier dropped moon-mail.</p>
-<p><strong>Obstacle:</strong> Stones move when nobody says please.</p>
-<p><strong>Clues:</strong> Wet envelopes, giggling reeds, hoofprints.</p>
-<p><strong>Solutions:</strong> Ask reeds kindly, leap quickly, sing to stones.</p>
-<p><strong>Reward:</strong> A moon-stamp that glows near secrets.</p>
-<hr>
-<h2>Print-and-play Guide cards</h2>
-<p>Use these as quick table reminders. Cut them into cards or copy them onto index cards.</p>
-<figure class="art-plate"><img src="../art/generated/06-dm-guide-token-cards.png" alt="Guide token cards and cozy table scene"></figure>
-<h3>Stat reminder cards</h3>
-<table><thead><tr><th>Card</th><th>Say to the child</th><th>Good for</th></tr></thead><tbody>
-<tr><td><strong>Brave</strong></td><td>“You try something hard or stand up for a friend.”</td><td>climbing, protecting, facing a noisy-but-safe surprise</td></tr>
-<tr><td><strong>Clever</strong></td><td>“You notice clues or make a plan.”</td><td>riddles, maps, remembering fairy stories</td></tr>
-<tr><td><strong>Kind</strong></td><td>“You help someone feel better.”</td><td>calming, sharing, apologising, inviting</td></tr>
-<tr><td><strong>Quick</strong></td><td>“You move fast or carefully.”</td><td>catching, sneaking, balancing, racing</td></tr>
-</tbody></table>
-<h3>Charm tokens</h3>
-<p>Give each hero 3 small tokens (buttons, shells, beads, or paper thistles). A hero may spend one to:</p>
-<ul>
-<li>reroll a die;</li>
-<li>add <strong>+1</strong> to a friend’s roll after saying how they help;</li>
-<li>ask for one gentle clue;</li>
-<li>make a scene softer by holding up the <strong>Lantern</strong> card.</li>
-</ul>
-<h3>Twist cards for 3–4 results</h3>
-<p>When a roll is almost there, let the player pick or roll 1d6:</p>
-<ol>
-<li>Your socks squeak loudly.</li>
-<li>A tiny fairy starts narrating everything you do.</li>
-<li>A tartan ribbon ties itself into a bow on your hat.</li>
-<li>You succeed, but the clue is covered in biscuit crumbs.</li>
-<li>A cloud sheep follows you for the rest of the scene.</li>
-<li>Everyone must do one silly dance step before moving on.</li>
-</ol>
-<h3>“Not yet” cards for 1–2 results</h3>
-<p>Avoid saying “you fail.” Try one of these:</p>
-<ul>
-<li>“Not yet — who can help you?”</li>
-<li>“That way is wobbly. What is a kinder or cleverer way?”</li>
-<li>“You learn one useful thing, but need a new plan.”</li>
-<li>“A funny complication appears; it is safe, just inconvenient.”</li>
-</ul>
-<h3>Table comfort checklist</h3>
-<p>Before play, prepare:</p>
-<ul>
-<li>dice that are easy to see;</li>
-<li>pencils and blank spaces for drawing;</li>
-<li>one visible <strong>Lantern</strong> card;</li>
-<li>a 5-minute wiggle break option;</li>
-<li>a promise that every ending is safe, warm, and celebratory.</li>
-</ul></main></body></html>
+NOTE = '<blockquote class="layout-note"><strong>Print note:</strong> Race and class entries now use full-page feature plates. The entire artwork is preserved with text layered on top, so portraits are not cut off inside small boxes.</blockquote>'
+
+for path in sorted(PRINT_DIR.glob('*-a4.html')):
+    text = path.read_text(encoding='utf-8')
+    text = STYLE_RE.sub('<style>\n' + CSS + '\n</style>', text, count=1)
+    text = re.sub(r'<blockquote class="layout-note">.*?</blockquote>', NOTE, text, count=1, flags=re.S)
+    path.write_text(text, encoding='utf-8')
+    print(path.name, 'profile', text.count('<section class="profile-card'), 'class', text.count('<section class="class-card'), 'scene', text.count('class="scene-plate"'))

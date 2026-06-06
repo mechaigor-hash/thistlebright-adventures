@@ -6,9 +6,11 @@ This version uses a more integrated tabletop-book layout:
 
 - parchment-style page backgrounds and framed artwork
 - scene art plates with text panels overlaid directly on the artwork
-- race/class portraits used as full-card background artwork, with readable parchment copy blocks on top
-- class abilities/spells in inset feature boxes layered over the class artwork
-- bestiary entries using full-card creature artwork with stat/solution text overlaid
+- each player race gets a full-page A4 feature plate
+- each player class gets a full-page A4 feature plate
+- race/class artwork uses `object-fit: contain` so the portrait is preserved rather than cropped inside a small box
+- class abilities/spells are layered in inset feature boxes over the full-page class artwork
+- bestiary entries use layered creature artwork with stat/solution text overlaid
 - `break-inside: avoid` / `page-break-inside: avoid` rules on plates, tables, callouts, and cards to prevent artwork from splitting across pages in print preview
 
 Files:
